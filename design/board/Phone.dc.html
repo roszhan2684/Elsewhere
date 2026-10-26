@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>iOS fork view</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0D0E12}
+a{color:#7EB6FF}a:hover{color:#B5D4FF}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; overflow: hidden; background: #0D0E12; color: #ECE8DF; font-family: 'Geist', system-ui, sans-serif; padding: 58px 0 28px; display: flex; flex-direction: column; gap: 18px">
+
+  <div style="display: flex; align-items: center; gap: 8px; padding: 0 12px">
+    <button type="button" aria-label="Back" style="width: 44px; height: 44px; border: none; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ECE8DF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></button>
+    <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+      <div style="font: 500 10px/1 'Geist Mono', monospace; letter-spacing: .12em; color: #9A9AA3">YOUR FORK</div>
+      <div style="font-size: 16px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Startup SF vs Stable Seattle</div>
+    </div>
+    <button type="button" aria-label="Evidence" style="width: 44px; height: 44px; border: none; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ECE8DF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></button>
+  </div>
+
+  <div role="group" aria-label="Time horizon" style="margin: 0 20px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; padding: 4px; border-radius: 12px; background: #1A1D24">
+    <button type="button" style="min-height: 40px; border: none; border-radius: 9px; background: transparent; color: #B9B6AE; font: 500 14px 'Geist', sans-serif">6 months</button>
+    <button type="button" aria-pressed="true" style="min-height: 40px; border: none; border-radius: 9px; background: #ECE8DF; color: #0D0E12; font: 500 14px 'Geist', sans-serif">2 years</button>
+    <button type="button" style="min-height: 40px; border: none; border-radius: 9px; background: transparent; color: #B9B6AE; font: 500 14px 'Geist', sans-serif">5 years</button>
+  </div>
+
+  <div style="flex: 1; min-height: 0; display: flex; gap: 12px; padding-left: 20px">
+    <div style="flex: none; width: 326px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px; padding: 22px; border-radius: 22px; background: #1A1D24; border: 1px solid #2A2E38">
+      <div style="display: flex; align-items: center; justify-content: space-between">
+        <div style="display: flex; align-items: center; gap: 10px"><span style="width: 28px; height: 28px; border-radius: 999px; background: #7EB6FF; color: #0D0E12; font: 600 13px/28px 'Geist Mono', monospace; text-align: center">A</span><span style="font-weight: 500">San Francisco</span></div>
+        <span style="font: 400 11px/1 'Geist Mono', monospace; color: #9A9AA3">YEAR 2</span>
+      </div>
+      <svg viewBox="0 0 280 40" style="width: 100%; height: 40px" aria-hidden="true">
+        <path d="M4 34 C80 34 120 10 276 10" stroke="#7EB6FF" stroke-width="2" fill="none" stroke-linecap="round"></path>
+        <circle cx="128" cy="15" r="4" fill="#FF5D73"></circle>
+        <text x="128" y="36" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="#9A9AA3">M14</text>
+      </svg>
+      <p style="margin: 0; font-family: 'Newsreader', serif; font-size: 21px; line-height: 1.35">“The company closed at month 14. I had a new role by 17, and I know how to hire now.”</p>
+      <div style="display: flex; flex-direction: column; gap: 0; border-top: 1px solid #2A2E38">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid #2A2E38"><span style="font-size: 14px; color: #B9B6AE">Career</span><span style="font-size: 14px">Founding engineer</span></div>
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid #2A2E38"><span style="font-size: 14px; color: #B9B6AE">Savings</span><span style="font-size: 14px; display: flex; gap: 8px; align-items: center">$5K–$25K <span style="font: 500 9px/1 'Geist Mono', monospace; padding: 3px 4px; border-radius: 3px; border: 1px dashed #9A9AA3; color: #C9C6BE">INF</span></span></div>
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 0"><span style="font-size: 14px; color: #B9B6AE">Confidence</span><span style="font-size: 14px">Medium</span></div>
+      </div>
+    </div>
+    <div aria-hidden="true" style="flex: none; width: 326px; box-sizing: border-box; padding: 22px; border-radius: 22px; background: #1A1D24; border: 1px solid #2A2E38; opacity: .55">
+      <span style="display: inline-block; width: 28px; height: 28px; border-radius: 999px; background: #E8914A"></span>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: center; gap: 6px" aria-label="Card 1 of 2">
+    <span style="width: 18px; height: 6px; border-radius: 999px; background: #7EB6FF"></span>
+    <span style="width: 6px; height: 6px; border-radius: 999px; background: #3A3F4B"></span>
+  </div>
+
+  <div style="display: flex; gap: 10px; padding: 0 20px">
+    <button type="button" style="flex: 1; min-height: 52px; border: none; border-radius: 16px; background: #ECE8DF; color: #0D0E12; font: 500 16px 'Geist', sans-serif">Talk to Future A</button>
+    <button type="button" style="min-height: 52px; padding: 0 18px; border-radius: 16px; border: 1px solid #3A3F4B; background: transparent; color: #ECE8DF; font: 500 16px 'Geist', sans-serif; display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 999px; background: #FF5D73"></span>Shock</button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# deps
+node_modules/
+.pnpm-store/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# build
+.next/
+out/
+dist/
+*.tsbuildinfo
+# env
+.env
+.env.local
+*.env
+!.env.example
+# data
+services/api/data/
+*.db
+# os
+.DS_Store
+# ios
+apps/ios/**/xcuserdata/
+apps/ios/**/DerivedData/
+public/demo/

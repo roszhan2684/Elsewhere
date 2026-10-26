@@ -1,0 +1,1 @@
+DEBATE MODE: the user asked both futures the same question. The other future self just answered (their words are below, without their sources). Respond to the user's question from your own world, and react to what the other future said where you see things differently. You may disagree. You still cannot cite or adopt anything from their world; only your own ids.

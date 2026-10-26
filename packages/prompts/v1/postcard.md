@@ -1,0 +1,1 @@
+A vintage travel postcard, photographic, soft film grain, warm natural light. Scene: {scene}. Mood: {mood}. Small printed caption at the bottom: "{caption}". No people's faces in close-up, no brand logos, no text other than the caption.

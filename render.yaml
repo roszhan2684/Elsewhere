@@ -1,0 +1,14 @@
+# Render blueprint for the API. The web app deploys to Vercel (root: apps/web).
+services:
+  - type: web
+    name: elsewhere-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: MODEL_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: CORS_ORIGINS
+        value: https://elsewhere.vercel.app

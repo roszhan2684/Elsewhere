@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Debate mode</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0D0E12}
+a{color:#7EB6FF}a:hover{color:#B5D4FF}
+</style>
+</helmet>
+<div style="min-height: 1000px; box-sizing: border-box; background: #0D0E12; color: #ECE8DF; font-family: 'Geist', system-ui, sans-serif; padding: 48px clamp(16px, 4vw, 64px)">
+  <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
+
+    <section aria-label="Debate thread" style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="font: 500 12px/1 'Geist Mono', monospace; letter-spacing: .14em; color: #9A9AA3">DEBATE · BOTH FUTURES · MONTH 24 · AFTER SHOCK</div>
+          <h1 style="margin: 0; font-family: 'Newsreader', serif; font-weight: 400; font-size: 34px; line-height: 1.1">Ask both of you at once</h1>
+        </div>
+        <div style="display: flex; gap: 6px; padding: 6px; border-radius: 999px; background: #1A1D24; font-size: 14px">
+          <span style="padding: 10px 14px; border-radius: 999px; color: #B9B6AE">Future A</span>
+          <span style="padding: 10px 14px; border-radius: 999px; color: #B9B6AE">Future B</span>
+          <span style="padding: 10px 14px; border-radius: 999px; background: #ECE8DF; color: #0D0E12; font-weight: 500">Debate</span>
+        </div>
+      </div>
+
+      <div style="align-self: flex-end; max-width: 520px; padding: 14px 18px; border-radius: 18px 18px 4px 18px; background: #2A2E38; font-size: 16px; line-height: 1.5">What do you regret?</div>
+
+      <sc-for list="{{ messages }}" as="m" hint-placeholder-count="3">
+        <div style="display: flex; gap: 14px; align-items: flex-start">
+          <span style="flex: none; width: 34px; height: 34px; border-radius: 999px; color: #0D0E12; font: 600 13px/34px 'Geist Mono', monospace; text-align: center; {{ m.avatarStyle }}">{{ m.who }}</span>
+          <div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline; font-size: 13px; color: #9A9AA3"><span style="color: #ECE8DF; font-weight: 500">{{ m.name }}</span><span style="font-family: 'Geist Mono', monospace">{{ m.meta }}</span></div>
+            <p style="margin: 0; font-family: 'Newsreader', serif; font-size: 21px; line-height: 1.55">
+              <sc-for list="{{ m.segs }}" as="sg" hint-placeholder-count="3"><span style="{{ sg.textStyle }}">{{ sg.t }}</span><sc-if value="{{ sg.hasClaim }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ sg.pick }}" aria-label="{{ sg.aria }}" style="margin: 0 4px; vertical-align: 3px; min-height: 24px; font: 500 10px/1 'Geist Mono', monospace; letter-spacing: .08em; cursor: pointer; border-radius: 4px; {{ sg.chipStyle }}">{{ sg.chip }}</button></sc-if></sc-for>
+            </p>
+          </div>
+        </div>
+      </sc-for>
+
+      <div style="display: flex; gap: 12px; align-items: center; padding: 12px 16px; border-radius: 12px; border: 1px dashed #3A3F4B; font-size: 13px; line-height: 1.5; color: #B9B6AE">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9A9AA3" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"></path></svg>
+        <span><b style="color: #ECE8DF; font-weight: 500">Branch guard</b> rewrote one sentence from Future B before it was sent: it mentioned “the shutdown”, and event E-14 exists only in Path A.</span>
+      </div>
+
+      <div style="display: flex; gap: 10px; align-items: center; padding: 8px 8px 8px 18px; border-radius: 999px; background: #1A1D24; border: 1px solid #2A2E38">
+        <label for="ask" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Ask both futures</label>
+        <input id="ask" type="text" placeholder="Ask both futures…" style="flex: 1 1 auto; min-width: 0; min-height: 44px; border: none; background: transparent; color: #ECE8DF; font: 400 15px 'Geist', sans-serif; outline: none">
+        <button type="button" aria-label="Record a voice question" style="width: 44px; height: 44px; border-radius: 999px; border: 1px solid #3A3F4B; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ECE8DF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg></button>
+        <button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: none; background: #ECE8DF; color: #0D0E12; font: 500 14px 'Geist', sans-serif; cursor: pointer">Ask</button>
+      </div>
+    </section>
+
+    <aside aria-label="Evidence" style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 18px; padding: 24px; border-radius: 18px; background: #1A1D24; border: 1px solid #2A2E38">
+      <div style="font: 500 12px/1 'Geist Mono', monospace; letter-spacing: .14em; color: #9A9AA3">EVIDENCE</div>
+      <span style="align-self: flex-start; font: 500 11px/1 'Geist Mono', monospace; letter-spacing: .08em; border-radius: 4px; {{ sel.chipStyle }}">{{ sel.type }}</span>
+      <p style="margin: 0; font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.4">“{{ sel.text }}”</p>
+      <div style="display: flex; flex-direction: column; gap: 14px; font-size: 14px; line-height: 1.5">
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="font: 500 11px/1 'Geist Mono', monospace; letter-spacing: .08em; color: #9A9AA3">WHERE IT CAME FROM</span><span>{{ sel.origin }}</span></div>
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="font: 500 11px/1 'Geist Mono', monospace; letter-spacing: .08em; color: #9A9AA3">WORLDSTATE FIELD</span><span style="font-family: 'Geist Mono', monospace; font-size: 13px">{{ sel.field }}</span></div>
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="font: 500 11px/1 'Geist Mono', monospace; letter-spacing: .08em; color: #9A9AA3">LINKED EVENT</span><span>{{ sel.event }}</span></div>
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="font: 500 11px/1 'Geist Mono', monospace; letter-spacing: .08em; color: #9A9AA3">CONFIDENCE</span><span>{{ sel.confidence }}</span></div>
+      </div>
+      <sc-if value="{{ sel.editable }}" hint-placeholder-val="{{ false }}">
+        <button type="button" style="align-self: flex-start; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #3A3F4B; background: transparent; color: #ECE8DF; font: 500 14px 'Geist', sans-serif; cursor: pointer">Change this assumption → recompute</button>
+      </sc-if>
+      <div style="height: 1px; background: #2A2E38"></div>
+      <div style="font-size: 13px; line-height: 1.5; color: #9A9AA3">Click any chip in the thread. Every claim a future self makes must point to a field or event in its own branch, or it is not sent.</div>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const selId = (this.state && this.state.sel) || 'c3';
+    const chipStyles = {
+      FACT: 'padding: 5px 7px; border: none; background: #ECE8DF; color: #0D0E12',
+      ASSUMPTION: 'padding: 4px 6px; border: 1px solid #ECE8DF; background: transparent; color: #ECE8DF',
+      INFERENCE: 'padding: 4px 6px; border: 1px dashed #9A9AA3; background: transparent; color: #C9C6BE'
+    };
+    const claims = {
+      c1: { type: 'INFERENCE', text: 'When the company closed, the equity was worth nothing', origin: 'Model inference · Finance agent (muse-spark-1.3), reconciled by the orchestrator', field: 'finance.equity_value = $0 (from month 14)', event: 'E-14 · Company closes (shock you applied)', confidence: 'High — within this branch', editable: false },
+      c2: { type: 'ASSUMPTION', text: 'I had about four months of savings', origin: 'You, during intake: “I have roughly four months of expenses saved.”', field: 'finance.runway_months = 4', event: 'Intake · answer to clarifying question 2', confidence: 'As stated by you', editable: true },
+      c3: { type: 'FACT', text: 'There’s no state income tax in Washington', origin: 'Web search via muse-spark-1.3 · [cited source title] · retrieved at simulation time', field: 'finance.state_income_tax = none', event: 'Grounded at world creation (v1)', confidence: 'High — cited public source', editable: false },
+      c4: { type: 'INFERENCE', text: 'I’m still doing work I could have done at 22', origin: 'Model inference · Career agent (muse-spark-1.3)', field: 'career.scope_growth = low', event: 'E-B12 · Promotion to senior (month 12)', confidence: 'Low — depends on team and manager', editable: false },
+      c5: { type: 'INFERENCE', text: 'Those 14 months taught me to run hiring', origin: 'Model inference · Career agent (muse-spark-1.3)', field: 'career.skills += hiring', event: 'E-09 · First hire (month 9)', confidence: 'Medium', editable: false }
+    };
+    const seg = (t, id) => {
+      if (!id) return { t, hasClaim: false, textStyle: '' };
+      const c = claims[id];
+      const on = id === selId;
+      return {
+        t,
+        hasClaim: true,
+        chip: c.type,
+        aria: 'Show evidence: ' + c.type.toLowerCase(),
+        chipStyle: chipStyles[c.type] + (on ? '; box-shadow: 0 0 0 2px #7EB6FF' : ''),
+        textStyle: on ? 'background: rgba(126,182,255,.16); border-radius: 3px' : 'text-decoration: underline; text-decoration-color: #3A3F4B; text-underline-offset: 4px',
+        pick: () => this.setState({ sel: id })
+      };
+    };
+    const messages = [
+      { who: 'A', name: 'Future A · San Francisco', meta: 'path A · month 24', avatarStyle: 'background: #7EB6FF', segs: [
+        seg('Not the jump itself. I regret not negotiating more cash. ', null),
+        seg('When the company closed, the equity was worth nothing', 'c1'),
+        seg(', and ', null),
+        seg('I had about four months of savings', 'c2'),
+        seg('. That was tight.', null)
+      ] },
+      { who: 'B', name: 'Future B · Seattle', meta: 'path B · month 24 · replying to A', avatarStyle: 'background: #E8914A', segs: [
+        seg('I’d push back a little. My money worked out — ', null),
+        seg('there’s no state income tax in Washington', 'c3'),
+        seg(' — but some weeks ', null),
+        seg('I’m still doing work I could have done at 22', 'c4'),
+        seg('.', null)
+      ] },
+      { who: 'A', name: 'Future A · San Francisco', meta: 'path A · month 24 · replying to B', avatarStyle: 'background: #7EB6FF', segs: [
+        seg('Fair. And ', null),
+        seg('those 14 months taught me to run hiring', 'c5'),
+        seg('. I wouldn’t trade that.', null)
+      ] }
+    ];
+    const s = claims[selId];
+    return {
+      messages,
+      sel: { ...s, chipStyle: chipStyles[s.type] }
+    };
+  }
+}
+</script>
+</body>
+</html>

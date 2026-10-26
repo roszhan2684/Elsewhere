@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Front pages from 2028</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0D0E12}
+a{color:#7EB6FF}a:hover{color:#B5D4FF}
+</style>
+</helmet>
+<div style="min-height: 1060px; box-sizing: border-box; background: #0D0E12; color: #ECE8DF; font-family: 'Geist', system-ui, sans-serif; padding: 48px clamp(16px, 4vw, 64px)">
+  <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px">
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <div style="font: 500 12px/1 'Geist Mono', monospace; letter-spacing: .14em; color: #9A9AA3">STRESS TEST · YEAR 2 EDITIONS</div>
+        <h1 style="margin: 0; font-family: 'Newsreader', serif; font-weight: 400; font-size: 36px; line-height: 1.1">What the news would say in each world</h1>
+      </div>
+      <div role="group" aria-label="Shock" style="display: flex; flex-wrap: wrap; gap: 6px; padding: 6px; border-radius: 999px; background: #1A1D24">
+        <button type="button" onClick="{{ showBefore }}" aria-pressed="{{ beforePressed }}" style="min-height: 44px; padding: 0 18px; border: none; border-radius: 999px; font: 500 14px 'Geist', sans-serif; cursor: pointer; {{ beforeBtnStyle }}">Before shock</button>
+        <button type="button" onClick="{{ showAfter }}" aria-pressed="{{ afterPressed }}" style="min-height: 44px; padding: 0 18px; border: none; border-radius: 999px; font: 500 14px 'Geist', sans-serif; cursor: pointer; display: flex; align-items: center; gap: 8px; {{ afterBtnStyle }}"><span style="width: 8px; height: 8px; border-radius: 999px; background: #FF5D73"></span>Startup fails at month 14</button>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 28px">
+
+      <article style="flex: 1 1 420px; min-width: 0; background: #F3EEE3; color: #16161A; border-radius: 6px; padding: 32px 32px 28px; display: flex; flex-direction: column; gap: 18px; {{ paperAStyle }}">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; font: 500 11px/1 'Geist Mono', monospace; letter-spacing: .1em; color: #4A4A52">
+          <span style="display: flex; align-items: center; gap: 8px"><span style="width: 18px; height: 18px; border-radius: 999px; background: #2F6FCC; color: #FFFFFF; text-align: center; line-height: 18px">A</span>SAN FRANCISCO EDITION</span>
+          <span>OCT 2028 · YEAR 2</span>
+        </div>
+        <div style="border-top: 3px solid #16161A; border-bottom: 1px solid #16161A; padding: 10px 0 8px; text-align: center; font-family: 'Newsreader', serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); letter-spacing: -0.01em">The Elsewhere Ledger</div>
+        <sc-if value="{{ shocked }}" hint-placeholder-val="{{ false }}">
+          <div style="align-self: flex-start; font: 500 11px/1 'Geist Mono', monospace; letter-spacing: .1em; padding: 6px 8px; border-radius: 3px; background: #C8243A; color: #FFFFFF">REWRITTEN BY SHOCK · E-14</div>
+        </sc-if>
+        <h2 style="margin: 0; font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 2.8vw, 38px); line-height: 1.08; letter-spacing: -0.01em">{{ a.headline }}</h2>
+        <p style="margin: 0; font-family: 'Newsreader', serif; font-style: italic; font-size: 19px; line-height: 1.45; color: #34343A">{{ a.deck }}</p>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid #16161A">
+          <sc-for list="{{ a.stats }}" as="st" hint-placeholder-count="3">
+            <div style="display: flex; flex-direction: column; gap: 8px; padding: 14px 12px 4px 0">
+              <div style="font: 500 10px/1.2 'Geist Mono', monospace; letter-spacing: .08em; color: #4A4A52">{{ st.label }}</div>
+              <div style="font-family: 'Newsreader', serif; font-size: 22px; line-height: 1.15">{{ st.value }}</div>
+              <div style="font: 400 12px/1.3 'Geist', sans-serif; color: #8A2A2A; text-decoration: line-through">{{ st.was }}</div>
+              <span style="align-self: flex-start; font: 500 10px/1 'Geist Mono', monospace; letter-spacing: .08em; padding: 4px 6px; border-radius: 3px; {{ st.chipStyle }}">{{ st.chip }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <sc-if value="{{ shocked }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; background: #E9E2D3; border-radius: 4px">
+            <div style="font: 500 11px/1 'Geist Mono', monospace; letter-spacing: .1em; color: #4A4A52">CHANGED BECAUSE</div>
+            <div style="font-size: 14px; line-height: 1.55; color: #16161A">Shock: company closes at month 14 <b>→</b> E-15 job search, 3 months (your assumption) <b>→</b> savings at month 24 fall by about $15K–$20K <b>→</b> options stay high: you leave with hiring experience.</div>
+          </div>
+        </sc-if>
+      </article>
+
+      <article style="flex: 1 1 420px; min-width: 0; background: #F3EEE3; color: #16161A; border-radius: 6px; padding: 32px 32px 28px; display: flex; flex-direction: column; gap: 18px; position: relative">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; font: 500 11px/1 'Geist Mono', monospace; letter-spacing: .1em; color: #4A4A52">
+          <span style="display: flex; align-items: center; gap: 8px"><span style="width: 18px; height: 18px; border-radius: 999px; background: #B8641E; color: #FFFFFF; text-align: center; line-height: 18px">B</span>SEATTLE EDITION</span>
+          <span>OCT 2028 · YEAR 2</span>
+        </div>
+        <div style="border-top: 3px solid #16161A; border-bottom: 1px solid #16161A; padding: 10px 0 8px; text-align: center; font-family: 'Newsreader', serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 44px); letter-spacing: -0.01em">The Elsewhere Ledger</div>
+        <sc-if value="{{ shocked }}" hint-placeholder-val="{{ false }}">
+          <div style="align-self: flex-start; font: 500 11px/1 'Geist Mono', monospace; letter-spacing: .1em; padding: 5px 7px; border-radius: 3px; border: 1.5px solid #16161A">UNCHANGED BY THIS SHOCK</div>
+        </sc-if>
+        <h2 style="margin: 0; font-family: 'Newsreader', serif; font-weight: 600; font-size: clamp(28px, 2.8vw, 38px); line-height: 1.08; letter-spacing: -0.01em">Promoted to senior. Savings on plan.</h2>
+        <p style="margin: 0; font-family: 'Newsreader', serif; font-style: italic; font-size: 19px; line-height: 1.45; color: #34343A">A steadier ladder and a slower learning curve. Lower housing costs and no state income tax widen the savings gap.</p>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid #16161A">
+          <div style="display: flex; flex-direction: column; gap: 8px; padding: 14px 12px 4px 0">
+            <div style="font: 500 10px/1.2 'Geist Mono', monospace; letter-spacing: .08em; color: #4A4A52">SAVINGS · MONTH 24</div>
+            <div style="font-family: 'Newsreader', serif; font-size: 22px; line-height: 1.15">$60K–$90K</div>
+            <span style="align-self: flex-start; font: 500 10px/1 'Geist Mono', monospace; letter-spacing: .08em; padding: 3px 5px; border-radius: 3px; border: 1px dashed #4A4A52; color: #34343A">INFERENCE</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; padding: 14px 12px 4px 0">
+            <div style="font: 500 10px/1.2 'Geist Mono', monospace; letter-spacing: .08em; color: #4A4A52">PAY</div>
+            <div style="font-family: 'Newsreader', serif; font-size: 22px; line-height: 1.15">$180K</div>
+            <span style="align-self: flex-start; font: 500 10px/1 'Geist Mono', monospace; letter-spacing: .08em; padding: 3px 5px; border-radius: 3px; border: 1px solid #16161A">ASSUMPTION</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; padding: 14px 12px 4px 0">
+            <div style="font: 500 10px/1.2 'Geist Mono', monospace; letter-spacing: .08em; color: #4A4A52">STATE INCOME TAX</div>
+            <div style="font-family: 'Newsreader', serif; font-size: 22px; line-height: 1.15">None in WA</div>
+            <span style="align-self: flex-start; font: 500 10px/1 'Geist Mono', monospace; letter-spacing: .08em; padding: 4px 6px; border-radius: 3px; background: #16161A; color: #F3EEE3">FACT</span>
+          </div>
+        </div>
+        <sc-if value="{{ shocked }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; background: #E9E2D3; border-radius: 4px">
+            <div style="font: 500 11px/1 'Geist Mono', monospace; letter-spacing: .1em; color: #4A4A52">WHY NOTHING MOVED</div>
+            <div style="font-size: 14px; line-height: 1.55; color: #16161A">This shock happens to a company you didn’t join. No WorldState field in Path B depends on it.</div>
+          </div>
+        </sc-if>
+      </article>
+    </div>
+
+    <sc-if value="{{ shocked }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding: 20px 24px; border-radius: 14px; background: #1A1D24">
+        <span style="font: 500 12px/1 'Geist Mono', monospace; letter-spacing: .12em; color: #9A9AA3">VERDICT UNDER THIS SHOCK</span>
+        <span style="font-size: 16px; line-height: 1.5; flex: 1 1 420px">Path B is more robust. Path A’s result depends most on how long the job search takes — see <a href="Assumptions.dc.html">What decides this?</a></span>
+        <span style="font-size: 13px; padding: 6px 10px; border-radius: 999px; border: 1px solid #3A3F4B; color: #D6D2C9">Medium confidence</span>
+      </div>
+    </sc-if>
+
+    <div style="font-size: 13px; color: #9A9AA3">Ranges are illustrative scenario values from the simulation, not predictions. In the build, numbers roll between states with NumberFlow and headlines rewrite in under 500ms.</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1060}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const shocked = !!(this.state && this.state.shocked);
+    const chip = {
+      INFERENCE: 'border: 1px dashed #4A4A52; color: #34343A; padding: 3px 5px',
+      ASSUMPTION: 'border: 1px solid #16161A; padding: 3px 5px',
+      FACT: 'background: #16161A; color: #F3EEE3'
+    };
+    const before = {
+      headline: 'Startup survives year two. You now lead a team of four.',
+      deck: 'The equity is still on paper. Savings grew slower than they would have in Seattle; your skills grew faster.',
+      stats: [
+        { label: 'SAVINGS · MONTH 24', value: '$20K–$45K', was: '', chip: 'INFERENCE' },
+        { label: 'ROLE', value: 'Eng lead, team of 4', was: '', chip: 'INFERENCE' },
+        { label: 'PAY', value: '$145K + equity', was: '', chip: 'ASSUMPTION' }
+      ]
+    };
+    const after = {
+      headline: 'The company shut down at month 14. You had a new role by month 17.',
+      deck: 'The equity went to zero. The experience didn’t: you leave with hiring and shipping experience most peers don’t have yet.',
+      stats: [
+        { label: 'SAVINGS · MONTH 24', value: '$5K–$25K', was: 'was $20K–$45K', chip: 'INFERENCE' },
+        { label: 'JOB SEARCH', value: '3 months', was: '', chip: 'ASSUMPTION' },
+        { label: 'NEXT ROLE', value: 'Founding engineer', was: 'was eng lead', chip: 'INFERENCE' }
+      ]
+    };
+    const src = shocked ? after : before;
+    const a = {
+      headline: src.headline,
+      deck: src.deck,
+      stats: src.stats.map((s) => ({ ...s, chipStyle: chip[s.chip] }))
+    };
+    const on = 'background: #ECE8DF; color: #0D0E12';
+    const off = 'background: transparent; color: #ECE8DF';
+    return {
+      shocked,
+      a,
+      paperAStyle: shocked ? 'box-shadow: 0 0 0 2px #FF5D73' : '',
+      beforePressed: shocked ? 'false' : 'true',
+      afterPressed: shocked ? 'true' : 'false',
+      beforeBtnStyle: shocked ? off : on,
+      afterBtnStyle: shocked ? on : off,
+      showBefore: () => this.setState({ shocked: false }),
+      showAfter: () => this.setState({ shocked: true })
+    };
+  }
+}
+</script>
+</body>
+</html>

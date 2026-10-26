@@ -1,0 +1,4723 @@
+{
+ "slug": "grad-school-vs-job",
+ "blurb": "A two-year master's in machine learning in Boston, or a full-time engineering job in Austin now?",
+ "simulation": {
+  "id": "demo-grad-school-vs-job",
+  "slug": "grad-school-vs-job",
+  "mode": "mock",
+  "status": "ready",
+  "version": 1,
+  "decision": {
+   "title": "Grad school Boston vs Stable job Austin",
+   "question": "Should I do a two-year master's in machine learning in Boston, or take a full-time software engineering job in Austin at $125K? Tuition is about $60K a year",
+   "path_a": {
+    "label": "Grad school in Boston",
+    "city": "Boston",
+    "role": null,
+    "org_type": "school",
+    "annual_pay_usd": null,
+    "equity": null,
+    "notes": "Should I do a two-year master's in machine learning in Boston,"
+   },
+   "path_b": {
+    "label": "Stable job in Austin",
+    "city": "Austin",
+    "role": "Software engineer",
+    "org_type": "established_company",
+    "annual_pay_usd": 125000.0,
+    "equity": null,
+    "notes": "take a full-time software engineering job in Austin at $125K? Tuition is about $60K a year"
+   },
+   "priorities": {
+    "learning": 5,
+    "stability": 3,
+    "ownership": 3,
+    "location": 3,
+    "autonomy": 3
+   },
+   "goals": [
+    "Keep learning fast"
+   ],
+   "fears": [],
+   "constraints": [
+    "Tuition is about $60K a year."
+   ],
+   "current": {
+    "city": null,
+    "profession": "Software engineer",
+    "age_band": null,
+    "savings_usd": 25000.0,
+    "monthly_expenses_usd": 3000.0
+   },
+   "clarifying_questions": []
+  },
+  "branches": {
+   "A": {
+    "branch": "A",
+    "label": "Grad school in Boston",
+    "summary": "In Path A you build steadily in Boston. Two years of lost income and tuition costs is the main risk.",
+    "top_tradeoffs": [
+     "More learning, less stability",
+     "More predictability, less ownership",
+     "Life built around Boston"
+    ],
+    "confidence": "medium",
+    "persona": {
+     "name": "Future A",
+     "voice": "Curious, a little academic, enthusiastic about ideas.",
+     "temperament": "Stimulated but impatient to earn again."
+    },
+    "finance_inputs": {
+     "start_savings": 25000.0,
+     "annual_pay": 0.0,
+     "effective_tax_rate": 0.31,
+     "annual_housing_low": 32000.0,
+     "annual_housing_high": 42000.0,
+     "annual_other_costs": 21600.0,
+     "raise_pct_per_year": 0.04,
+     "equity_note": null,
+     "pay_segments": [
+      {
+       "start_month": 0,
+       "end_month": 24,
+       "annual_pay": 0.0,
+       "label": "studying"
+      },
+      {
+       "start_month": 24,
+       "end_month": null,
+       "annual_pay": 150000.0,
+       "label": "first role after the degree"
+      }
+     ],
+     "one_time_costs": [
+      {
+       "month": 0,
+       "amount": 60000.0,
+       "label": "tuition, year 1"
+      },
+      {
+       "month": 12,
+       "amount": 60000.0,
+       "label": "tuition, year 2"
+      }
+     ]
+    },
+    "snapshots": [
+     {
+      "timepoint": "m0",
+      "headline": "Day one: full-time student in Boston",
+      "career": {
+       "role": {
+        "text": "Full-time student",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "studying",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Coursework and research",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Foundations and theory",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "No salary (studying)",
+        "range": {
+         "low": 0.0,
+         "high": 0.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_005",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$32K to $42K a year",
+        "range": {
+         "low": 32000.0,
+         "high": 42000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_001",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$25K",
+        "range": {
+         "low": 25000.0,
+         "high": 25000.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "4.6\u20135.8 months of expenses",
+        "range": {
+         "low": 4.6,
+         "high": 5.8,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Boston",
+        "range": null,
+        "evidence_id": "ev_U_001",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Hybrid, 2\u20133 office days",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Boston",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "45\u201355 hours a week",
+        "range": {
+         "low": 45.0,
+         "high": 55.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: depends on the job market at graduation",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: industry roles remain open",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Two years of lost income and tuition costs",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": []
+     },
+     {
+      "timepoint": "m6",
+      "headline": "Six months in: student, deep in coursework",
+      "career": {
+       "role": {
+        "text": "Student, deep in coursework",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "studying",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Thesis or capstone underway",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Research methods",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "No salary (studying)",
+        "range": {
+         "low": 0.0,
+         "high": 0.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_005",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$32K to $42K a year",
+        "range": {
+         "low": 32000.0,
+         "high": 42000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_001",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$61K to $68K in debt",
+        "range": {
+         "low": -67880.0,
+         "high": -60720.00000000001,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "0 months of expenses",
+        "range": {
+         "low": 0.0,
+         "high": 0.0,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Boston",
+        "range": null,
+        "evidence_id": "ev_U_001",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Hybrid, 2\u20133 office days",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Boston",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "45\u201355 hours a week",
+        "range": {
+         "low": 45.0,
+         "high": 55.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "stress": {
+        "text": "High",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: depends on the job market at graduation",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: industry roles remain open",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Two years of lost income and tuition costs",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": []
+     },
+     {
+      "timepoint": "m24",
+      "headline": "Year two: graduated; first role after the degree",
+      "career": {
+       "role": {
+        "text": "Graduated; first role after the degree",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Entry role at a higher level",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Applied specialism",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Boston",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "High",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$150K a year",
+        "range": {
+         "low": 150000.0,
+         "high": 150000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_005",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$32K to $42K a year",
+        "range": {
+         "low": 32000.0,
+         "high": 42000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_001",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$198K to $227K in debt",
+        "range": {
+         "low": -226520.0,
+         "high": -197880.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "0 months of expenses",
+        "range": {
+         "low": 0.0,
+         "high": 0.0,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Boston",
+        "range": null,
+        "evidence_id": "ev_U_001",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Hybrid, 2\u20133 office days",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Boston",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "45\u201355 hours a week",
+        "range": {
+         "low": 45.0,
+         "high": 55.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: depends on the job market at graduation",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: industry roles remain open",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Two years of lost income and tuition costs",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "5/5 (you weighted it 5/5)",
+        "range": {
+         "low": 5.0,
+         "high": 5.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "stability": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "location": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-A-001",
+       "E-A-002"
+      ]
+     },
+     {
+      "timepoint": "m60",
+      "headline": "Year five: specialist in their field",
+      "career": {
+       "role": {
+        "text": "Specialist in their field",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Recognised specialist",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Deep expertise",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Boston",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "High",
+        "range": null,
+        "evidence_id": "ev_A_003",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$169K a year",
+        "range": {
+         "low": 168729.6,
+         "high": 168729.6,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_005",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$32K to $42K a year",
+        "range": {
+         "low": 32000.0,
+         "high": 42000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_001",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$29K to $101K in debt",
+        "range": {
+         "low": -100714.39999999998,
+         "high": -29114.400000000023,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "0 months of expenses",
+        "range": {
+         "low": 0.0,
+         "high": 0.0,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Boston",
+        "range": null,
+        "evidence_id": "ev_U_001",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Hybrid, 2\u20133 office days",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Boston",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "45\u201355 hours a week",
+        "range": {
+         "low": 45.0,
+         "high": 55.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Low",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: depends on the job market at graduation",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: industry roles remain open",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Two years of lost income and tuition costs",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "5/5 (you weighted it 5/5)",
+        "range": {
+         "low": 5.0,
+         "high": 5.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "stability": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "location": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-A-001",
+       "E-A-002",
+       "E-A-003"
+      ]
+     }
+    ]
+   },
+   "B": {
+    "branch": "B",
+    "label": "Stable job in Austin",
+    "summary": "In Path B you build steadily in Austin. Slower learning curve; feeling of a road not taken is the main risk.",
+    "top_tradeoffs": [
+     "More stability, less learning",
+     "More predictability, less ownership",
+     "Life built around Austin"
+    ],
+    "confidence": "medium",
+    "persona": {
+     "name": "Future B",
+     "voice": "Calm, measured, a bit wistful.",
+     "temperament": "Comfortable and secure; sometimes wonders what they'd have learned elsewhere."
+    },
+    "finance_inputs": {
+     "start_savings": 25000.0,
+     "annual_pay": 125000.0,
+     "effective_tax_rate": 0.25,
+     "annual_housing_low": 20000.0,
+     "annual_housing_high": 28000.0,
+     "annual_other_costs": 21600.0,
+     "raise_pct_per_year": 0.05,
+     "equity_note": null,
+     "pay_segments": [],
+     "one_time_costs": []
+    },
+    "snapshots": [
+     {
+      "timepoint": "m0",
+      "headline": "Day one: new-hire engineer in Austin",
+      "career": {
+       "role": {
+        "text": "New-hire engineer",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "scope": {
+        "text": "One well-defined area",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Learning internal systems",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$125K a year",
+        "range": {
+         "low": 125000.0,
+         "high": 125000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_003",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "Public stock grants vest on schedule",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$20K to $28K a year",
+        "range": {
+         "low": 20000.0,
+         "high": 28000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_001",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$25K",
+        "range": {
+         "low": 25000.0,
+         "high": 25000.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "5.8\u20137.6 months of expenses",
+        "range": {
+         "low": 5.8,
+         "high": 7.6,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Austin",
+        "range": null,
+        "evidence_id": "ev_U_004",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Hybrid, 2\u20133 office days",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Austin",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201345 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 45.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "High: steady company, clear ladder",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "Medium: startup moves get harder with a higher salary",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Slower learning curve; feeling of a road not taken",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": []
+     },
+     {
+      "timepoint": "m6",
+      "headline": "Six months in: fully ramped on the team",
+      "career": {
+       "role": {
+        "text": "Fully ramped on the team",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Owns a service",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Deep in one stack",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$125K a year",
+        "range": {
+         "low": 125000.0,
+         "high": 125000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_003",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "Public stock grants vest on schedule",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$20K to $28K a year",
+        "range": {
+         "low": 20000.0,
+         "high": 28000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_001",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$46K to $52K",
+        "range": {
+         "low": 45994.99999999999,
+         "high": 52155.000000000015,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "10.7\u201315.9 months of expenses",
+        "range": {
+         "low": 10.7,
+         "high": 15.9,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Austin",
+        "range": null,
+        "evidence_id": "ev_U_004",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Hybrid, 2\u20133 office days",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Austin",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201345 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 45.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Low",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "High: steady company, clear ladder",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "Medium: startup moves get harder with a higher salary",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Slower learning curve; feeling of a road not taken",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": [
+       "E-B-001"
+      ]
+     },
+     {
+      "timepoint": "m24",
+      "headline": "Year two: senior engineer",
+      "career": {
+       "role": {
+        "text": "Senior engineer",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Leads projects within the team",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Technical leadership on projects",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Austin",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$138K a year",
+        "range": {
+         "low": 137812.5,
+         "high": 137812.5,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "Public stock grants vest on schedule",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$20K to $28K a year",
+        "range": {
+         "low": 20000.0,
+         "high": 28000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_001",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$114K to $138K",
+        "range": {
+         "low": 113667.50000000004,
+         "high": 138307.49999999997,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "26.4\u201342.1 months of expenses",
+        "range": {
+         "low": 26.4,
+         "high": 42.1,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Austin",
+        "range": null,
+        "evidence_id": "ev_U_004",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Hybrid, 2\u20133 office days",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Austin",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201345 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 45.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Low",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "High: steady company, clear ladder",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "Medium: startup moves get harder with a higher salary",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Slower learning curve; feeling of a road not taken",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "3/5 (you weighted it 5/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "stability": {
+        "text": "5/5 (you weighted it 3/5)",
+        "range": {
+         "low": 5.0,
+         "high": 5.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "location": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-B-001",
+       "E-B-002"
+      ]
+     },
+     {
+      "timepoint": "m60",
+      "headline": "Year five: senior or staff engineer",
+      "career": {
+       "role": {
+        "text": "Senior or staff engineer",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Leads cross-team work",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Specialist with a clear niche",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Austin",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$160K a year",
+        "range": {
+         "low": 159535.19531250006,
+         "high": 159535.19531250006,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "Public stock grants vest on schedule",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$20K to $28K a year",
+        "range": {
+         "low": 20000.0,
+         "high": 28000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_001",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$284K to $346K",
+        "range": {
+         "low": 284227.9296874999,
+         "high": 345827.92968749994,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "65.9\u2013105.2 months of expenses",
+        "range": {
+         "low": 65.9,
+         "high": 105.2,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Austin",
+        "range": null,
+        "evidence_id": "ev_U_004",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Hybrid, 2\u20133 office days",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Austin",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201345 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 45.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "High: steady company, clear ladder",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "Medium: startup moves get harder with a higher salary",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Slower learning curve; feeling of a road not taken",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "3/5 (you weighted it 5/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "stability": {
+        "text": "5/5 (you weighted it 3/5)",
+        "range": {
+         "low": 5.0,
+         "high": 5.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "location": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_008",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-B-001",
+       "E-B-002",
+       "E-B-003"
+      ]
+     }
+    ]
+   }
+  },
+  "evidence": [
+   {
+    "id": "ev_U_001",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path A is based in Boston (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-26T19:46:51.626167+00:00"
+   },
+   {
+    "id": "ev_U_002",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path A: Grad school in Boston. Should I do a two-year master's in machine learning in Boston,",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-26T19:46:51.626182+00:00"
+   },
+   {
+    "id": "ev_U_003",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path B pays $125,000 a year (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-26T19:46:51.626198+00:00"
+   },
+   {
+    "id": "ev_U_004",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path B is based in Austin (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-26T19:46:51.626205+00:00"
+   },
+   {
+    "id": "ev_U_005",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path B: Stable job in Austin. take a full-time software engineering job in Austin at $125K? Tuition is about $60K a year",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-26T19:46:51.626212+00:00"
+   },
+   {
+    "id": "ev_U_006",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "You have about $25,000 saved (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-26T19:46:51.626223+00:00"
+   },
+   {
+    "id": "ev_U_007",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "You spend about $3,000 a month (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-26T19:46:51.626232+00:00"
+   },
+   {
+    "id": "ev_U_008",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Your priorities (1-5): learning 5, stability 3, ownership 3, location 3, autonomy 3.",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-26T19:46:51.626244+00:00"
+   },
+   {
+    "id": "ev_U_009",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Goal: Keep learning fast",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-26T19:46:51.626254+00:00"
+   },
+   {
+    "id": "ev_A_001",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "evidence-resolver",
+    "model_id": "muse-spark-1.3",
+    "text": "Typical annual rent for a one-bedroom apartment in Boston: Offline mock: not looked up (Typical annual rent for a one-bedroom apartment in Boston). Using a rough built-in estimate.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-26T19:46:51.728282+00:00"
+   },
+   {
+    "id": "ev_B_001",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "evidence-resolver",
+    "model_id": "muse-spark-1.3",
+    "text": "Typical annual rent for a one-bedroom apartment in Austin: Offline mock: not looked up (Typical annual rent for a one-bedroom apartment in Austin). Using a rough built-in estimate.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-26T19:46:51.728366+00:00"
+   },
+   {
+    "id": "ev_A_002",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-26T19:46:51.779274+00:00"
+   },
+   {
+    "id": "ev_A_003",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Typical progression for a engineer at a school.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-26T19:46:51.779304+00:00"
+   },
+   {
+    "id": "ev_A_004",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Professional network grows around Boston.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-26T19:46:51.779314+00:00"
+   },
+   {
+    "id": "ev_A_005",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "finance",
+    "model_id": "muse-spark-1.3",
+    "text": "Equity at a school is illiquid until an exit.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-26T19:46:51.779491+00:00"
+   },
+   {
+    "id": "ev_A_006",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "lifestyle",
+    "model_id": "muse-spark-1.3",
+    "text": "Hours and stress typical of a school role.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-26T19:46:51.779520+00:00"
+   },
+   {
+    "id": "ev_A_007",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "risk",
+    "model_id": "muse-spark-1.3",
+    "text": "Risk profile of a school path.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-26T19:46:51.779622+00:00"
+   },
+   {
+    "id": "ev_A_008",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "values",
+    "model_id": "muse-spark-1.3",
+    "text": "Scored against the priorities you gave.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-26T19:46:51.779657+00:00"
+   },
+   {
+    "id": "ev_A_009",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-26T19:46:51.779723+00:00"
+   },
+   {
+    "id": "ev_B_002",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-26T19:46:51.780172+00:00"
+   },
+   {
+    "id": "ev_B_003",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Typical progression for a Software engineer at a established company.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-26T19:46:51.780189+00:00"
+   },
+   {
+    "id": "ev_B_004",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Professional network grows around Austin.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-26T19:46:51.780201+00:00"
+   },
+   {
+    "id": "ev_B_005",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "finance",
+    "model_id": "muse-spark-1.3",
+    "text": "Equity at a established company is illiquid until an exit.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-26T19:46:51.780340+00:00"
+   },
+   {
+    "id": "ev_B_006",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "lifestyle",
+    "model_id": "muse-spark-1.3",
+    "text": "Hours and stress typical of a established company role.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-26T19:46:51.780366+00:00"
+   },
+   {
+    "id": "ev_B_007",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "risk",
+    "model_id": "muse-spark-1.3",
+    "text": "Risk profile of a established company path.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-26T19:46:51.780458+00:00"
+   },
+   {
+    "id": "ev_B_008",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "values",
+    "model_id": "muse-spark-1.3",
+    "text": "Scored against the priorities you gave.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-26T19:46:51.780490+00:00"
+   },
+   {
+    "id": "ev_B_009",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-26T19:46:51.780551+00:00"
+   }
+  ],
+  "events": [
+   {
+    "id": "E-A-001",
+    "branch": "A",
+    "month": 8,
+    "kind": "turning_point",
+    "title": "Joined a research group",
+    "detail": "A faculty member takes you on.",
+    "caused_by": [],
+    "evidence_id": "ev_A_003",
+    "version": 1
+   },
+   {
+    "id": "E-A-002",
+    "branch": "A",
+    "month": 22,
+    "kind": "turning_point",
+    "title": "Graduated",
+    "detail": "Degree finished; job search begins.",
+    "caused_by": [],
+    "evidence_id": "ev_A_003",
+    "version": 1
+   },
+   {
+    "id": "E-A-003",
+    "branch": "A",
+    "month": 25,
+    "kind": "turning_point",
+    "title": "Started first post-degree role",
+    "detail": "Higher starting level than before.",
+    "caused_by": [],
+    "evidence_id": "ev_A_003",
+    "version": 1
+   },
+   {
+    "id": "E-B-001",
+    "branch": "B",
+    "month": 6,
+    "kind": "turning_point",
+    "title": "Finished first performance cycle",
+    "detail": "Solid review; settled into the team.",
+    "caused_by": [],
+    "evidence_id": "ev_B_003",
+    "version": 1
+   },
+   {
+    "id": "E-B-002",
+    "branch": "B",
+    "month": 14,
+    "kind": "turning_point",
+    "title": "Promoted to senior engineer",
+    "detail": "Promotion with a raise.",
+    "caused_by": [],
+    "evidence_id": "ev_B_003",
+    "version": 1
+   },
+   {
+    "id": "E-B-003",
+    "branch": "B",
+    "month": 40,
+    "kind": "turning_point",
+    "title": "Led a cross-team project",
+    "detail": "First project spanning several teams.",
+    "caused_by": [],
+    "evidence_id": "ev_B_003",
+    "version": 1
+   }
+  ],
+  "shocks": [],
+  "suggested_shocks": [
+   {
+    "label": "Scholarship after 6 months",
+    "description": "A scholarship covers the remaining tuition.",
+    "month": 6
+   },
+   {
+    "label": "Layoffs hit at month 18",
+    "description": "The company cuts 10% of staff.",
+    "month": 18
+   },
+   {
+    "label": "Family needs you nearby",
+    "description": "A family situation makes living near home matter more.",
+    "month": 20
+   }
+  ],
+  "checks": [
+   {
+    "name": "Branch isolation",
+    "passed": true,
+    "repaired": 0,
+    "detail": "No world cites the other world's evidence or events."
+   },
+   {
+    "name": "Timeline order",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Every event follows its causes."
+   },
+   {
+    "name": "Money reconciles",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Savings match pay, tax and costs at every timepoint."
+   },
+   {
+    "name": "Facts have sources",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Every FACT has a citation; every ASSUMPTION came from you."
+   },
+   {
+    "name": "No unsupported values",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Values without evidence are shown as unknown, not filled in."
+   },
+   {
+    "name": "Story holds together",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Both worlds hold together."
+   }
+  ],
+  "comparison": {
+   "summary": "Path A (Grad school in Boston) leans toward learning; Path B (Stable job in Austin) leans toward stability.",
+   "dominant_assumptions": [
+    "How long a job search takes if things go wrong",
+    "Housing cost difference between the cities",
+    "Whether equity ends up worth anything"
+   ],
+   "what_would_change_my_mind": [
+    "The startup's runway is shorter than 12 months",
+    "The stable role offers a fast promotion track"
+   ]
+  },
+  "created_at": "2026-10-26T19:46:51.626092+00:00"
+ },
+ "precomputed_shock": {
+  "request": {
+   "label": "Scholarship after 6 months",
+   "description": "A merit scholarship covers the rest of the tuition.",
+   "month": 6
+  },
+  "simulation": {
+   "id": "demo-grad-school-vs-job",
+   "slug": "grad-school-vs-job",
+   "mode": "mock",
+   "status": "ready",
+   "version": 2,
+   "decision": {
+    "title": "Grad school Boston vs Stable job Austin",
+    "question": "Should I do a two-year master's in machine learning in Boston, or take a full-time software engineering job in Austin at $125K? Tuition is about $60K a year",
+    "path_a": {
+     "label": "Grad school in Boston",
+     "city": "Boston",
+     "role": null,
+     "org_type": "school",
+     "annual_pay_usd": null,
+     "equity": null,
+     "notes": "Should I do a two-year master's in machine learning in Boston,"
+    },
+    "path_b": {
+     "label": "Stable job in Austin",
+     "city": "Austin",
+     "role": "Software engineer",
+     "org_type": "established_company",
+     "annual_pay_usd": 125000.0,
+     "equity": null,
+     "notes": "take a full-time software engineering job in Austin at $125K? Tuition is about $60K a year"
+    },
+    "priorities": {
+     "learning": 5,
+     "stability": 3,
+     "ownership": 3,
+     "location": 3,
+     "autonomy": 3
+    },
+    "goals": [
+     "Keep learning fast"
+    ],
+    "fears": [],
+    "constraints": [
+     "Tuition is about $60K a year."
+    ],
+    "current": {
+     "city": null,
+     "profession": "Software engineer",
+     "age_band": null,
+     "savings_usd": 25000.0,
+     "monthly_expenses_usd": 3000.0
+    },
+    "clarifying_questions": []
+   },
+   "branches": {
+    "A": {
+     "branch": "A",
+     "label": "Grad school in Boston",
+     "summary": "In Path A you build steadily in Boston. Two years of lost income and tuition costs is the main risk.",
+     "top_tradeoffs": [
+      "More learning, less stability",
+      "More predictability, less ownership",
+      "Life built around Boston"
+     ],
+     "confidence": "medium",
+     "persona": {
+      "name": "Future A",
+      "voice": "Curious, a little academic, enthusiastic about ideas.",
+      "temperament": "Stimulated but impatient to earn again."
+     },
+     "finance_inputs": {
+      "start_savings": 25000.0,
+      "annual_pay": 0.0,
+      "effective_tax_rate": 0.31,
+      "annual_housing_low": 32000.0,
+      "annual_housing_high": 42000.0,
+      "annual_other_costs": 21600.0,
+      "raise_pct_per_year": 0.04,
+      "equity_note": null,
+      "pay_segments": [
+       {
+        "start_month": 0,
+        "end_month": 24,
+        "annual_pay": 0.0,
+        "label": "studying"
+       },
+       {
+        "start_month": 24,
+        "end_month": null,
+        "annual_pay": 150000.0,
+        "label": "first role after the degree"
+       }
+      ],
+      "one_time_costs": [
+       {
+        "month": 0,
+        "amount": 60000.0,
+        "label": "tuition, year 1"
+       },
+       {
+        "month": 12,
+        "amount": 60000.0,
+        "label": "tuition, year 2"
+       },
+       {
+        "month": 6,
+        "amount": -30000.0,
+        "label": "Scholarship after 6 months"
+       }
+      ]
+     },
+     "snapshots": [
+      {
+       "timepoint": "m0",
+       "headline": "Day one: full-time student in Boston",
+       "career": {
+        "role": {
+         "text": "Full-time student",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "studying",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Coursework and research",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Foundations and theory",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "No salary (studying)",
+         "range": {
+          "low": 0.0,
+          "high": 0.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_005",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$32K to $42K a year",
+         "range": {
+          "low": 32000.0,
+          "high": 42000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_001",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$25K",
+         "range": {
+          "low": 25000.0,
+          "high": 25000.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "4.6\u20135.8 months of expenses",
+         "range": {
+          "low": 4.6,
+          "high": 5.8,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Boston",
+         "range": null,
+         "evidence_id": "ev_U_001",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Hybrid, 2\u20133 office days",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Boston",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "45\u201355 hours a week",
+         "range": {
+          "low": 45.0,
+          "high": 55.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: depends on the job market at graduation",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: industry roles remain open",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Two years of lost income and tuition costs",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": []
+      },
+      {
+       "timepoint": "m6",
+       "headline": "Six months in: student, deep in coursework",
+       "career": {
+        "role": {
+         "text": "Student, deep in coursework",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "studying",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Thesis or capstone underway",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Research methods",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "No salary (studying)",
+         "range": {
+          "low": 0.0,
+          "high": 0.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_005",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$32K to $42K a year",
+         "range": {
+          "low": 32000.0,
+          "high": 42000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_001",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$61K to $68K in debt",
+         "range": {
+          "low": -67880.0,
+          "high": -60720.00000000001,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "0 months of expenses",
+         "range": {
+          "low": 0.0,
+          "high": 0.0,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Boston",
+         "range": null,
+         "evidence_id": "ev_U_001",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Hybrid, 2\u20133 office days",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Boston",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "45\u201355 hours a week",
+         "range": {
+          "low": 45.0,
+          "high": 55.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "stress": {
+         "text": "High for a few months, then easing",
+         "range": null,
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: depends on the job market at graduation",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: industry roles remain open",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Two years of lost income and tuition costs",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": [
+        "E-A-004"
+       ]
+      },
+      {
+       "timepoint": "m24",
+       "headline": "Year two: graduated; first role after the degree",
+       "career": {
+        "role": {
+         "text": "Graduated; first role after the degree",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Entry role at a higher level",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Applied specialism",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Boston",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "High",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$150K a year",
+         "range": {
+          "low": 150000.0,
+          "high": 150000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_005",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$32K to $42K a year",
+         "range": {
+          "low": 32000.0,
+          "high": 42000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_001",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$168K to $197K in debt",
+         "range": {
+          "low": -196520.0,
+          "high": -167880.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "0 months of expenses",
+         "range": {
+          "low": 0.0,
+          "high": 0.0,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Boston",
+         "range": null,
+         "evidence_id": "ev_U_001",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Hybrid, 2\u20133 office days",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Boston",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "45\u201355 hours a week",
+         "range": {
+          "low": 45.0,
+          "high": 55.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "stress": {
+         "text": "High for a few months, then easing",
+         "range": null,
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: depends on the job market at graduation",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: industry roles remain open",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Two years of lost income and tuition costs",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "5/5 (you weighted it 5/5)",
+         "range": {
+          "low": 5.0,
+          "high": 5.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "stability": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "location": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-A-004",
+        "E-A-001",
+        "E-A-002"
+       ]
+      },
+      {
+       "timepoint": "m60",
+       "headline": "Year five: specialist in their field",
+       "career": {
+        "role": {
+         "text": "Specialist in their field",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Recognised specialist",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Deep expertise",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Boston",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "High",
+         "range": null,
+         "evidence_id": "ev_A_003",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$169K a year",
+         "range": {
+          "low": 168729.6,
+          "high": 168729.6,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_005",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$32K to $42K a year",
+         "range": {
+          "low": 32000.0,
+          "high": 42000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_001",
+         "status": "known"
+        },
+        "savings": {
+         "text": "\u2212$71K to $886",
+         "range": {
+          "low": -70714.39999999998,
+          "high": 885.5999999999767,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "0\u20130.2 months of expenses",
+         "range": {
+          "low": 0.0,
+          "high": 0.2,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Boston",
+         "range": null,
+         "evidence_id": "ev_U_001",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Hybrid, 2\u20133 office days",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Boston",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "45\u201355 hours a week",
+         "range": {
+          "low": 45.0,
+          "high": 55.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: depends on the job market at graduation",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: industry roles remain open",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Two years of lost income and tuition costs",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "5/5 (you weighted it 5/5)",
+         "range": {
+          "low": 5.0,
+          "high": 5.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "stability": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "location": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-A-004",
+        "E-A-001",
+        "E-A-002",
+        "E-A-003"
+       ]
+      }
+     ]
+    },
+    "B": {
+     "branch": "B",
+     "label": "Stable job in Austin",
+     "summary": "In Path B you build steadily in Austin. Slower learning curve; feeling of a road not taken is the main risk.",
+     "top_tradeoffs": [
+      "More stability, less learning",
+      "More predictability, less ownership",
+      "Life built around Austin"
+     ],
+     "confidence": "medium",
+     "persona": {
+      "name": "Future B",
+      "voice": "Calm, measured, a bit wistful.",
+      "temperament": "Comfortable and secure; sometimes wonders what they'd have learned elsewhere."
+     },
+     "finance_inputs": {
+      "start_savings": 25000.0,
+      "annual_pay": 125000.0,
+      "effective_tax_rate": 0.25,
+      "annual_housing_low": 20000.0,
+      "annual_housing_high": 28000.0,
+      "annual_other_costs": 21600.0,
+      "raise_pct_per_year": 0.05,
+      "equity_note": null,
+      "pay_segments": [],
+      "one_time_costs": []
+     },
+     "snapshots": [
+      {
+       "timepoint": "m0",
+       "headline": "Day one: new-hire engineer in Austin",
+       "career": {
+        "role": {
+         "text": "New-hire engineer",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "scope": {
+         "text": "One well-defined area",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Learning internal systems",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$125K a year",
+         "range": {
+          "low": 125000.0,
+          "high": 125000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_003",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "Public stock grants vest on schedule",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$20K to $28K a year",
+         "range": {
+          "low": 20000.0,
+          "high": 28000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_001",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$25K",
+         "range": {
+          "low": 25000.0,
+          "high": 25000.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "5.8\u20137.6 months of expenses",
+         "range": {
+          "low": 5.8,
+          "high": 7.6,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Austin",
+         "range": null,
+         "evidence_id": "ev_U_004",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Hybrid, 2\u20133 office days",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Austin",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201345 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 45.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "High: steady company, clear ladder",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "Medium: startup moves get harder with a higher salary",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Slower learning curve; feeling of a road not taken",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": []
+      },
+      {
+       "timepoint": "m6",
+       "headline": "Six months in: fully ramped on the team",
+       "career": {
+        "role": {
+         "text": "Fully ramped on the team",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Owns a service",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Deep in one stack",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$125K a year",
+         "range": {
+          "low": 125000.0,
+          "high": 125000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_003",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "Public stock grants vest on schedule",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$20K to $28K a year",
+         "range": {
+          "low": 20000.0,
+          "high": 28000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_001",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$46K to $52K",
+         "range": {
+          "low": 45994.99999999999,
+          "high": 52155.000000000015,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "10.7\u201315.9 months of expenses",
+         "range": {
+          "low": 10.7,
+          "high": 15.9,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Austin",
+         "range": null,
+         "evidence_id": "ev_U_004",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Hybrid, 2\u20133 office days",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Austin",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201345 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 45.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Low",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "High: steady company, clear ladder",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "Medium: startup moves get harder with a higher salary",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Slower learning curve; feeling of a road not taken",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": [
+        "E-B-001"
+       ]
+      },
+      {
+       "timepoint": "m24",
+       "headline": "Year two: senior engineer",
+       "career": {
+        "role": {
+         "text": "Senior engineer",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Leads projects within the team",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Technical leadership on projects",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Austin",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$138K a year",
+         "range": {
+          "low": 137812.5,
+          "high": 137812.5,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "Public stock grants vest on schedule",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$20K to $28K a year",
+         "range": {
+          "low": 20000.0,
+          "high": 28000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_001",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$114K to $138K",
+         "range": {
+          "low": 113667.50000000004,
+          "high": 138307.49999999997,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "26.4\u201342.1 months of expenses",
+         "range": {
+          "low": 26.4,
+          "high": 42.1,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Austin",
+         "range": null,
+         "evidence_id": "ev_U_004",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Hybrid, 2\u20133 office days",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Austin",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201345 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 45.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Low",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "High: steady company, clear ladder",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "Medium: startup moves get harder with a higher salary",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Slower learning curve; feeling of a road not taken",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "3/5 (you weighted it 5/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "stability": {
+         "text": "5/5 (you weighted it 3/5)",
+         "range": {
+          "low": 5.0,
+          "high": 5.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "location": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-B-001",
+        "E-B-002"
+       ]
+      },
+      {
+       "timepoint": "m60",
+       "headline": "Year five: senior or staff engineer",
+       "career": {
+        "role": {
+         "text": "Senior or staff engineer",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Leads cross-team work",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Specialist with a clear niche",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Austin",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$160K a year",
+         "range": {
+          "low": 159535.19531250006,
+          "high": 159535.19531250006,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "Public stock grants vest on schedule",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$20K to $28K a year",
+         "range": {
+          "low": 20000.0,
+          "high": 28000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_001",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$284K to $346K",
+         "range": {
+          "low": 284227.9296874999,
+          "high": 345827.92968749994,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "65.9\u2013105.2 months of expenses",
+         "range": {
+          "low": 65.9,
+          "high": 105.2,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Austin",
+         "range": null,
+         "evidence_id": "ev_U_004",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Hybrid, 2\u20133 office days",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Austin",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201345 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 45.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "High: steady company, clear ladder",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "Medium: startup moves get harder with a higher salary",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Slower learning curve; feeling of a road not taken",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "3/5 (you weighted it 5/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "stability": {
+         "text": "5/5 (you weighted it 3/5)",
+         "range": {
+          "low": 5.0,
+          "high": 5.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "location": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_008",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-B-001",
+        "E-B-002",
+        "E-B-003"
+       ]
+      }
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "id": "ev_U_001",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path A is based in Boston (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-26T19:46:51.626167+00:00"
+    },
+    {
+     "id": "ev_U_002",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path A: Grad school in Boston. Should I do a two-year master's in machine learning in Boston,",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-26T19:46:51.626182+00:00"
+    },
+    {
+     "id": "ev_U_003",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path B pays $125,000 a year (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-26T19:46:51.626198+00:00"
+    },
+    {
+     "id": "ev_U_004",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path B is based in Austin (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-26T19:46:51.626205+00:00"
+    },
+    {
+     "id": "ev_U_005",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path B: Stable job in Austin. take a full-time software engineering job in Austin at $125K? Tuition is about $60K a year",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-26T19:46:51.626212+00:00"
+    },
+    {
+     "id": "ev_U_006",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "You have about $25,000 saved (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-26T19:46:51.626223+00:00"
+    },
+    {
+     "id": "ev_U_007",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "You spend about $3,000 a month (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-26T19:46:51.626232+00:00"
+    },
+    {
+     "id": "ev_U_008",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Your priorities (1-5): learning 5, stability 3, ownership 3, location 3, autonomy 3.",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-26T19:46:51.626244+00:00"
+    },
+    {
+     "id": "ev_U_009",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Goal: Keep learning fast",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-26T19:46:51.626254+00:00"
+    },
+    {
+     "id": "ev_A_001",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "evidence-resolver",
+     "model_id": "muse-spark-1.3",
+     "text": "Typical annual rent for a one-bedroom apartment in Boston: Offline mock: not looked up (Typical annual rent for a one-bedroom apartment in Boston). Using a rough built-in estimate.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-26T19:46:51.728282+00:00"
+    },
+    {
+     "id": "ev_B_001",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "evidence-resolver",
+     "model_id": "muse-spark-1.3",
+     "text": "Typical annual rent for a one-bedroom apartment in Austin: Offline mock: not looked up (Typical annual rent for a one-bedroom apartment in Austin). Using a rough built-in estimate.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-26T19:46:51.728366+00:00"
+    },
+    {
+     "id": "ev_A_002",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:51.779274+00:00"
+    },
+    {
+     "id": "ev_A_003",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Typical progression for a engineer at a school.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:51.779304+00:00"
+    },
+    {
+     "id": "ev_A_004",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Professional network grows around Boston.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-26T19:46:51.779314+00:00"
+    },
+    {
+     "id": "ev_A_005",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "finance",
+     "model_id": "muse-spark-1.3",
+     "text": "Equity at a school is illiquid until an exit.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:51.779491+00:00"
+    },
+    {
+     "id": "ev_A_006",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "lifestyle",
+     "model_id": "muse-spark-1.3",
+     "text": "Hours and stress typical of a school role.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-26T19:46:51.779520+00:00"
+    },
+    {
+     "id": "ev_A_007",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "risk",
+     "model_id": "muse-spark-1.3",
+     "text": "Risk profile of a school path.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:51.779622+00:00"
+    },
+    {
+     "id": "ev_A_008",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "values",
+     "model_id": "muse-spark-1.3",
+     "text": "Scored against the priorities you gave.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:51.779657+00:00"
+    },
+    {
+     "id": "ev_A_009",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:51.779723+00:00"
+    },
+    {
+     "id": "ev_B_002",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:51.780172+00:00"
+    },
+    {
+     "id": "ev_B_003",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Typical progression for a Software engineer at a established company.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:51.780189+00:00"
+    },
+    {
+     "id": "ev_B_004",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Professional network grows around Austin.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-26T19:46:51.780201+00:00"
+    },
+    {
+     "id": "ev_B_005",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "finance",
+     "model_id": "muse-spark-1.3",
+     "text": "Equity at a established company is illiquid until an exit.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:51.780340+00:00"
+    },
+    {
+     "id": "ev_B_006",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "lifestyle",
+     "model_id": "muse-spark-1.3",
+     "text": "Hours and stress typical of a established company role.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-26T19:46:51.780366+00:00"
+    },
+    {
+     "id": "ev_B_007",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "risk",
+     "model_id": "muse-spark-1.3",
+     "text": "Risk profile of a established company path.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:51.780458+00:00"
+    },
+    {
+     "id": "ev_B_008",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "values",
+     "model_id": "muse-spark-1.3",
+     "text": "Scored against the priorities you gave.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:51.780490+00:00"
+    },
+    {
+     "id": "ev_B_009",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:51.780551+00:00"
+    },
+    {
+     "id": "ev_U_010",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "shock",
+     "model_id": null,
+     "text": "For \u201cScholarship after 6 months\u201d: The scholarship saves about $30K",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:55.408648+00:00"
+    },
+    {
+     "id": "ev_A_010",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "shock",
+     "model_id": null,
+     "text": "You applied a shock: Scholarship after 6 months. A merit scholarship covers the rest of the tuition.",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-26T19:46:55.408665+00:00"
+    },
+    {
+     "id": "ev_A_011",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 6.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:55.560887+00:00"
+    },
+    {
+     "id": "ev_A_012",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "lifestyle",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 6.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:55.561035+00:00"
+    },
+    {
+     "id": "ev_A_013",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "risk",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 6.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:55.561188+00:00"
+    },
+    {
+     "id": "ev_A_014",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "values",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 6.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-26T19:46:55.561245+00:00"
+    }
+   ],
+   "events": [
+    {
+     "id": "E-A-001",
+     "branch": "A",
+     "month": 8,
+     "kind": "turning_point",
+     "title": "Joined a research group",
+     "detail": "A faculty member takes you on.",
+     "caused_by": [],
+     "evidence_id": "ev_A_003",
+     "version": 1
+    },
+    {
+     "id": "E-A-002",
+     "branch": "A",
+     "month": 22,
+     "kind": "turning_point",
+     "title": "Graduated",
+     "detail": "Degree finished; job search begins.",
+     "caused_by": [],
+     "evidence_id": "ev_A_003",
+     "version": 1
+    },
+    {
+     "id": "E-A-003",
+     "branch": "A",
+     "month": 25,
+     "kind": "turning_point",
+     "title": "Started first post-degree role",
+     "detail": "Higher starting level than before.",
+     "caused_by": [],
+     "evidence_id": "ev_A_003",
+     "version": 1
+    },
+    {
+     "id": "E-B-001",
+     "branch": "B",
+     "month": 6,
+     "kind": "turning_point",
+     "title": "Finished first performance cycle",
+     "detail": "Solid review; settled into the team.",
+     "caused_by": [],
+     "evidence_id": "ev_B_003",
+     "version": 1
+    },
+    {
+     "id": "E-B-002",
+     "branch": "B",
+     "month": 14,
+     "kind": "turning_point",
+     "title": "Promoted to senior engineer",
+     "detail": "Promotion with a raise.",
+     "caused_by": [],
+     "evidence_id": "ev_B_003",
+     "version": 1
+    },
+    {
+     "id": "E-B-003",
+     "branch": "B",
+     "month": 40,
+     "kind": "turning_point",
+     "title": "Led a cross-team project",
+     "detail": "First project spanning several teams.",
+     "caused_by": [],
+     "evidence_id": "ev_B_003",
+     "version": 1
+    },
+    {
+     "id": "E-A-004",
+     "branch": "A",
+     "month": 6,
+     "kind": "shock",
+     "title": "Won a scholarship",
+     "detail": "Remaining tuition covered.",
+     "caused_by": [
+      "S-01"
+     ],
+     "evidence_id": "ev_A_010",
+     "version": 2
+    }
+   ],
+   "shocks": [
+    {
+     "id": "S-01",
+     "label": "Scholarship after 6 months",
+     "description": "A merit scholarship covers the rest of the tuition.",
+     "month": 6,
+     "applies_to": [
+      "A"
+     ],
+     "not_applied_because": {
+      "B": "This shock doesn't touch Path B: nothing in this world depends on it."
+     },
+     "changes": [
+      {
+       "branch": "A",
+       "timepoint": "m6",
+       "field": "lifestyle.stress",
+       "before": "High",
+       "after": "High for a few months, then easing",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "finance.savings",
+        "finance.runway_months"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m24",
+       "field": "finance.savings",
+       "before": "$198K to $227K in debt",
+       "after": "$168K to $197K in debt",
+       "because": [
+        "S-01",
+        "E-A-004"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m24",
+       "field": "lifestyle.stress",
+       "before": "Medium",
+       "after": "High for a few months, then easing",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "finance.savings",
+        "finance.runway_months"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m60",
+       "field": "finance.savings",
+       "before": "$29K to $101K in debt",
+       "after": "\u2212$71K to $886",
+       "because": [
+        "S-01",
+        "E-A-004"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m60",
+       "field": "finance.runway_months",
+       "before": "0 months of expenses",
+       "after": "0\u20130.2 months of expenses",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "finance.savings"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m60",
+       "field": "lifestyle.stress",
+       "before": "Low",
+       "after": "Medium",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "finance.savings",
+        "finance.runway_months"
+       ]
+      }
+     ],
+     "front_pages": [
+      {
+       "branch": "A",
+       "headline": "Scholarship after 6 months. By year two: graduated; first role after the degree.",
+       "deck": "Savings at year two: $168K to $197K in debt. Stimulated but impatient to earn again.",
+       "changed_because": "Scholarship after 6 months \u2192 savings at year 2: $198K to $227K in debt \u2192 $168K to $197K in debt.",
+       "unchanged": false
+      },
+      {
+       "branch": "B",
+       "headline": "Year two: senior engineer.",
+       "deck": "Savings at year two: $114K to $138K.",
+       "changed_because": "This shock happens somewhere this world never went.",
+       "unchanged": true
+      }
+     ],
+     "verdict": {
+      "more_robust": "B",
+      "why": "Path B is untouched by this shock.",
+      "dominant_assumption": "How long a job search takes if things go wrong",
+      "confidence": "medium"
+     },
+     "from_version": 1,
+     "to_version": 2,
+     "created_at": "2026-10-26T19:46:55.408570+00:00"
+    }
+   ],
+   "suggested_shocks": [
+    {
+     "label": "Scholarship after 6 months",
+     "description": "A scholarship covers the remaining tuition.",
+     "month": 6
+    },
+    {
+     "label": "Layoffs hit at month 18",
+     "description": "The company cuts 10% of staff.",
+     "month": 18
+    },
+    {
+     "label": "Family needs you nearby",
+     "description": "A family situation makes living near home matter more.",
+     "month": 20
+    }
+   ],
+   "checks": [
+    {
+     "name": "Branch isolation",
+     "passed": true,
+     "repaired": 0,
+     "detail": "No world cites the other world's evidence or events."
+    },
+    {
+     "name": "Timeline order",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Every event follows its causes."
+    },
+    {
+     "name": "Money reconciles",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Savings match pay, tax and costs at every timepoint."
+    },
+    {
+     "name": "Facts have sources",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Every FACT has a citation; every ASSUMPTION came from you."
+    },
+    {
+     "name": "No unsupported values",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Values without evidence are shown as unknown, not filled in."
+    },
+    {
+     "name": "Story holds together",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Both worlds hold together."
+    }
+   ],
+   "comparison": {
+    "summary": "Path A (Grad school in Boston) leans toward learning; Path B (Stable job in Austin) leans toward stability.",
+    "dominant_assumptions": [
+     "How long a job search takes if things go wrong",
+     "Housing cost difference between the cities",
+     "Whether equity ends up worth anything"
+    ],
+    "what_would_change_my_mind": [
+     "The startup's runway is shorter than 12 months",
+     "The stable role offers a fast promotion track"
+    ]
+   },
+   "created_at": "2026-10-26T19:46:51.626092+00:00"
+  }
+ },
+ "messages": [
+  {
+   "id": "6f9a737b633e",
+   "role": "user",
+   "text": "Was it worth it?",
+   "claims": [],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-26T19:46:52.088639+00:00"
+  },
+  {
+   "id": "e7dd2af13b76",
+   "role": "future_a",
+   "text": "Honestly? At month 8, joined a research group [E-A-001]. Most of what I'm learning is applied specialism [ev_A_003]. My role these days: graduated; first role after the degree [ev_A_003]. That's the part of this life I think about most.",
+   "claims": [
+    {
+     "start": 22,
+     "end": 46,
+     "ref": "E-A-001"
+    },
+    {
+     "start": 57,
+     "end": 105,
+     "ref": "ev_A_003"
+    },
+    {
+     "start": 117,
+     "end": 176,
+     "ref": "ev_A_003"
+    }
+   ],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-26T19:46:53.181293+00:00"
+  },
+  {
+   "id": "e19ba9e6ed33",
+   "role": "future_b",
+   "text": "I see it differently. At month 6, finished first performance cycle [E-B-001]. Most of what I'm learning is technical leadership on projects [ev_B_003]. My role these days: senior engineer [ev_B_003]. That's the part of this life I think about most.",
+   "claims": [
+    {
+     "start": 34,
+     "end": 67,
+     "ref": "E-B-001"
+    },
+    {
+     "start": 78,
+     "end": 140,
+     "ref": "ev_B_003"
+    },
+    {
+     "start": 152,
+     "end": 188,
+     "ref": "ev_B_003"
+    }
+   ],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-26T19:46:54.296149+00:00"
+  },
+  {
+   "id": "eff859a24d77",
+   "role": "future_a",
+   "text": "Fair, but from where I'm standing: What worries me most: two years of lost income and tuition costs [ev_A_007]. Stress? medium [ev_A_006]. That's the part of this life I think about most.",
+   "claims": [
+    {
+     "start": 6,
+     "end": 100,
+     "ref": "ev_A_007"
+    },
+    {
+     "start": 112,
+     "end": 127,
+     "ref": "ev_A_006"
+    }
+   ],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-26T19:46:55.252689+00:00"
+  }
+ ],
+ "postcards": {
+  "A": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTM2IDEwMjQiIHdpZHRoPSIxNTM2IiBoZWlnaHQ9IjEwMjQiPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFhMWQyNCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzJGNkZDQyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTUzNiIgaGVpZ2h0PSIxMDI0IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgNzYwIEwxODAgNjQwIEwzMjAgNzAwIEw1MjAgNTYwIEw3MDAgNjkwIEw5MDAgNjAwIEwxMTAwIDcwMCBMMTMwMCA2MTAgTDE1MzYgNzIwIEwxNTM2IDEwMjQgTDAgMTAyNFoiIGZpbGw9IiMwZDBlMTIiIG9wYWNpdHk9Ii44NSIvPgo8cmVjdCB4PSI0MCIgeT0iNDAiIHdpZHRoPSIxNDU2IiBoZWlnaHQ9Ijk0NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWNlOGRmIiBzdHJva2Utd2lkdGg9IjQiIG9wYWNpdHk9Ii42Ii8+Cjx0ZXh0IHg9IjgwIiB5PSIxNjAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSI5NiIgZmlsbD0iI2VjZThkZiI+R3JlZXRpbmdzIGZyb20gQm9zdG9uPC90ZXh0Pgo8dGV4dCB4PSI4MCIgeT0iOTQwIiBmb250LWZhbWlseT0iR2VvcmdpYSwgc2VyaWYiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZm9udC1zaXplPSI0NCIgZmlsbD0iI2VjZThkZiI+UGF0aCBBIMK3IEJvc3RvbiDCtyBtb250aCAyNDwvdGV4dD4KPHRleHQgeD0iMTQ1NiIgeT0iOTQwIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI0IiBmaWxsPSIjZWNlOGRmIiBvcGFjaXR5PSIuNyI+T0ZGTElORSBNT0NLIMK3IG5vdCBnZW5lcmF0ZWQgYnkgTXVzZSBJbWFnZTwvdGV4dD4KPC9zdmc+",
+  "B": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTM2IDEwMjQiIHdpZHRoPSIxNTM2IiBoZWlnaHQ9IjEwMjQiPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFhMWQyNCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0I4NjQxRSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTUzNiIgaGVpZ2h0PSIxMDI0IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgNzYwIEwxODAgNjQwIEwzMjAgNzAwIEw1MjAgNTYwIEw3MDAgNjkwIEw5MDAgNjAwIEwxMTAwIDcwMCBMMTMwMCA2MTAgTDE1MzYgNzIwIEwxNTM2IDEwMjQgTDAgMTAyNFoiIGZpbGw9IiMwZDBlMTIiIG9wYWNpdHk9Ii44NSIvPgo8cmVjdCB4PSI0MCIgeT0iNDAiIHdpZHRoPSIxNDU2IiBoZWlnaHQ9Ijk0NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWNlOGRmIiBzdHJva2Utd2lkdGg9IjQiIG9wYWNpdHk9Ii42Ii8+Cjx0ZXh0IHg9IjgwIiB5PSIxNjAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSI5NiIgZmlsbD0iI2VjZThkZiI+R3JlZXRpbmdzIGZyb20gQXVzdGluPC90ZXh0Pgo8dGV4dCB4PSI4MCIgeT0iOTQwIiBmb250LWZhbWlseT0iR2VvcmdpYSwgc2VyaWYiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZm9udC1zaXplPSI0NCIgZmlsbD0iI2VjZThkZiI+UGF0aCBCIMK3IEF1c3RpbiDCtyBtb250aCAyNDwvdGV4dD4KPHRleHQgeD0iMTQ1NiIgeT0iOTQwIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI0IiBmaWxsPSIjZWNlOGRmIiBvcGFjaXR5PSIuNyI+T0ZGTElORSBNT0NLIMK3IG5vdCBnZW5lcmF0ZWQgYnkgTXVzZSBJbWFnZTwvdGV4dD4KPC9zdmc+"
+ }
+}

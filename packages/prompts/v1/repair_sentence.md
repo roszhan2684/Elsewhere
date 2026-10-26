@@ -1,0 +1,1 @@
+Rewrite this sentence so it only uses facts from the allowed world and cites only allowed ids. Keep the same voice and meaning where possible. If nothing remains, return a short sentence saying you don't know that part. Return only the sentence.

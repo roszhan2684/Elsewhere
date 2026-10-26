@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+/* Elsewhere tokens — docs/design-direction.md */
+@theme {
+  --color-ink: #0d0e12;
+  --color-ink-2: #14161c;
+  --color-raised: #1a1d24;
+  --color-raised-2: #22262f;
+  --color-line: #2a2e38;
+  --color-line-2: #3a3f4b;
+  --color-paper: #ece8df;
+  --color-paper-2: #d6d2c9;
+  --color-soft: #b9b6ae;
+  --color-muted: #9a9aa3;
+  --color-faint: #6b6c74;
+  --color-path-a: #7eb6ff;
+  --color-path-b: #e8914a;
+  --color-path-a-ink: #2f6fcc;
+  --color-path-b-ink: #b8641e;
+  --color-shock: #ff5d73;
+  --color-newsprint: #f3eee3;
+  --color-newsprint-2: #e9e2d3;
+
+  --font-display: var(--font-newsreader), Georgia, serif;
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-path-a) 35%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-path-a);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.label-mono {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+@keyframes shock-pulse {
+  0% {
+    transform: scale(0.4);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(3.2);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  html,
+  body {
+    background: white;
+    color: black;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

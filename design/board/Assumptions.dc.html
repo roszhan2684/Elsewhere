@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>What decides this</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0D0E12}
+a{color:#7EB6FF}a:hover{color:#B5D4FF}
+input[type=range]{accent-color:#ECE8DF}
+</style>
+</helmet>
+<div style="min-height: 960px; box-sizing: border-box; background: #0D0E12; color: #ECE8DF; font-family: 'Geist', system-ui, sans-serif; padding: 48px clamp(16px, 4vw, 64px)">
+  <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
+
+    <div style="display: flex; flex-direction: column; gap: 10px">
+      <div style="font: 500 12px/1 'Geist Mono', monospace; letter-spacing: .14em; color: #9A9AA3">WHAT DECIDES THIS? · AFTER SHOCK · MONTH 24</div>
+      <h1 style="margin: 0; font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1">{{ headline }}</h1>
+      <div style="font-size: 16px; line-height: 1.5; color: #B9B6AE">Most decisive right now: <b style="color: #ECE8DF; font-weight: 500">{{ topName }}</b>. Drag an assumption — both worlds update instantly because this view is plain math, not a model call.</div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+
+      <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 26px; padding: 26px; border-radius: 18px; background: #1A1D24; border: 1px solid #2A2E38">
+        <div style="display: flex; justify-content: space-between; align-items: center"><span style="font: 500 12px/1 'Geist Mono', monospace; letter-spacing: .12em; color: #9A9AA3">YOUR ASSUMPTIONS</span><span style="font: 500 10px/1 'Geist Mono', monospace; letter-spacing: .08em; padding: 4px 6px; border-radius: 4px; border: 1px solid #ECE8DF">ASSUMPTION</span></div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; justify-content: space-between; gap: 12px"><label for="g" style="font-size: 15px">Job search after shutdown</label><span style="font-family: 'Geist Mono', monospace; font-size: 14px">{{ gText }}</span></div>
+          <input id="g" type="range" min="0" max="9" step="1" value="{{ g }}" onChange="{{ setG }}" style="width: 100%; min-height: 28px">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; justify-content: space-between; gap: 12px"><label for="h" style="font-size: 15px">Extra housing cost in SF</label><span style="font-family: 'Geist Mono', monospace; font-size: 14px">{{ hText }}</span></div>
+          <input id="h" type="range" min="0" max="24" step="1" value="{{ h }}" onChange="{{ setH }}" style="width: 100%; min-height: 28px">
+          <div style="font-size: 12px; color: #9A9AA3">Seeded from a grounded rent lookup at runtime · [FACT placeholder]</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; justify-content: space-between; gap: 12px"><label for="n" style="font-size: 15px">Salary in the next role</label><span style="font-family: 'Geist Mono', monospace; font-size: 14px">{{ nText }}</span></div>
+          <input id="n" type="range" min="120" max="200" step="5" value="{{ n }}" onChange="{{ setN }}" style="width: 100%; min-height: 28px">
+        </div>
+        <div style="height: 1px; background: #2A2E38"></div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 6px"><span style="font: 500 11px/1 'Geist Mono', monospace; color: #7EB6FF">A · CASH BY M24</span><span style="font-family: 'Newsreader', serif; font-size: 28px">{{ aText }}</span></div>
+          <div style="display: flex; flex-direction: column; gap: 6px"><span style="font: 500 11px/1 'Geist Mono', monospace; color: #E8914A">B · CASH BY M24</span><span style="font-family: 'Newsreader', serif; font-size: 28px">{{ bText }}</span></div>
+        </div>
+      </div>
+
+      <div style="flex: 2 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px; padding: 26px; border-radius: 18px; background: #14161C">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px"><span style="font: 500 12px/1 'Geist Mono', monospace; letter-spacing: .12em; color: #9A9AA3">HOW MUCH EACH ASSUMPTION CAN SWING THE GAP</span><span style="font: 400 12px/1 'Geist Mono', monospace; color: #9A9AA3">sorted by swing</span></div>
+        <sc-for list="{{ bars }}" as="b" hint-placeholder-count="4">
+          <div style="display: flex; flex-direction: column; gap: 8px; padding: 6px 0">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 15px"><span>{{ b.name }}</span><span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #B9B6AE">{{ b.range }}</span></div>
+            <div style="height: 22px; border-radius: 6px; background: #1F232B; overflow: hidden">
+              <div style="height: 100%; border-radius: 6px; transition: width 380ms ease-out; {{ b.barStyle }}"></div>
+            </div>
+            <div style="font: 400 12px/1 'Geist Mono', monospace; color: #9A9AA3">{{ b.swing }}</div>
+          </div>
+        </sc-for>
+        <div style="font-size: 13px; line-height: 1.5; color: #9A9AA3; padding-top: 4px">Illustrative model: pre-tax pay minus extra housing, months 0–24, startup closes at month 14. The real build runs the same math on the Finance agent’s ranges.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":960}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const st = this.state || {};
+    const g = st.g ?? 3;
+    const h = st.h ?? 12;
+    const n = st.n ?? 150;
+    const cashA = (gg, hh, nn) => 145 / 12 * 14 + nn / 12 * Math.max(0, 10 - gg) - 2 * hh;
+    const cashB = 180 * 2;
+    const a = cashA(g, h, n);
+    const gap = a - cashB;
+    const k = (v) => (v < 0 ? '−$' : '$') + Math.round(Math.abs(v)) + 'K';
+    const raw = [
+      { name: 'Job search after shutdown (0–9 months)', lo: cashA(9, h, n) - cashB, hi: cashA(0, h, n) - cashB },
+      { name: 'Startup survives past month 14', lo: gap, hi: 145 * 2 - 2 * h - cashB },
+      { name: 'Extra housing cost in SF ($0–24K a year)', lo: cashA(g, 24, n) - cashB, hi: cashA(g, 0, n) - cashB },
+      { name: 'Salary in the next role ($120K–200K)', lo: cashA(g, h, 120) - cashB, hi: cashA(g, h, 200) - cashB }
+    ].map((r) => ({ ...r, s: Math.abs(r.hi - r.lo) }));
+    raw.sort((x, y) => y.s - x.s);
+    const max = Math.max(...raw.map((r) => r.s), 1);
+    const bars = raw.map((r, i) => ({
+      name: r.name,
+      range: 'gap ' + k(r.lo) + ' → ' + k(r.hi),
+      swing: '±' + k(r.s / 2) + ' swing',
+      barStyle: 'width: ' + Math.max(4, Math.round(r.s / max * 100)) + '%; background: ' + (i === 0 ? '#ECE8DF' : '#5A5F6B')
+    }));
+    return {
+      g, h, n,
+      gText: g + (g === 1 ? ' month' : ' months'),
+      hText: '$' + h + 'K / year',
+      nText: '$' + n + 'K',
+      aText: k(a),
+      bText: k(cashB - 2 * 0),
+      headline: gap < 0 ? 'Path A ends ' + k(-gap).replace('−', '') + ' behind Path B on cash.' : 'Path A ends ' + k(gap) + ' ahead of Path B on cash.',
+      topName: raw[0].name.split(' (')[0].toLowerCase(),
+      bars,
+      setG: (e) => this.setState({ g: Number(e.target.value) }),
+      setH: (e) => this.setState({ h: Number(e.target.value) }),
+      setN: (e) => this.setState({ n: Number(e.target.value) })
+    };
+  }
+}
+</script>
+</body>
+</html>
