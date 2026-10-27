@@ -24,3 +24,6 @@ services/api/data/
 apps/ios/**/xcuserdata/
 apps/ios/**/DerivedData/
 public/demo/
+
+# launch video working files (final cut lives in docs/media/)
+brag-output/
