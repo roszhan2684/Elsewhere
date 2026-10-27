@@ -84,6 +84,59 @@ def _chars(*parts: Any) -> int:
     return n
 
 
+
+MAX_SOURCES = 3
+
+
+def _get(o: Any, key: str) -> Any:
+    return o.get(key) if isinstance(o, dict) else getattr(o, key, None)
+
+
+def parse_grounding(output: list[Any]) -> tuple[str, list[dict[str, str]], int]:
+    """Read a web-search response: the final answer, its sources, and how many searches ran.
+
+    Meta returns sources on the `web_search_call` items (`results`: title + url), and usually no
+    `url_citation` annotations. Inline citations still win when present. Messages in the
+    "commentary" phase ("I'll search the web for ...") are progress chatter, not the answer.
+    """
+    searches = 0
+    results: list[dict[str, str]] = []
+    cited: list[dict[str, str]] = []
+    answer: list[str] = []
+    chatter: list[str] = []
+    for o in output:
+        kind = _get(o, "type")
+        if kind == "web_search_call":
+            searches += 1
+            for r in _get(o, "results") or []:
+                url = _get(r, "url")
+                if url:
+                    results.append({"url": url, "title": _get(r, "title") or url})
+        elif kind == "message":
+            parts = [p for p in (_get(o, "content") or []) if _get(p, "type") == "output_text"]
+            (chatter if _get(o, "phase") == "commentary" else answer).extend((_get(p, "text") or "") for p in parts)
+            for p in parts:
+                for ann in _get(p, "annotations") or []:
+                    if _get(ann, "type") == "url_citation" and _get(ann, "url"):
+                        cited.append({"url": _get(ann, "url"), "title": _get(ann, "title") or _get(ann, "url")})
+    text = " ".join(t.strip() for t in (answer or chatter) if t.strip()).replace("**", "")  # no markdown in evidence
+    if not cited and results:
+        # Put sources the answer names first (e.g. "according to Apartment List" -> apartmentlist.com).
+        squashed = "".join(ch for ch in text.lower() if ch.isalnum())
+        def named(c: dict[str, str]) -> bool:
+            host = c["url"].split("//")[-1].split("/")[0].lower().removeprefix("www.")
+            return host.split(".")[0] in squashed
+        cited = sorted(results, key=lambda c: not named(c))
+    seen: set[str] = set()
+    citations = []
+    for c in cited:
+        key = c["url"].lower()
+        if key not in seen:
+            seen.add(key)
+            citations.append(c)
+    return text, citations[:MAX_SOURCES], searches
+
+
 class LLM:
     def __init__(self, settings: Settings | None = None, sink: CallSink | None = None, budget: Budget | None = None):
         self.s = settings or get_settings()
@@ -287,18 +340,11 @@ class LLM:
             cost = await self._settle(reserved, model, 0, 0, 0, failed=True)
             await self._log(CallRecord(current_sim.get(), agent, model, "meta", "low", _ms(t0), ok=False, error=str(e)[:500], cost_usd=cost))
             raise LLMError(f"{agent}: {e}") from e
-        searches = sum(1 for o in resp.output if getattr(o, "type", None) == "web_search_call")
-        citations: list[dict[str, str]] = []
-        for o in resp.output:
-            for part in getattr(o, "content", None) or []:
-                for ann in getattr(part, "annotations", None) or []:
-                    if getattr(ann, "type", None) == "url_citation" and getattr(ann, "url", None):
-                        if all(c["url"] != ann.url for c in citations):
-                            citations.append({"url": ann.url, "title": getattr(ann, "title", "") or ann.url})
+        text, citations, searches = parse_grounding(resp.output)
         it, ot, ct = self._usage(resp)
         cost = await self._settle(reserved, model, it, ot, ct, extra=searches * SEARCH_PRICE)
         await self._log(CallRecord(current_sim.get(), agent, model, "meta", "low", _ms(t0), it, ot, ct, searched=searches > 0, cost_usd=cost))
-        return GroundingResult(text=resp.output_text.strip(), citations=citations, searched=searches > 0)
+        return GroundingResult(text=text, citations=citations, searched=searches > 0)
 
     # ------------------------------------------------------------ streaming text
 

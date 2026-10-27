@@ -68,3 +68,68 @@ def test_branch_guard():
     assert violates("After the company shut down I moved on.", allowed, ["company shut down"])
     sp = spans("I lead a team [ev_A_001]. Savings are thin [E-A-002].")
     assert [s.ref for s in sp] == ["ev_A_001", "E-A-002"]
+
+
+def test_parse_grounding_reads_sources_from_search_results():
+    """Shape seen from the live Meta API on 2026-10-26: no url_citation annotations,
+    sources on the web_search_call item, and a 'commentary' message before the answer."""
+    from elsewhere.llm import parse_grounding
+
+    output = [
+        {"type": "reasoning"},
+        {"type": "message", "phase": "commentary",
+         "content": [{"type": "output_text", "text": "I'll search the web for Seattle rent.", "annotations": []}]},
+        {"type": "web_search_call", "results": [
+            {"type": "text_result", "title": "Average rent in Seattle", "url": "https://www.steadily.com/blog/average-rent-seattle"},
+            {"type": "text_result", "title": "Seattle rent report", "url": "https://www.apartmentlist.com/renter-life/how-much-is-rent-in-seattle"},
+            {"type": "text_result", "title": "Dup", "url": "https://www.apartmentlist.com/renter-life/how-much-is-rent-in-seattle"},
+            {"type": "text_result", "title": "Calculator", "url": "https://www.truecostliving.com/seattle-wa"},
+            {"type": "text_result", "title": "Other", "url": "https://example.com/x"},
+        ]},
+        {"type": "message", "phase": None,
+         "content": [{"type": "output_text", "text": "Median one-bedroom rent is $1,948, according to Apartment List.", "annotations": []}]},
+    ]
+    text, cites, searches = parse_grounding(output)
+    assert text == "Median one-bedroom rent is $1,948, according to Apartment List."
+    assert searches == 1
+    assert len(cites) == 3
+    assert "apartmentlist.com" in cites[0]["url"]  # the source the answer names comes first
+    assert len({c["url"].lower() for c in cites}) == 3
+
+
+def test_parse_grounding_without_search_has_no_sources():
+    from elsewhere.llm import parse_grounding
+
+    text, cites, searches = parse_grounding([{"type": "message", "content": [{"type": "output_text", "text": "No idea.", "annotations": []}]}])
+    assert (text, cites, searches) == ("No idea.", [], 0)
+
+
+def test_registry_never_reuses_ids_after_events_are_removed():
+    """A shock drops events after the shock month; new ids must not collide with the ones left."""
+    import json, pathlib
+    from elsewhere.contracts import Simulation
+    from elsewhere.engine.compiler import Registry
+
+    d = json.loads((pathlib.Path(__file__).resolve().parents[3] / "demo" / "startup-sf-vs-seattle.json").read_text())
+    sim = Simulation.model_validate(d["simulation"])
+    sim.events, sim.evidence = [], []
+    reg = Registry(sim)
+    e1 = reg.event("A", 3, "turning_point", "one")
+    reg.event("A", 9, "turning_point", "two")
+    sim.events = [e for e in sim.events if e.id != e1]
+    reg.event("A", 14, "shock", "three")
+    assert len({e.id for e in sim.events}) == len(sim.events) == 2
+
+    v1 = reg.evidence("A", "INFERENCE", "model", "t", "x", "low")
+    reg.evidence("A", "INFERENCE", "model", "t", "y", "low")
+    sim.evidence = [e for e in sim.evidence if e.id != v1]
+    reg.evidence("A", "INFERENCE", "model", "t", "z", "low")
+    assert len({e.id for e in sim.evidence}) == len(sim.evidence) == 2
+
+
+def test_dangling_reference_is_trimmed():
+    from elsewhere.agents.persona import DANGLING_REF
+
+    assert DANGLING_REF.sub("", "we closed after a failed raise [E-A-006] [") == "we closed after a failed raise [E-A-006]"
+    assert DANGLING_REF.sub("", "after a raise [ev_A_0") == "after a raise"
+    assert DANGLING_REF.sub("", "complete [ev_A_001].") == "complete [ev_A_001]."

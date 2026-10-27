@@ -28,6 +28,12 @@ EVIDENCE_ID = re.compile(r"^ev_([UABS])_(\d{3})$")
 ENGINE_NOTE = "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction."
 
 
+def _next_number(ids) -> int:
+    """Highest existing number + 1. Counting instead would reuse ids after a shock removes later events."""
+    nums = [int(m.group(1)) for i in ids if (m := re.search(r"(\d+)$", i))]
+    return max(nums, default=0) + 1
+
+
 class Registry:
     """Assigns stable ids. Ids carry their branch letter so isolation can be checked by code."""
 
@@ -45,7 +51,7 @@ class Registry:
         model_id: str | None = None,
         citation: Citation | None = None,
     ) -> str:
-        n = sum(1 for e in self.sim.evidence if e.id.startswith(f"ev_{prefix}_")) + 1
+        n = _next_number(e.id for e in self.sim.evidence if e.id.startswith(f"ev_{prefix}_"))
         eid = f"ev_{prefix}_{n:03d}"
         self.sim.evidence.append(
             EvidenceItem(id=eid, kind=kind, source=source, agent=agent, model_id=model_id, text=text, citation=citation, confidence=confidence)
@@ -68,7 +74,7 @@ class Registry:
         caused_by: list[str] | None = None,
         evidence_id: str | None = None,
     ) -> str:
-        n = sum(1 for e in self.sim.events if e.branch == branch) + 1
+        n = _next_number(e.id for e in self.sim.events if e.id.startswith(f"E-{branch}-"))
         eid = f"E-{branch}-{n:03d}"
         self.sim.events.append(
             WorldEvent(

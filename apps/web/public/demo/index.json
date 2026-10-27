@@ -1,20 +1,20 @@
 [
  {
   "slug": "grad-school-vs-job",
-  "title": "Grad school Boston vs Stable job Austin",
+  "title": "Boston ML Masters vs Austin SWE",
   "blurb": "A two-year master's in machine learning in Boston, or a full-time engineering job in Austin now?",
-  "mode": "mock"
+  "mode": "live"
  },
  {
   "slug": "own-product-vs-stay",
-  "title": "Own product NYC vs Stable job NYC",
+  "title": "Indie Build vs Stay NYC",
   "blurb": "Quit to build your own product, or stay employed at a big company in New York?",
-  "mode": "mock"
+  "mode": "live"
  },
  {
   "slug": "startup-sf-vs-seattle",
-  "title": "Startup SF vs Stable job Seattle",
+  "title": "Startup SF vs Stable Seattle",
   "blurb": "Join a 7-person AI startup in San Francisco, or take the stable role in Seattle?",
-  "mode": "mock"
+  "mode": "live"
  }
 ]

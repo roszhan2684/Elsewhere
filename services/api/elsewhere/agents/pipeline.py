@@ -420,7 +420,7 @@ async def shock(llm: LLM, sim: Simulation, label: str, description: str, month: 
         agent="shock_planner", model=s.orchestrator_model, instructions=system("shock_planner"),
         input=f"SHOCK: {label}. {description} (around month {month})\n\n{world_text(sim, 'A')}\n\n{world_text(sim, 'B')}",
         schema=ShockPlan, effort="medium", mock=lambda: mock.shock_plan(spec, label, description, month),
-        max_output_tokens=12000,
+        max_output_tokens=5000,
     )
     month = plan.month
     await emit("agent_done", {"agent": "shock_planner", "branch": "both", "model": s.orchestrator_model,

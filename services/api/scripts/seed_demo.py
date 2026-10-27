@@ -12,6 +12,8 @@ shock fails during judging), a precomputed debate, and the postcards.
 import asyncio
 import base64
 import json
+import shutil
+import subprocess
 import sys
 import uuid
 
@@ -52,6 +54,15 @@ SCENARIOS = [
 ]
 
 
+def compact_image(data: bytes, mime: str) -> tuple[bytes, str]:
+    """Shrink a postcard to 1024px WebP so the static demo files stay small. Needs ffmpeg; otherwise unchanged."""
+    if not mime.startswith("image/") or mime == "image/svg+xml" or not shutil.which("ffmpeg"):
+        return data, mime
+    r = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", "pipe:0", "-vf", "scale='min(1024,iw)':-2",
+                        "-c:v", "libwebp", "-quality", "80", "-f", "webp", "pipe:1"], input=data, capture_output=True)
+    return (r.stdout, "image/webp") if r.returncode == 0 and r.stdout else (data, mime)
+
+
 async def build(llm: LLM, sc: dict) -> dict:
     sim_id = f"demo-{sc['slug']}"
     current_sim.set(sim_id)
@@ -73,6 +84,7 @@ async def build(llm: LLM, sc: dict) -> dict:
     postcards = {}
     for b in ("A", "B"):
         data, mime, _ = await persona.postcard(llm, base, b)
+        data, mime = compact_image(data, mime)
         postcards[b] = f"data:{mime};base64,{base64.b64encode(data).decode()}"
 
     shocked = sim.model_copy(deep=True)

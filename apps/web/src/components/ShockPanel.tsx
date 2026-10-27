@@ -20,7 +20,10 @@ export function ShockPanel({
   fallback?: { request: { label: string; description: string; month: number }; simulation: Simulation };
   onSelect: (ref: string) => void;
 }) {
-  const presets = sim.suggested_shocks.length ? sim.suggested_shocks : fallback ? [fallback.request] : [];
+  // A demo's saved shock goes first: it's the default, and the only one with a saved run to fall back on.
+  const presets = fallback
+    ? [fallback.request, ...sim.suggested_shocks.filter((s) => s.label !== fallback.request.label)].slice(0, 3)
+    : sim.suggested_shocks;
   const [label, setLabel] = useState(presets[0]?.label ?? "");
   const [description, setDescription] = useState(presets[0]?.description ?? "");
   const [month, setMonth] = useState(presets[0]?.month ?? 12);

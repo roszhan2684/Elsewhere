@@ -15,6 +15,7 @@ from ..llm import LLM
 from ..prompts import load, system
 
 REF = re.compile(r"\[(ev_[UABS]_\d{3}|E-[AB]-\d{3})\]")
+DANGLING_REF = re.compile(r"\s*\[[^\]]*$")
 SENTENCE_END = re.compile(r"[.!?](?:\s*\[[^\]]+\])*\s+")
 LABELS = {
     "career.role": "My role", "career.employment_status": "Work status", "career.scope": "What I own",
@@ -123,7 +124,7 @@ async def stream_answer(
 
     async for delta in llm.stream_text(
         agent=f"persona_{branch}", model=s.specialist_model, instructions=instructions, input=prompt,
-        effort="low", cache_key=f"elsewhere-persona-{sim.id}-{branch}",
+        effort="low", cache_key=f"elsewhere-persona-{sim.id}-{branch}", max_output_tokens=2000,
         mock=lambda: mock.persona_reply(question, branch, lines, other_said),
     ):
         buf += delta
@@ -132,6 +133,7 @@ async def stream_answer(
             sentence = await check(sentence)
             full += sentence
             yield {"type": "delta", "branch": branch, "text": sentence}
+    buf = DANGLING_REF.sub("", buf)  # an answer cut off by the token cap can end mid-reference: "... ["
     if buf.strip():
         tail = await check(buf)
         full += tail
