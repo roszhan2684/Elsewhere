@@ -3,6 +3,7 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import { ApiError, postStream } from "@/lib/api";
+import { type VoiceStatus, speakTurns, stopSpeaking } from "@/lib/voice";
 import type { PersonaMessage, Simulation, Timepoint } from "@/lib/types";
 import { TP_LABEL } from "@/lib/types";
 import { ClaimText } from "./ClaimText";
@@ -37,6 +38,25 @@ export function ChatPanel({
   const [error, setError] = useState<string | null>(null);
   const [guard, setGuard] = useState<string | null>(null);
   const endRef = useRef<HTMLDivElement>(null);
+  const [voice, setVoice] = useState<VoiceStatus>({ state: "idle" });
+  const [speakingId, setSpeakingId] = useState<string | null>(null);
+
+  useEffect(() => () => stopSpeaking(), []);
+
+  function listen(list: Live[], id: string) {
+    if (speakingId === id) {
+      stopSpeaking();
+      setSpeakingId(null);
+      setVoice({ state: "idle" });
+      return;
+    }
+    const turns = list.filter((m) => m.role !== "user" && m.text).map((m) => ({ text: m.text, branch: (m.role === "future_a" ? "A" : "B") as "A" | "B" }));
+    setSpeakingId(id);
+    speakTurns(turns, (st) => {
+      setVoice(st);
+      if (st.state === "idle" || st.state === "error") setSpeakingId((cur) => (cur === id ? null : cur));
+    });
+  }
   const evidence = new Map(sim.evidence.map((e) => [e.id, e]));
   const events = new Map(sim.events.map((e) => [e.id, e]));
 
@@ -98,6 +118,20 @@ export function ChatPanel({
         </div>
       </div>
 
+      {messages.some((m) => m.role !== "user" && m.text && !m.streaming) && (
+        <div className="flex flex-wrap items-center gap-3 rounded-xl bg-ink-2 px-3 py-2">
+          <button type="button" onClick={() => listen(messages, "all")}
+            className="flex min-h-9 items-center gap-2 rounded-full border border-line-2 px-3.5 text-[13px] hover:border-paper">
+            <Speaker on={speakingId === "all"} />{speakingId === "all" ? "Stop" : "Listen to your futures"}
+          </button>
+          <span className="text-[12px] text-muted">
+            {voice.state === "loading" ? `Loading Meta’s MMS voice model in your browser (first time only, ~38 MB)… ${Math.round(voice.progress * 100)}%`
+              : voice.state === "speaking" ? (voice.engine === "meta" ? "Speaking with Meta MMS-TTS, on your device. Future A and B get different voices." : "Meta’s voice model couldn’t load here, so this is your browser’s voice.")
+              : "Voices by Meta’s open-source MMS-TTS model, running on your device. Nothing is sent anywhere."}
+          </span>
+        </div>
+      )}
+
       <div className="flex max-h-[560px] min-h-[200px] flex-col gap-5 overflow-y-auto pr-1" aria-live="polite">
         {messages.length === 0 && <p className="py-6 text-center text-[14px] text-muted">Ask a question, or try one below.</p>}
         {messages.map((m) =>
@@ -113,6 +147,12 @@ export function ChatPanel({
                   <span className="font-medium text-paper">{m.role === "future_a" ? `Future A · ${sim.branches.A.label}` : `Future B · ${sim.branches.B.label}`}</span>
                   <span className="font-mono">{TP_LABEL[m.timepoint]}{m.replyingTo ? ` · replying to ${m.replyingTo}` : ""}</span>
                   {m.guard_rewrites > 0 && <span className="font-mono text-path-b">guard: {m.guard_rewrites} rewritten</span>}
+                  {!m.streaming && m.text && (
+                    <button type="button" onClick={() => listen([m], m.id)} className="flex items-center gap-1 text-muted hover:text-paper"
+                      aria-label={speakingId === m.id ? "Stop" : `Listen to Future ${m.role === "future_a" ? "A" : "B"}`}>
+                      <Speaker on={speakingId === m.id} />
+                    </button>
+                  )}
                 </div>
                 <p className="font-display text-[19px] leading-[1.55]">
                   <ClaimText text={m.text} evidence={evidence} events={events} selected={selected} onSelect={onSelect} />
@@ -152,5 +192,14 @@ export function ChatPanel({
         </button>
       </form>
     </div>
+  );
+}
+
+function Speaker({ on }: { on: boolean }) {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor" />
+      {on ? <path d="M16 9l5 5M21 9l-5 5" /> : <path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" />}
+    </svg>
   );
 }

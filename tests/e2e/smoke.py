@@ -34,7 +34,7 @@ async def main():
         await pg.click("button:has-text('Apply shock to both worlds')")
         await pg.wait_for_selector("text=The Elsewhere Ledger", timeout=60000); await pg.wait_for_timeout(800)
         await pg.screenshot(path=f"{OUT}/6-shock.png", full_page=True)
-        await pg.click("role=tab[name=/What decides this/]"); await pg.wait_for_timeout(500)
+        await pg.click("role=tab[name=/What decides/]"); await pg.wait_for_timeout(500)
         await pg.locator("[role=tabpanel]").screenshot(path=f"{OUT}/7-decides.png")
         await pg.click("role=tab[name=/Under the hood/]"); await pg.wait_for_timeout(800)
         await pg.locator("[role=tabpanel]").screenshot(path=f"{OUT}/8-hood.png")

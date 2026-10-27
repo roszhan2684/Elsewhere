@@ -18,6 +18,7 @@ const FIELD_LABEL: Record<string, string> = {
 
 export function origin(e: EvidenceItem): string {
   if (e.source === "user") return e.agent === "shock" ? "You — a shock you applied" : e.agent === "assumptions" ? "You — an assumption you changed" : "You, during intake";
+  if (e.agent === "reference-library") return `Elsewhere's fact library · source checked ${e.citation?.retrieved_at ?? ""}`.trim();
   if (e.source === "web") return `Web search via ${e.model_id ?? "Muse Spark"}`;
   if (e.source === "engine") return "Calculated by Elsewhere's finance model (code, not a model)";
   const agent = e.agent === "evidence-resolver" ? "Evidence resolver" : e.agent === "consistency" ? "Consistency checker" : `${e.agent[0].toUpperCase()}${e.agent.slice(1)} agent`;

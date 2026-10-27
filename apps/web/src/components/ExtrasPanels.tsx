@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { ApiError, type ModelCall, api, assetUrl } from "@/lib/api";
 import type { Branch, Simulation } from "@/lib/types";
 import { snap } from "@/lib/types";
+import { AgentGraph, callsToReplay, scriptedBuild, useReplay } from "./AgentGraph";
+import { CounselorBrief } from "./CounselorBrief";
 
 // ------------------------------------------------------------ postcards
 
@@ -83,9 +85,36 @@ export function PostcardsPanel({
 // ------------------------------------------------------------ brief
 
 export function BriefPanel({ sim }: { sim: Simulation }) {
+  const [view, setView] = useState<"brief" | "counselor">("brief");
+  return (
+    <div className="flex flex-col gap-5">
+      <div className="no-print flex flex-wrap items-center justify-between gap-3">
+        <div role="tablist" aria-label="Brief style" className="flex gap-1 rounded-full bg-ink-2 p-1 text-[14px]">
+          {([["brief", "Decision brief"], ["counselor", "Counselor handout"]] as const).map(([k, l]) => (
+            <button key={k} role="tab" aria-selected={view === k} type="button" onClick={() => setView(k)}
+              className={clsx("min-h-10 rounded-full px-4", view === k ? "bg-paper font-medium text-ink" : "text-soft")}>{l}</button>
+          ))}
+        </div>
+        {view === "counselor" && (
+          <button type="button" onClick={() => window.print()} className="min-h-10 rounded-full bg-paper px-4 text-[13px] font-medium text-ink">Print / save PDF</button>
+        )}
+      </div>
+      {view === "counselor" ? (
+        <>
+          <p className="no-print max-w-3xl text-[14px] leading-relaxed text-soft">
+            A one-page guide for a school counselor, mentor or caseworker to go through together: plain language, the same numbers as the app, questions to talk about, and space for notes. Built in your browser with no model call.
+          </p>
+          <CounselorBrief sim={sim} />
+        </>
+      ) : <StandardBrief sim={sim} />}
+    </div>
+  );
+}
+
+function StandardBrief({ sim }: { sim: Simulation }) {
   const c = sim.comparison;
   return (
-    <article className="flex flex-col gap-7">
+    <article className="print-area flex flex-col gap-7">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div className="flex max-w-3xl flex-col gap-2">
           <span className="label-mono">Decision brief · version {sim.version}</span>
@@ -154,8 +183,22 @@ export function HoodPanel({ sim, liveId }: { sim: Simulation; liveId: string | n
     "muse-image-1.0": "Future postcards",
     "muse-voice-transcribe-1.0": "Voice intake",
   };
+  const replay = useReplay();
+  const real = calls ? callsToReplay(calls.calls) : [];
+  const usesReal = real.some((s) => s.agent === "orchestrator") && real.length > 8;
   return (
     <div className="flex flex-col gap-7">
+      <div className="flex flex-col gap-3 rounded-2xl bg-ink-2 p-4 sm:p-5">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <span className="label-mono">Watch this world get built</span>
+          <button type="button" onClick={() => replay.play(usesReal ? real : scriptedBuild())} disabled={replay.playing}
+            className="min-h-10 rounded-full bg-paper px-4 text-[13px] font-medium text-ink disabled:opacity-50">
+            {replay.playing ? "Replaying…" : "Replay the build"}
+          </button>
+        </div>
+        <AgentGraph rows={replay.rows} mode="simulate"
+          caption={usesReal ? "real call timings from this run, 4× speed" : "real pipeline order; timing is illustrative"} />
+      </div>
       <div className="flex flex-col gap-3">
         <span className="label-mono">How this world was built</span>
         <ol className="grid gap-2 text-[14px] md:grid-cols-5">

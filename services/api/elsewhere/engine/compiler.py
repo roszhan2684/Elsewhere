@@ -146,7 +146,10 @@ def add_events(reg: Registry, branch: str, drafts: list[EventDraft], kind: str, 
 def apply_finance(reg: Registry, bw: BranchWorld, pay_evidence: str | None, housing_evidence: str | None) -> None:
     """Fill salary, housing, savings and runway at every timepoint from the engine."""
     fi = bw.finance_inputs
-    engine_ev = reg.find_evidence(bw.branch, ENGINE_NOTE) or reg.evidence(bw.branch, "INFERENCE", "engine", "finance-engine", ENGINE_NOTE, "medium")
+    # The engine is plain arithmetic, so its numbers are only as good as their inputs.
+    inputs_solid = _is_solid(reg.sim, pay_evidence) and _is_solid(reg.sim, housing_evidence)
+    engine_ev = reg.find_evidence(bw.branch, ENGINE_NOTE) or reg.evidence(
+        bw.branch, "INFERENCE", "engine", "finance-engine", ENGINE_NOTE, "high" if inputs_solid else "medium")
     points = fin.timeline(fi)
     for tp in TIMEPOINTS:
         p = points[tp]
@@ -183,6 +186,32 @@ def apply_finance(reg: Registry, bw: BranchWorld, pay_evidence: str | None, hous
             evidence_id=engine_ev,
             status="known",
         )
+
+
+def _is_solid(sim: Simulation, evidence_id: str | None) -> bool:
+    """True for a sourced FACT, a number the user stated, or engine math on such inputs."""
+    e = next((x for x in sim.evidence if x.id == evidence_id), None) if evidence_id else None
+    if e is None:
+        return False
+    return e.kind == "FACT" or (e.kind == "ASSUMPTION" and e.source == "user") or (e.source == "engine" and e.confidence == "high")
+
+
+CONFIDENCE_ORDER: list[Confidence] = ["low", "medium", "high"]
+
+
+def evidence_confidence(sim: Simulation, branch: str, model_view: Confidence) -> Confidence:
+    """Overall confidence for one branch, earned from its evidence rather than asserted.
+
+    high:   pay and housing rest on facts or your own numbers, and at least two sourced facts apply
+    low:    neither of those, and no sourced facts at all
+    medium: anything in between
+    The model's own view can be raised by at most one step, never more.
+    """
+    m0 = sim.branches[branch].snap("m0").finance
+    money_solid = _is_solid(sim, m0.salary.evidence_id) and _is_solid(sim, m0.housing_cost.evidence_id)
+    facts = sum(1 for e in sim.evidence if e.kind == "FACT" and e.id.startswith((f"ev_{branch}_", "ev_S_")))
+    grade = 2 if money_solid and facts >= 2 else 0 if not money_solid and facts == 0 else 1
+    return CONFIDENCE_ORDER[min(grade, CONFIDENCE_ORDER.index(model_view) + 1)]
 
 
 def carry_forward(bw: BranchWorld) -> None:

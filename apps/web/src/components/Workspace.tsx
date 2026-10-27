@@ -4,9 +4,15 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { api } from "@/lib/api";
-import type { Branch, DemoBundle, PersonaMessage, ShockRecord, Simulation, Timepoint } from "@/lib/types";
+import type { Branch, DemoBundle, PersonaMessage, ShockRecord, Simulation, ThirdDoor, Timepoint } from "@/lib/types";
 import { TIMEPOINTS, TP_LABEL } from "@/lib/types";
 import { BranchColumn } from "./BranchColumn";
+import { CheckinPanel } from "./CheckinPanel";
+import { DoorsPanel } from "./DoorsPanel";
+import { FriendsPanel } from "./FriendsPanel";
+import { FuturesPanel } from "./FuturesPanel";
+import { DoorIcon, ThirdDoorPanel } from "./ThirdDoorPanel";
+import { ValuesPanel } from "./ValuesPanel";
 import { ChatPanel } from "./ChatPanel";
 import { DecidesPanel } from "./DecidesPanel";
 import { EvidencePanel } from "./EvidencePanel";
@@ -16,11 +22,17 @@ import { ForkMark } from "./ForkMark";
 import { ModeBadge } from "./ModeBadge";
 import { ShockPanel } from "./ShockPanel";
 
-type Tab = "futures" | "shock" | "decides" | "postcards" | "brief" | "hood";
+type Tab = "futures" | "shock" | "many" | "decides" | "doors" | "values" | "third" | "friends" | "checkin" | "postcards" | "brief" | "hood";
 const TABS: { id: Tab; label: string }[] = [
   { id: "futures", label: "Talk to your futures" },
   { id: "shock", label: "Stress test" },
-  { id: "decides", label: "What decides this?" },
+  { id: "many", label: "1,000 futures" },
+  { id: "decides", label: "What decides it" },
+  { id: "doors", label: "Switch back?" },
+  { id: "values", label: "Values" },
+  { id: "third", label: "Third door" },
+  { id: "friends", label: "Ask friends" },
+  { id: "checkin", label: "Check in" },
   { id: "postcards", label: "Postcards" },
   { id: "brief", label: "Brief" },
   { id: "hood", label: "Under the hood" },
@@ -97,6 +109,15 @@ export function Workspace({
         </div>
       </header>
 
+      {sim.derived_from && (
+        <div className="mx-auto mt-4 w-full max-w-[1400px] px-4 sm:px-8">
+          <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-path-c/50 bg-raised px-4 py-3 text-[14px]">
+            <span className="flex items-center gap-2"><DoorIcon size={16} />This fork tests a third door Muse Wonder proposed.</span>
+            <Link href={`/sim/${sim.derived_from}`} className="text-path-c hover:underline">← Back to the original decision</Link>
+          </div>
+        </div>
+      )}
+
       {banner && (
         <div className="mx-auto mt-4 w-full max-w-[1400px] px-4 sm:px-8">
           <div className="flex items-center justify-between gap-3 rounded-xl border border-line bg-raised px-4 py-3 text-[14px] text-paper-2">
@@ -120,6 +141,14 @@ export function Workspace({
             <span className="font-display text-[22px] leading-tight">{sim.branches.B.label}</span>
             <span className="text-[13px] leading-snug text-muted">{sim.branches.B.top_tradeoffs[0]}</span>
           </div>
+          {!sim.derived_from && (
+            <div className="flex justify-center md:col-span-3">
+              <button type="button" onClick={() => { setTab("third"); document.getElementById("explore")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
+                className="flex min-h-10 items-center gap-2 rounded-full border border-dashed border-path-c/60 px-4 text-[13px] text-paper-2 hover:border-path-c">
+                <DoorIcon size={15} />{sim.third_door ? <>Third door: <b className="font-medium text-path-c">{sim.third_door.label}</b></> : "Is this really either/or? Ask Wonder for a third door"}
+              </button>
+            </div>
+          )}
           <div className="md:col-span-3">
             <div role="tablist" aria-label="Time horizon" className="mx-auto grid max-w-xl grid-cols-4 gap-1 rounded-xl bg-raised p-1">
               {TIMEPOINTS.map((t) => (
@@ -139,7 +168,7 @@ export function Workspace({
         </div>
 
         <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_380px]">
-          <section className="flex min-w-0 flex-col gap-6 rounded-2xl border border-line p-5 sm:p-6">
+          <section id="explore" className="flex min-w-0 scroll-mt-20 flex-col gap-6 rounded-2xl border border-line p-5 sm:p-6">
             <div role="tablist" aria-label="Explore" className="-mx-1 flex gap-1 overflow-x-auto pb-1">
               {TABS.map((t) => (
                 <button key={t.id} role="tab" aria-selected={tab === t.id} type="button" onClick={() => setTab(t.id)}
@@ -152,7 +181,13 @@ export function Workspace({
             <div role="tabpanel">
               {tab === "futures" && <ChatPanel sim={sim} tp={tp} messages={messages} ensureLive={ensureLive} selected={selected} onSelect={select} />}
               {tab === "shock" && <ShockPanel sim={sim} ensureLive={ensureLive} onApplied={onShock} fallback={demo?.precomputed_shock} onSelect={select} />}
+              {tab === "many" && <FuturesPanel sim={sim} />}
               {tab === "decides" && <DecidesPanel key={sim.version} sim={sim} ensureLive={ensureLive} onUpdated={setSim} />}
+              {tab === "doors" && <DoorsPanel key={sim.version} sim={sim} />}
+              {tab === "values" && <ValuesPanel key={sim.version} sim={sim} tp={tp} />}
+              {tab === "third" && <ThirdDoorPanel sim={sim} ensureLive={ensureLive} onFound={(d: ThirdDoor) => setSim((x) => ({ ...x, third_door: d }))} />}
+              {tab === "friends" && <FriendsPanel sim={sim} liveId={liveId} ensureLive={ensureLive} />}
+              {tab === "checkin" && <CheckinPanel sim={sim} liveId={liveId} ensureLive={ensureLive} demoSlug={demo?.slug} />}
               {tab === "postcards" && <PostcardsPanel sim={sim} ensureLive={ensureLive} initial={demo?.postcards} liveId={liveId} />}
               {tab === "brief" && <BriefPanel sim={sim} />}
               {tab === "hood" && <HoodPanel sim={sim} liveId={liveId} />}

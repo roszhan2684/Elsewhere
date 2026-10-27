@@ -46,7 +46,7 @@ export function Chip({
 }
 
 export const KIND_HELP: Record<EvidenceKind, string> = {
-  FACT: "Looked up with web search, with a citation.",
+  FACT: "From a cited source: a live web search or Elsewhere's library of checked public figures.",
   ASSUMPTION: "You said it, or you chose it. You can change it.",
   INFERENCE: "Reasoned by the models or calculated by Elsewhere.",
 };

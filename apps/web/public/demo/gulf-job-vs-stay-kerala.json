@@ -1,0 +1,4928 @@
+{
+ "slug": "gulf-job-vs-stay-kerala",
+ "order": 1,
+ "blurb": "A recruiter offers a construction job in Dubai at 2.5\u00d7 the pay, for a $1,500 fee. Go, or stay near family in Kerala?",
+ "simulation": {
+  "id": "demo-gulf-job-vs-stay-kerala",
+  "slug": "gulf-job-vs-stay-kerala",
+  "mode": "mock",
+  "status": "ready",
+  "version": 1,
+  "decision": {
+   "title": "Dubai job vs Stay in Kochi",
+   "question": "Should I take a construction electrician job in Dubai paying $10,800 a year with housing provided (the recruitment agent wants a $1,500 fee), or stay in Kochi, Kerala as an electrician earning $4,200 ",
+   "path_a": {
+    "label": "Job in Dubai",
+    "city": "Dubai",
+    "role": "Electrician",
+    "org_type": "established_company",
+    "annual_pay_usd": 10800.0,
+    "equity": null,
+    "notes": "Should I take a construction electrician job in Dubai paying $10,800 a year with housing provided (the recruitment agent wants a $1,500 fee),"
+   },
+   "path_b": {
+    "label": "Local job in Kochi",
+    "city": "Kochi",
+    "role": "Electrician",
+    "org_type": "established_company",
+    "annual_pay_usd": 4200.0,
+    "equity": null,
+    "notes": "stay in Kochi, Kerala as an electrician earning $4,200 a year near my parents? I want to send money home and build savings"
+   },
+   "priorities": {
+    "learning": 3,
+    "stability": 3,
+    "ownership": 3,
+    "location": 4,
+    "autonomy": 3
+   },
+   "goals": [
+    "Send money home and build savings"
+   ],
+   "fears": [
+    "The fee and being far from family"
+   ],
+   "constraints": [
+    "Should I take a construction electrician job in Dubai paying $10,800 a year with housing provided (the recruitment agent wants a $1,500 fee), or stay in Kochi, Kerala as an electrician earning $4,200 a year near my parents?",
+    "I'm worried about the fee and being far from family."
+   ],
+   "current": {
+    "city": null,
+    "profession": "Electrician",
+    "age_band": null,
+    "savings_usd": 900.0,
+    "monthly_expenses_usd": 250.0
+   },
+   "clarifying_questions": []
+  },
+  "branches": {
+   "A": {
+    "branch": "A",
+    "label": "Job in Dubai",
+    "summary": "In Path A you build steadily in Dubai. Unpaid wages or a cancelled contract far from home is the main risk.",
+    "top_tradeoffs": [
+     "More stability, less learning",
+     "More predictability, less ownership",
+     "Life built around Dubai"
+    ],
+    "confidence": "high",
+    "persona": {
+     "name": "Future A",
+     "voice": "Tired, proud, counts in two currencies.",
+     "temperament": "Steady and homesick; every month home is a goal reached."
+    },
+    "finance_inputs": {
+     "start_savings": 900.0,
+     "annual_pay": 10800.0,
+     "effective_tax_rate": 0.0,
+     "annual_housing_low": 0.0,
+     "annual_housing_high": 1200.0,
+     "annual_other_costs": 1800.0,
+     "raise_pct_per_year": 0.02,
+     "equity_note": null,
+     "pay_segments": [],
+     "one_time_costs": [
+      {
+       "month": 0,
+       "amount": 1500.0,
+       "label": "recruitment fee"
+      }
+     ]
+    },
+    "snapshots": [
+     {
+      "timepoint": "m0",
+      "headline": "Day one: new arrival on a construction crew in Dubai",
+      "career": {
+       "role": {
+        "text": "New arrival on a construction crew",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Assigned tasks on one site",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Gulf site rules and safety",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$11K a year",
+        "range": {
+         "low": 10800.0,
+         "high": 10800.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_001",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$0 to $1K a year",
+        "range": {
+         "low": 0.0,
+         "high": 1200.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_003",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$900",
+        "range": {
+         "low": 900.0,
+         "high": 900.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "3.4\u20136.7 months of expenses",
+        "range": {
+         "low": 3.4,
+         "high": 6.7,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Dubai",
+        "range": null,
+        "evidence_id": "ev_U_002",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Bus from the labour camp to site",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Dubai",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "54\u201360 hours a week",
+        "range": {
+         "low": 54.0,
+         "high": 60.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "stress": {
+        "text": "High",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Low",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: tied to one employer and one visa",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "Medium: coming home is easy, a second contract is harder",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Unpaid wages or a cancelled contract far from home",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": []
+     },
+     {
+      "timepoint": "m6",
+      "headline": "Six months in: settled into the crew",
+      "career": {
+       "role": {
+        "text": "Settled into the crew",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Trusted with wiring on a floor",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Commercial wiring at scale",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$11K a year",
+        "range": {
+         "low": 10800.0,
+         "high": 10800.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_001",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$0 to $1K a year",
+        "range": {
+         "low": 0.0,
+         "high": 1200.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_003",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$4K",
+        "range": {
+         "low": 3210.0,
+         "high": 3990.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "12.1\u201329.6 months of expenses",
+        "range": {
+         "low": 12.1,
+         "high": 29.6,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Dubai",
+        "range": null,
+        "evidence_id": "ev_U_002",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Bus from the labour camp to site",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Dubai",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "54\u201360 hours a week",
+        "range": {
+         "low": 54.0,
+         "high": 60.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "stress": {
+        "text": "High",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Low",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: tied to one employer and one visa",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "Medium: coming home is easy, a second contract is harder",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Unpaid wages or a cancelled contract far from home",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": [
+       "E-A-001",
+       "E-A-002"
+      ]
+     },
+     {
+      "timepoint": "m24",
+      "headline": "Year two: experienced crew member",
+      "career": {
+       "role": {
+        "text": "Experienced crew member",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Leads a small group of workers",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Supervising and planning work",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Dubai",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$11K a year",
+        "range": {
+         "low": 11236.32,
+         "high": 11236.32,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$0 to $1K a year",
+        "range": {
+         "low": 0.0,
+         "high": 1200.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_003",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$15K to $18K",
+        "range": {
+         "low": 14856.0,
+         "high": 17976.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "56.1\u2013133.2 months of expenses",
+        "range": {
+         "low": 56.1,
+         "high": 133.2,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Dubai",
+        "range": null,
+        "evidence_id": "ev_U_002",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Bus from the labour camp to site",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Dubai",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "54\u201360 hours a week",
+        "range": {
+         "low": 54.0,
+         "high": 60.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Low",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: tied to one employer and one visa",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "Medium: coming home is easy, a second contract is harder",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Unpaid wages or a cancelled contract far from home",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "stability": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "location": {
+        "text": "1/5 (you weighted it 4/5)",
+        "range": {
+         "low": 1.0,
+         "high": 1.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "1/5 (you weighted it 3/5)",
+        "range": {
+         "low": 1.0,
+         "high": 1.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-A-001",
+       "E-A-002",
+       "E-A-003"
+      ]
+     },
+     {
+      "timepoint": "m60",
+      "headline": "Year five: senior hand or back home with savings",
+      "career": {
+       "role": {
+        "text": "Senior hand or back home with savings",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Supervises or starts a small business at home",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "skills": {
+        "text": "A record that helps you get hired again",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Dubai",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$12K a year",
+        "range": {
+         "low": 11924.07267456,
+         "high": 11924.07267456,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$0 to $1K a year",
+        "range": {
+         "low": 0.0,
+         "high": 1200.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_003",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$40K to $48K",
+        "range": {
+         "low": 39703.633728000044,
+         "high": 47503.633728000044,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "149.8\u2013351.9 months of expenses",
+        "range": {
+         "low": 149.8,
+         "high": 351.9,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Dubai",
+        "range": null,
+        "evidence_id": "ev_U_002",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Bus from the labour camp to site",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Dubai",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "54\u201360 hours a week",
+        "range": {
+         "low": 54.0,
+         "high": 60.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Low",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: tied to one employer and one visa",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "Medium: coming home is easy, a second contract is harder",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Unpaid wages or a cancelled contract far from home",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "stability": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "location": {
+        "text": "1/5 (you weighted it 4/5)",
+        "range": {
+         "low": 1.0,
+         "high": 1.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "1/5 (you weighted it 3/5)",
+        "range": {
+         "low": 1.0,
+         "high": 1.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-A-001",
+       "E-A-002",
+       "E-A-003"
+      ]
+     }
+    ]
+   },
+   "B": {
+    "branch": "B",
+    "label": "Local job in Kochi",
+    "summary": "In Path B you build steadily in Kochi. Pay grows slowly and little is saved is the main risk.",
+    "top_tradeoffs": [
+     "More stability, less learning",
+     "More predictability, less ownership",
+     "Life built around Kochi"
+    ],
+    "confidence": "medium",
+    "persona": {
+     "name": "Future B",
+     "voice": "Practical and dry, a little weary.",
+     "temperament": "Steady and close to home; quietly wonders about the bigger move."
+    },
+    "finance_inputs": {
+     "start_savings": 900.0,
+     "annual_pay": 4200.0,
+     "effective_tax_rate": 0.12,
+     "annual_housing_low": 600.0,
+     "annual_housing_high": 1800.0,
+     "annual_other_costs": 1800.0,
+     "raise_pct_per_year": 0.03,
+     "equity_note": null,
+     "pay_segments": [],
+     "one_time_costs": []
+    },
+    "snapshots": [
+     {
+      "timepoint": "m0",
+      "headline": "Day one: hourly worker in Kochi",
+      "career": {
+       "role": {
+        "text": "Hourly worker",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Assigned shifts",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "skills": {
+        "text": "The job's routines",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$4K a year",
+        "range": {
+         "low": 4200.0,
+         "high": 4200.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_004",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$600 to $2K a year",
+        "range": {
+         "low": 600.0,
+         "high": 1800.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_002",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$900",
+        "range": {
+         "low": 900.0,
+         "high": 900.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_010",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "2.9\u20134.9 months of expenses",
+        "range": {
+         "low": 2.9,
+         "high": 4.9,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_010",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Kochi",
+        "range": null,
+        "evidence_id": "ev_U_005",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Short drive or bus",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Kochi",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201348 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 48.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: steady, but hours can be cut",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: similar work is easy to find",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Pay grows slowly and little is saved",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": []
+     },
+     {
+      "timepoint": "m6",
+      "headline": "Six months in: reliable on the schedule",
+      "career": {
+       "role": {
+        "text": "Reliable on the schedule",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Training new hires",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Speed and reliability",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$4K a year",
+        "range": {
+         "low": 4200.0,
+         "high": 4200.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_004",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$600 to $2K a year",
+        "range": {
+         "low": 600.0,
+         "high": 1800.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_002",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$1K",
+        "range": {
+         "low": 858.0,
+         "high": 1638.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_010",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "2.7\u20138.9 months of expenses",
+        "range": {
+         "low": 2.7,
+         "high": 8.9,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_010",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Kochi",
+        "range": null,
+        "evidence_id": "ev_U_005",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Short drive or bus",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Kochi",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201348 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 48.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: steady, but hours can be cut",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: similar work is easy to find",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Pay grows slowly and little is saved",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": [
+       "E-B-001"
+      ]
+     },
+     {
+      "timepoint": "m24",
+      "headline": "Year two: shift lead or certified tradesperson",
+      "career": {
+       "role": {
+        "text": "Shift lead or certified tradesperson",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Runs a shift or small jobs",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Leading a shift",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Kochi",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$4K a year",
+        "range": {
+         "low": 4455.78,
+         "high": 4455.78,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_010",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$600 to $2K a year",
+        "range": {
+         "low": 600.0,
+         "high": 1800.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_002",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$843 to $4K",
+        "range": {
+         "low": 842.8800000000001,
+         "high": 3962.8799999999974,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_010",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "2.7\u201321.4 months of expenses",
+        "range": {
+         "low": 2.7,
+         "high": 21.4,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_010",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Kochi",
+        "range": null,
+        "evidence_id": "ev_U_005",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Short drive or bus",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Kochi",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201348 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 48.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: steady, but hours can be cut",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: similar work is easy to find",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Pay grows slowly and little is saved",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "stability": {
+        "text": "4/5 (you weighted it 3/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "location": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-B-001",
+       "E-B-002"
+      ]
+     },
+     {
+      "timepoint": "m60",
+      "headline": "Year five: supervisor or small contractor",
+      "career": {
+       "role": {
+        "text": "Supervisor or small contractor",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Manages a crew or own clients",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Running work for others",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Kochi",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_004",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$5K a year",
+        "range": {
+         "low": 4868.95111206,
+         "high": 4868.95111206,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_010",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$600 to $2K a year",
+        "range": {
+         "low": 600.0,
+         "high": 1800.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_002",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$2K to $9K",
+        "range": {
+         "low": 1622.5659537599995,
+         "high": 9422.565953760004,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_010",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "5.2\u201350.9 months of expenses",
+        "range": {
+         "low": 5.2,
+         "high": 50.9,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_010",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Kochi",
+        "range": null,
+        "evidence_id": "ev_U_005",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Short drive or bus",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Kochi",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201348 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 48.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Low",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: steady, but hours can be cut",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: similar work is easy to find",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Pay grows slowly and little is saved",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "stability": {
+        "text": "4/5 (you weighted it 3/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "location": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-B-001",
+       "E-B-002",
+       "E-B-003"
+      ]
+     }
+    ]
+   }
+  },
+  "evidence": [
+   {
+    "id": "ev_U_001",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path A pays $10,800 a year (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.839657+00:00"
+   },
+   {
+    "id": "ev_U_002",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path A is based in Dubai (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.839718+00:00"
+   },
+   {
+    "id": "ev_U_003",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path A: Job in Dubai. Should I take a construction electrician job in Dubai paying $10,800 a year with housing provided (the recruitment agent wants a $1,500 fee),",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.839726+00:00"
+   },
+   {
+    "id": "ev_U_004",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path B pays $4,200 a year (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.839734+00:00"
+   },
+   {
+    "id": "ev_U_005",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path B is based in Kochi (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.839740+00:00"
+   },
+   {
+    "id": "ev_U_006",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path B: Local job in Kochi. stay in Kochi, Kerala as an electrician earning $4,200 a year near my parents? I want to send money home and build savings",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.839746+00:00"
+   },
+   {
+    "id": "ev_U_007",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "You have about $900 saved (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.839754+00:00"
+   },
+   {
+    "id": "ev_U_008",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "You spend about $250 a month (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.839762+00:00"
+   },
+   {
+    "id": "ev_U_009",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Your priorities (1-5): learning 3, stability 3, ownership 3, location 4, autonomy 3.",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.839772+00:00"
+   },
+   {
+    "id": "ev_U_010",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Goal: Send money home and build savings",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.839780+00:00"
+   },
+   {
+    "id": "ev_U_011",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Worry: The fee and being far from family",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.839788+00:00"
+   },
+   {
+    "id": "ev_A_001",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "UAE labour law (Federal Decree-Law No. 33 of 2021) bars employers from charging workers recruitment or hiring costs, directly or indirectly; MOHRE says the employer must pay them.",
+    "citation": {
+     "url": "https://www.mondaq.com/employee-rights-labour-relations/1783954/recruitment-obligations-under-uae-labour-law",
+     "title": "Recruitment obligations under UAE labour law (Mondaq), citing Decree-Law 33 of 2021",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.841373+00:00"
+   },
+   {
+    "id": "ev_A_002",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "UAE private employers must pay wages through the Wage Protection System. Under MOHRE Resolution 340 of 2026 (from 1 June 2026), any payment after the due date counts as delayed and the company is put under electronic monitoring.",
+    "citation": {
+     "url": "https://www.clydeco.com/en/insights/2026/06/uae-introduces-stricter-wage-protection",
+     "title": "Clyde & Co: UAE introduces stricter wage protection system enforcement framework (June 2026)",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.841385+00:00"
+   },
+   {
+    "id": "ev_A_003",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "The UAE does not tax individuals' salaries, and the Ministry of Finance has said it has no plans to introduce personal income tax.",
+    "citation": {
+     "url": "https://gulfnews.com/business/economy/uae-affirms-there-are-no-plans-to-introduce-income-tax-on-individuals-1.1705996309815",
+     "title": "Gulf News: UAE affirms there are no plans to introduce income tax on individuals",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.841392+00:00"
+   },
+   {
+    "id": "ev_B_001",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "Kerala pays the highest rural construction wages in India: men averaged \u20b9893.6 a day in 2023-24 (RBI Handbook of Statistics on Indian States, Table 116).",
+    "citation": {
+     "url": "https://website.rbi.org.in/web/rbi/-/publications/table-116-state-wise-average-daily-wage-rates-in-rural-india-men-construction-workers-",
+     "title": "RBI Handbook of Statistics on Indian States, Table 116",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:53.841397+00:00"
+   },
+   {
+    "id": "ev_A_004",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "evidence-resolver",
+    "model_id": "muse-spark-1.3",
+    "text": "Typical annual rent for a one-bedroom apartment in Dubai: Offline mock: not looked up (Typical annual rent for a one-bedroom apartment in Dubai). Using a rough built-in estimate.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:35:53.947731+00:00"
+   },
+   {
+    "id": "ev_B_002",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "evidence-resolver",
+    "model_id": "muse-spark-1.3",
+    "text": "Typical annual rent for a one-bedroom apartment in Kochi: Offline mock: not looked up (Typical annual rent for a one-bedroom apartment in Kochi). Using a rough built-in estimate.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:35:53.949636+00:00"
+   },
+   {
+    "id": "ev_A_005",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:35:54.067738+00:00"
+   },
+   {
+    "id": "ev_A_006",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Typical progression for a Electrician at a established company.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:35:54.067757+00:00"
+   },
+   {
+    "id": "ev_A_007",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Professional network grows around Dubai.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:35:54.067765+00:00"
+   },
+   {
+    "id": "ev_A_008",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "finance",
+    "model_id": "muse-spark-1.3",
+    "text": "Equity at a established company is illiquid until an exit.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:35:54.067875+00:00"
+   },
+   {
+    "id": "ev_A_009",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "lifestyle",
+    "model_id": "muse-spark-1.3",
+    "text": "Hours and stress typical of a established company role.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:35:54.067896+00:00"
+   },
+   {
+    "id": "ev_A_010",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "risk",
+    "model_id": "muse-spark-1.3",
+    "text": "Risk profile of a established company path.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:35:54.067962+00:00"
+   },
+   {
+    "id": "ev_A_011",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "values",
+    "model_id": "muse-spark-1.3",
+    "text": "Scored against the priorities you gave.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:35:54.067989+00:00"
+   },
+   {
+    "id": "ev_A_012",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:35:54.068038+00:00"
+   },
+   {
+    "id": "ev_B_003",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:35:54.068454+00:00"
+   },
+   {
+    "id": "ev_B_004",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Typical progression for a Electrician at a established company.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:35:54.068465+00:00"
+   },
+   {
+    "id": "ev_B_005",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Professional network grows around Kochi.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:35:54.068473+00:00"
+   },
+   {
+    "id": "ev_B_006",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "finance",
+    "model_id": "muse-spark-1.3",
+    "text": "Equity at a established company is illiquid until an exit.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:35:54.068536+00:00"
+   },
+   {
+    "id": "ev_B_007",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "lifestyle",
+    "model_id": "muse-spark-1.3",
+    "text": "Hours and stress typical of a established company role.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:35:54.068551+00:00"
+   },
+   {
+    "id": "ev_B_008",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "risk",
+    "model_id": "muse-spark-1.3",
+    "text": "Risk profile of a established company path.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:35:54.068597+00:00"
+   },
+   {
+    "id": "ev_B_009",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "values",
+    "model_id": "muse-spark-1.3",
+    "text": "Scored against the priorities you gave.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:35:54.068618+00:00"
+   },
+   {
+    "id": "ev_B_010",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:35:54.068653+00:00"
+   }
+  ],
+  "events": [
+   {
+    "id": "E-A-001",
+    "branch": "A",
+    "month": 1,
+    "kind": "turning_point",
+    "title": "Arrived and started on site",
+    "detail": "Housing is shared; the work is long and hot.",
+    "caused_by": [],
+    "evidence_id": "ev_A_006",
+    "version": 1
+   },
+   {
+    "id": "E-A-002",
+    "branch": "A",
+    "month": 6,
+    "kind": "turning_point",
+    "title": "Sent the first big amount home",
+    "detail": "Money home covers family costs.",
+    "caused_by": [],
+    "evidence_id": "ev_A_006",
+    "version": 1
+   },
+   {
+    "id": "E-A-003",
+    "branch": "A",
+    "month": 24,
+    "kind": "turning_point",
+    "title": "Contract renewal decision",
+    "detail": "The two-year contract comes up for renewal.",
+    "caused_by": [],
+    "evidence_id": "ev_A_006",
+    "version": 1
+   },
+   {
+    "id": "E-B-001",
+    "branch": "B",
+    "month": 5,
+    "kind": "turning_point",
+    "title": "Picked up extra shifts",
+    "detail": "Overtime helps for a few months.",
+    "caused_by": [],
+    "evidence_id": "ev_B_004",
+    "version": 1
+   },
+   {
+    "id": "E-B-002",
+    "branch": "B",
+    "month": 18,
+    "kind": "turning_point",
+    "title": "Promoted to shift lead",
+    "detail": "A small raise and more responsibility.",
+    "caused_by": [],
+    "evidence_id": "ev_B_004",
+    "version": 1
+   },
+   {
+    "id": "E-B-003",
+    "branch": "B",
+    "month": 40,
+    "kind": "turning_point",
+    "title": "Took on supervising",
+    "detail": "Leads others.",
+    "caused_by": [],
+    "evidence_id": "ev_B_004",
+    "version": 1
+   }
+  ],
+  "shocks": [],
+  "suggested_shocks": [
+   {
+    "label": "Wages withheld for 3 months",
+    "description": "The employer stops paying salary for three months.",
+    "month": 8
+   },
+   {
+    "label": "Hours cut at month 12",
+    "description": "Shifts are cut and the job ends.",
+    "month": 12
+   },
+   {
+    "label": "Medical emergency",
+    "description": "An unexpected hospital bill and two weeks off work.",
+    "month": 16
+   }
+  ],
+  "checks": [
+   {
+    "name": "Branch isolation",
+    "passed": true,
+    "repaired": 0,
+    "detail": "No world cites the other world's evidence or events."
+   },
+   {
+    "name": "Timeline order",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Every event follows its causes."
+   },
+   {
+    "name": "Money reconciles",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Savings match pay, tax and costs at every timepoint."
+   },
+   {
+    "name": "Facts have sources",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Every FACT has a citation; every ASSUMPTION came from you."
+   },
+   {
+    "name": "No unsupported values",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Values without evidence are shown as unknown, not filled in."
+   },
+   {
+    "name": "Story holds together",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Both worlds hold together."
+   }
+  ],
+  "comparison": {
+   "summary": "Path A (Job in Dubai) leans toward balance; Path B (Local job in Kochi) leans toward stability, location.",
+   "dominant_assumptions": [
+    "How long a job search takes if things go wrong",
+    "Housing cost difference between the cities",
+    "Whether equity ends up worth anything"
+   ],
+   "what_would_change_my_mind": [
+    "The startup's runway is shorter than 12 months",
+    "The stable role offers a fast promotion track"
+   ]
+  },
+  "third_door": null,
+  "derived_from": null,
+  "created_at": "2026-10-27T15:35:53.839608+00:00"
+ },
+ "precomputed_shock": {
+  "request": {
+   "label": "Wages withheld for 3 months",
+   "description": "The employer stops paying salary for three months.",
+   "month": 8
+  },
+  "simulation": {
+   "id": "demo-gulf-job-vs-stay-kerala",
+   "slug": "gulf-job-vs-stay-kerala",
+   "mode": "mock",
+   "status": "ready",
+   "version": 2,
+   "decision": {
+    "title": "Dubai job vs Stay in Kochi",
+    "question": "Should I take a construction electrician job in Dubai paying $10,800 a year with housing provided (the recruitment agent wants a $1,500 fee), or stay in Kochi, Kerala as an electrician earning $4,200 ",
+    "path_a": {
+     "label": "Job in Dubai",
+     "city": "Dubai",
+     "role": "Electrician",
+     "org_type": "established_company",
+     "annual_pay_usd": 10800.0,
+     "equity": null,
+     "notes": "Should I take a construction electrician job in Dubai paying $10,800 a year with housing provided (the recruitment agent wants a $1,500 fee),"
+    },
+    "path_b": {
+     "label": "Local job in Kochi",
+     "city": "Kochi",
+     "role": "Electrician",
+     "org_type": "established_company",
+     "annual_pay_usd": 4200.0,
+     "equity": null,
+     "notes": "stay in Kochi, Kerala as an electrician earning $4,200 a year near my parents? I want to send money home and build savings"
+    },
+    "priorities": {
+     "learning": 3,
+     "stability": 3,
+     "ownership": 3,
+     "location": 4,
+     "autonomy": 3
+    },
+    "goals": [
+     "Send money home and build savings"
+    ],
+    "fears": [
+     "The fee and being far from family"
+    ],
+    "constraints": [
+     "Should I take a construction electrician job in Dubai paying $10,800 a year with housing provided (the recruitment agent wants a $1,500 fee), or stay in Kochi, Kerala as an electrician earning $4,200 a year near my parents?",
+     "I'm worried about the fee and being far from family."
+    ],
+    "current": {
+     "city": null,
+     "profession": "Electrician",
+     "age_band": null,
+     "savings_usd": 900.0,
+     "monthly_expenses_usd": 250.0
+    },
+    "clarifying_questions": []
+   },
+   "branches": {
+    "A": {
+     "branch": "A",
+     "label": "Job in Dubai",
+     "summary": "In Path A you build steadily in Dubai. Unpaid wages or a cancelled contract far from home is the main risk.",
+     "top_tradeoffs": [
+      "More stability, less learning",
+      "More predictability, less ownership",
+      "Life built around Dubai"
+     ],
+     "confidence": "high",
+     "persona": {
+      "name": "Future A",
+      "voice": "Tired, proud, counts in two currencies.",
+      "temperament": "Steady and homesick; every month home is a goal reached."
+     },
+     "finance_inputs": {
+      "start_savings": 900.0,
+      "annual_pay": 10800.0,
+      "effective_tax_rate": 0.0,
+      "annual_housing_low": 0.0,
+      "annual_housing_high": 1200.0,
+      "annual_other_costs": 1800.0,
+      "raise_pct_per_year": 0.02,
+      "equity_note": null,
+      "pay_segments": [
+       {
+        "start_month": 0,
+        "end_month": 8,
+        "annual_pay": 10800.0,
+        "label": "base pay"
+       },
+       {
+        "start_month": 8,
+        "end_month": 11,
+        "annual_pay": 0.0,
+        "label": "wages withheld"
+       },
+       {
+        "start_month": 11,
+        "end_month": null,
+        "annual_pay": 10800.0,
+        "label": "wages resumed"
+       }
+      ],
+      "one_time_costs": [
+       {
+        "month": 0,
+        "amount": 1500.0,
+        "label": "recruitment fee"
+       }
+      ]
+     },
+     "snapshots": [
+      {
+       "timepoint": "m0",
+       "headline": "Day one: new arrival on a construction crew in Dubai",
+       "career": {
+        "role": {
+         "text": "New arrival on a construction crew",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Assigned tasks on one site",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Gulf site rules and safety",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$11K a year",
+         "range": {
+          "low": 10800.0,
+          "high": 10800.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_001",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$0 to $1K a year",
+         "range": {
+          "low": 0.0,
+          "high": 1200.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_003",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$900",
+         "range": {
+          "low": 900.0,
+          "high": 900.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "3.4\u20136.7 months of expenses",
+         "range": {
+          "low": 3.4,
+          "high": 6.7,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Dubai",
+         "range": null,
+         "evidence_id": "ev_U_002",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Bus from the labour camp to site",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Dubai",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "54\u201360 hours a week",
+         "range": {
+          "low": 54.0,
+          "high": 60.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "stress": {
+         "text": "High",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Low",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: tied to one employer and one visa",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "Medium: coming home is easy, a second contract is harder",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Unpaid wages or a cancelled contract far from home",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": []
+      },
+      {
+       "timepoint": "m6",
+       "headline": "Six months in: settled into the crew",
+       "career": {
+        "role": {
+         "text": "Settled into the crew",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Trusted with wiring on a floor",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Commercial wiring at scale",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$11K a year",
+         "range": {
+          "low": 10800.0,
+          "high": 10800.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_001",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$0 to $1K a year",
+         "range": {
+          "low": 0.0,
+          "high": 1200.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_003",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$4K",
+         "range": {
+          "low": 3210.0,
+          "high": 3990.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "12.1\u201329.6 months of expenses",
+         "range": {
+          "low": 12.1,
+          "high": 29.6,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Dubai",
+         "range": null,
+         "evidence_id": "ev_U_002",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Bus from the labour camp to site",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Dubai",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "54\u201360 hours a week",
+         "range": {
+          "low": 54.0,
+          "high": 60.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "stress": {
+         "text": "High",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Low",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: tied to one employer and one visa",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "Medium: coming home is easy, a second contract is harder",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Unpaid wages or a cancelled contract far from home",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": [
+        "E-A-001",
+        "E-A-002"
+       ]
+      },
+      {
+       "timepoint": "m24",
+       "headline": "Year two: experienced crew member",
+       "career": {
+        "role": {
+         "text": "Experienced crew member",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Leads a small group of workers",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Supervising and planning work",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Dubai",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$11K a year",
+         "range": {
+          "low": 11016.0,
+          "high": 11016.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$0 to $1K a year",
+         "range": {
+          "low": 0.0,
+          "high": 1200.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_003",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$12K to $15K",
+         "range": {
+          "low": 11958.0,
+          "high": 15078.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "45.1\u2013111.7 months of expenses",
+         "range": {
+          "low": 45.1,
+          "high": 111.7,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Dubai",
+         "range": null,
+         "evidence_id": "ev_U_002",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Bus from the labour camp to site",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Dubai",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "54\u201360 hours a week",
+         "range": {
+          "low": 54.0,
+          "high": 60.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "stress": {
+         "text": "High for a few months, then easing",
+         "range": null,
+         "evidence_id": "ev_A_016",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Low",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: tied to one employer and one visa",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "Medium: coming home is easy, a second contract is harder",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Unpaid wages or a cancelled contract far from home",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "stability": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "location": {
+         "text": "1/5 (you weighted it 4/5)",
+         "range": {
+          "low": 1.0,
+          "high": 1.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "1/5 (you weighted it 3/5)",
+         "range": {
+          "low": 1.0,
+          "high": 1.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-A-001",
+        "E-A-002",
+        "E-A-004",
+        "E-A-005",
+        "E-A-003"
+       ]
+      },
+      {
+       "timepoint": "m60",
+       "headline": "Year five: senior hand or back home with savings",
+       "career": {
+        "role": {
+         "text": "Senior hand or back home with savings",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Supervises or starts a small business at home",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "skills": {
+         "text": "A record that helps you get hired again",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Dubai",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$12K a year",
+         "range": {
+          "low": 11690.267328,
+          "high": 11690.267328,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$0 to $1K a year",
+         "range": {
+          "low": 0.0,
+          "high": 1200.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_003",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$36K to $44K",
+         "range": {
+          "low": 36187.55534400003,
+          "high": 43987.55534400003,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "136.6\u2013325.8 months of expenses",
+         "range": {
+          "low": 136.6,
+          "high": 325.8,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Dubai",
+         "range": null,
+         "evidence_id": "ev_U_002",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Bus from the labour camp to site",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Dubai",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "54\u201360 hours a week",
+         "range": {
+          "low": 54.0,
+          "high": 60.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_016",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Low",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: tied to one employer and one visa",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "Medium: coming home is easy, a second contract is harder",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Unpaid wages or a cancelled contract far from home",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "stability": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "location": {
+         "text": "1/5 (you weighted it 4/5)",
+         "range": {
+          "low": 1.0,
+          "high": 1.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "1/5 (you weighted it 3/5)",
+         "range": {
+          "low": 1.0,
+          "high": 1.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-A-001",
+        "E-A-002",
+        "E-A-004",
+        "E-A-005",
+        "E-A-003"
+       ]
+      }
+     ]
+    },
+    "B": {
+     "branch": "B",
+     "label": "Local job in Kochi",
+     "summary": "In Path B you build steadily in Kochi. Pay grows slowly and little is saved is the main risk.",
+     "top_tradeoffs": [
+      "More stability, less learning",
+      "More predictability, less ownership",
+      "Life built around Kochi"
+     ],
+     "confidence": "medium",
+     "persona": {
+      "name": "Future B",
+      "voice": "Practical and dry, a little weary.",
+      "temperament": "Steady and close to home; quietly wonders about the bigger move."
+     },
+     "finance_inputs": {
+      "start_savings": 900.0,
+      "annual_pay": 4200.0,
+      "effective_tax_rate": 0.12,
+      "annual_housing_low": 600.0,
+      "annual_housing_high": 1800.0,
+      "annual_other_costs": 1800.0,
+      "raise_pct_per_year": 0.03,
+      "equity_note": null,
+      "pay_segments": [],
+      "one_time_costs": []
+     },
+     "snapshots": [
+      {
+       "timepoint": "m0",
+       "headline": "Day one: hourly worker in Kochi",
+       "career": {
+        "role": {
+         "text": "Hourly worker",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Assigned shifts",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "skills": {
+         "text": "The job's routines",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$4K a year",
+         "range": {
+          "low": 4200.0,
+          "high": 4200.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_004",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$600 to $2K a year",
+         "range": {
+          "low": 600.0,
+          "high": 1800.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_002",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$900",
+         "range": {
+          "low": 900.0,
+          "high": 900.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_010",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "2.9\u20134.9 months of expenses",
+         "range": {
+          "low": 2.9,
+          "high": 4.9,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_010",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Kochi",
+         "range": null,
+         "evidence_id": "ev_U_005",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Short drive or bus",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Kochi",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201348 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 48.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: steady, but hours can be cut",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: similar work is easy to find",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Pay grows slowly and little is saved",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": []
+      },
+      {
+       "timepoint": "m6",
+       "headline": "Six months in: reliable on the schedule",
+       "career": {
+        "role": {
+         "text": "Reliable on the schedule",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Training new hires",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Speed and reliability",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$4K a year",
+         "range": {
+          "low": 4200.0,
+          "high": 4200.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_004",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$600 to $2K a year",
+         "range": {
+          "low": 600.0,
+          "high": 1800.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_002",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$1K",
+         "range": {
+          "low": 858.0,
+          "high": 1638.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_010",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "2.7\u20138.9 months of expenses",
+         "range": {
+          "low": 2.7,
+          "high": 8.9,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_010",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Kochi",
+         "range": null,
+         "evidence_id": "ev_U_005",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Short drive or bus",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Kochi",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201348 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 48.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: steady, but hours can be cut",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: similar work is easy to find",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Pay grows slowly and little is saved",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": [
+        "E-B-001"
+       ]
+      },
+      {
+       "timepoint": "m24",
+       "headline": "Year two: shift lead or certified tradesperson",
+       "career": {
+        "role": {
+         "text": "Shift lead or certified tradesperson",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Runs a shift or small jobs",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Leading a shift",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Kochi",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$4K a year",
+         "range": {
+          "low": 4455.78,
+          "high": 4455.78,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_010",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$600 to $2K a year",
+         "range": {
+          "low": 600.0,
+          "high": 1800.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_002",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$843 to $4K",
+         "range": {
+          "low": 842.8800000000001,
+          "high": 3962.8799999999974,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_010",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "2.7\u201321.4 months of expenses",
+         "range": {
+          "low": 2.7,
+          "high": 21.4,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_010",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Kochi",
+         "range": null,
+         "evidence_id": "ev_U_005",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Short drive or bus",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Kochi",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201348 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 48.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: steady, but hours can be cut",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: similar work is easy to find",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Pay grows slowly and little is saved",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "stability": {
+         "text": "4/5 (you weighted it 3/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "location": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-B-001",
+        "E-B-002"
+       ]
+      },
+      {
+       "timepoint": "m60",
+       "headline": "Year five: supervisor or small contractor",
+       "career": {
+        "role": {
+         "text": "Supervisor or small contractor",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Manages a crew or own clients",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Running work for others",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Kochi",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_004",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$5K a year",
+         "range": {
+          "low": 4868.95111206,
+          "high": 4868.95111206,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_010",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$600 to $2K a year",
+         "range": {
+          "low": 600.0,
+          "high": 1800.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_002",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$2K to $9K",
+         "range": {
+          "low": 1622.5659537599995,
+          "high": 9422.565953760004,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_010",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "5.2\u201350.9 months of expenses",
+         "range": {
+          "low": 5.2,
+          "high": 50.9,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_010",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Kochi",
+         "range": null,
+         "evidence_id": "ev_U_005",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Short drive or bus",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Kochi",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201348 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 48.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Low",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: steady, but hours can be cut",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: similar work is easy to find",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Pay grows slowly and little is saved",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "stability": {
+         "text": "4/5 (you weighted it 3/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "location": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-B-001",
+        "E-B-002",
+        "E-B-003"
+       ]
+      }
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "id": "ev_U_001",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path A pays $10,800 a year (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.839657+00:00"
+    },
+    {
+     "id": "ev_U_002",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path A is based in Dubai (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.839718+00:00"
+    },
+    {
+     "id": "ev_U_003",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path A: Job in Dubai. Should I take a construction electrician job in Dubai paying $10,800 a year with housing provided (the recruitment agent wants a $1,500 fee),",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.839726+00:00"
+    },
+    {
+     "id": "ev_U_004",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path B pays $4,200 a year (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.839734+00:00"
+    },
+    {
+     "id": "ev_U_005",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path B is based in Kochi (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.839740+00:00"
+    },
+    {
+     "id": "ev_U_006",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path B: Local job in Kochi. stay in Kochi, Kerala as an electrician earning $4,200 a year near my parents? I want to send money home and build savings",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.839746+00:00"
+    },
+    {
+     "id": "ev_U_007",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "You have about $900 saved (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.839754+00:00"
+    },
+    {
+     "id": "ev_U_008",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "You spend about $250 a month (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.839762+00:00"
+    },
+    {
+     "id": "ev_U_009",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Your priorities (1-5): learning 3, stability 3, ownership 3, location 4, autonomy 3.",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.839772+00:00"
+    },
+    {
+     "id": "ev_U_010",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Goal: Send money home and build savings",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.839780+00:00"
+    },
+    {
+     "id": "ev_U_011",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Worry: The fee and being far from family",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.839788+00:00"
+    },
+    {
+     "id": "ev_A_001",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "UAE labour law (Federal Decree-Law No. 33 of 2021) bars employers from charging workers recruitment or hiring costs, directly or indirectly; MOHRE says the employer must pay them.",
+     "citation": {
+      "url": "https://www.mondaq.com/employee-rights-labour-relations/1783954/recruitment-obligations-under-uae-labour-law",
+      "title": "Recruitment obligations under UAE labour law (Mondaq), citing Decree-Law 33 of 2021",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.841373+00:00"
+    },
+    {
+     "id": "ev_A_002",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "UAE private employers must pay wages through the Wage Protection System. Under MOHRE Resolution 340 of 2026 (from 1 June 2026), any payment after the due date counts as delayed and the company is put under electronic monitoring.",
+     "citation": {
+      "url": "https://www.clydeco.com/en/insights/2026/06/uae-introduces-stricter-wage-protection",
+      "title": "Clyde & Co: UAE introduces stricter wage protection system enforcement framework (June 2026)",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.841385+00:00"
+    },
+    {
+     "id": "ev_A_003",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "The UAE does not tax individuals' salaries, and the Ministry of Finance has said it has no plans to introduce personal income tax.",
+     "citation": {
+      "url": "https://gulfnews.com/business/economy/uae-affirms-there-are-no-plans-to-introduce-income-tax-on-individuals-1.1705996309815",
+      "title": "Gulf News: UAE affirms there are no plans to introduce income tax on individuals",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.841392+00:00"
+    },
+    {
+     "id": "ev_B_001",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "Kerala pays the highest rural construction wages in India: men averaged \u20b9893.6 a day in 2023-24 (RBI Handbook of Statistics on Indian States, Table 116).",
+     "citation": {
+      "url": "https://website.rbi.org.in/web/rbi/-/publications/table-116-state-wise-average-daily-wage-rates-in-rural-india-men-construction-workers-",
+      "title": "RBI Handbook of Statistics on Indian States, Table 116",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:53.841397+00:00"
+    },
+    {
+     "id": "ev_A_004",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "evidence-resolver",
+     "model_id": "muse-spark-1.3",
+     "text": "Typical annual rent for a one-bedroom apartment in Dubai: Offline mock: not looked up (Typical annual rent for a one-bedroom apartment in Dubai). Using a rough built-in estimate.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:35:53.947731+00:00"
+    },
+    {
+     "id": "ev_B_002",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "evidence-resolver",
+     "model_id": "muse-spark-1.3",
+     "text": "Typical annual rent for a one-bedroom apartment in Kochi: Offline mock: not looked up (Typical annual rent for a one-bedroom apartment in Kochi). Using a rough built-in estimate.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:35:53.949636+00:00"
+    },
+    {
+     "id": "ev_A_005",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:54.067738+00:00"
+    },
+    {
+     "id": "ev_A_006",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Typical progression for a Electrician at a established company.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:54.067757+00:00"
+    },
+    {
+     "id": "ev_A_007",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Professional network grows around Dubai.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:35:54.067765+00:00"
+    },
+    {
+     "id": "ev_A_008",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "finance",
+     "model_id": "muse-spark-1.3",
+     "text": "Equity at a established company is illiquid until an exit.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:54.067875+00:00"
+    },
+    {
+     "id": "ev_A_009",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "lifestyle",
+     "model_id": "muse-spark-1.3",
+     "text": "Hours and stress typical of a established company role.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:35:54.067896+00:00"
+    },
+    {
+     "id": "ev_A_010",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "risk",
+     "model_id": "muse-spark-1.3",
+     "text": "Risk profile of a established company path.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:54.067962+00:00"
+    },
+    {
+     "id": "ev_A_011",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "values",
+     "model_id": "muse-spark-1.3",
+     "text": "Scored against the priorities you gave.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:54.067989+00:00"
+    },
+    {
+     "id": "ev_A_012",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:54.068038+00:00"
+    },
+    {
+     "id": "ev_B_003",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:54.068454+00:00"
+    },
+    {
+     "id": "ev_B_004",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Typical progression for a Electrician at a established company.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:54.068465+00:00"
+    },
+    {
+     "id": "ev_B_005",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Professional network grows around Kochi.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:35:54.068473+00:00"
+    },
+    {
+     "id": "ev_B_006",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "finance",
+     "model_id": "muse-spark-1.3",
+     "text": "Equity at a established company is illiquid until an exit.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:54.068536+00:00"
+    },
+    {
+     "id": "ev_B_007",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "lifestyle",
+     "model_id": "muse-spark-1.3",
+     "text": "Hours and stress typical of a established company role.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:35:54.068551+00:00"
+    },
+    {
+     "id": "ev_B_008",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "risk",
+     "model_id": "muse-spark-1.3",
+     "text": "Risk profile of a established company path.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:54.068597+00:00"
+    },
+    {
+     "id": "ev_B_009",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "values",
+     "model_id": "muse-spark-1.3",
+     "text": "Scored against the priorities you gave.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:54.068618+00:00"
+    },
+    {
+     "id": "ev_B_010",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:54.068653+00:00"
+    },
+    {
+     "id": "ev_U_012",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "shock",
+     "model_id": null,
+     "text": "For \u201cWages withheld for 3 months\u201d: Wages stop for 3 months and the back pay is not recovered",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:57.756868+00:00"
+    },
+    {
+     "id": "ev_U_013",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "shock",
+     "model_id": null,
+     "text": "For \u201cWages withheld for 3 months\u201d: Housing and food stay employer-provided",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:57.756880+00:00"
+    },
+    {
+     "id": "ev_A_013",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "shock",
+     "model_id": null,
+     "text": "You applied a shock: Wages withheld for 3 months. The employer stops paying salary for three months.",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:57.756894+00:00"
+    },
+    {
+     "id": "ev_A_014",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "risk",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 8.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:57.911339+00:00"
+    },
+    {
+     "id": "ev_A_015",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 8.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:57.912622+00:00"
+    },
+    {
+     "id": "ev_A_016",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "lifestyle",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 8.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:57.915181+00:00"
+    },
+    {
+     "id": "ev_A_017",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "values",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 8.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:57.921973+00:00"
+    }
+   ],
+   "events": [
+    {
+     "id": "E-A-001",
+     "branch": "A",
+     "month": 1,
+     "kind": "turning_point",
+     "title": "Arrived and started on site",
+     "detail": "Housing is shared; the work is long and hot.",
+     "caused_by": [],
+     "evidence_id": "ev_A_006",
+     "version": 1
+    },
+    {
+     "id": "E-A-002",
+     "branch": "A",
+     "month": 6,
+     "kind": "turning_point",
+     "title": "Sent the first big amount home",
+     "detail": "Money home covers family costs.",
+     "caused_by": [],
+     "evidence_id": "ev_A_006",
+     "version": 1
+    },
+    {
+     "id": "E-A-003",
+     "branch": "A",
+     "month": 24,
+     "kind": "turning_point",
+     "title": "Contract renewal decision",
+     "detail": "The two-year contract comes up for renewal.",
+     "caused_by": [],
+     "evidence_id": "ev_A_006",
+     "version": 1
+    },
+    {
+     "id": "E-B-001",
+     "branch": "B",
+     "month": 5,
+     "kind": "turning_point",
+     "title": "Picked up extra shifts",
+     "detail": "Overtime helps for a few months.",
+     "caused_by": [],
+     "evidence_id": "ev_B_004",
+     "version": 1
+    },
+    {
+     "id": "E-B-002",
+     "branch": "B",
+     "month": 18,
+     "kind": "turning_point",
+     "title": "Promoted to shift lead",
+     "detail": "A small raise and more responsibility.",
+     "caused_by": [],
+     "evidence_id": "ev_B_004",
+     "version": 1
+    },
+    {
+     "id": "E-B-003",
+     "branch": "B",
+     "month": 40,
+     "kind": "turning_point",
+     "title": "Took on supervising",
+     "detail": "Leads others.",
+     "caused_by": [],
+     "evidence_id": "ev_B_004",
+     "version": 1
+    },
+    {
+     "id": "E-A-004",
+     "branch": "A",
+     "month": 8,
+     "kind": "shock",
+     "title": "Employer stopped paying wages",
+     "detail": "Salary is held back for three months.",
+     "caused_by": [
+      "S-01"
+     ],
+     "evidence_id": "ev_A_013",
+     "version": 2
+    },
+    {
+     "id": "E-A-005",
+     "branch": "A",
+     "month": 11,
+     "kind": "shock",
+     "title": "Back pay partly recovered",
+     "detail": "Wages resume after a complaint to the labour office.",
+     "caused_by": [
+      "S-01"
+     ],
+     "evidence_id": "ev_A_013",
+     "version": 2
+    }
+   ],
+   "shocks": [
+    {
+     "id": "S-01",
+     "label": "Wages withheld for 3 months",
+     "description": "The employer stops paying salary for three months.",
+     "month": 8,
+     "applies_to": [
+      "A"
+     ],
+     "not_applied_because": {
+      "B": "This shock doesn't touch Path B: nothing in this world depends on it."
+     },
+     "changes": [
+      {
+       "branch": "A",
+       "timepoint": "m24",
+       "field": "finance.salary",
+       "before": "$11K a year",
+       "after": "$11K a year",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "E-A-005"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m24",
+       "field": "finance.savings",
+       "before": "$15K to $18K",
+       "after": "$12K to $15K",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "E-A-005",
+        "finance.salary"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m24",
+       "field": "finance.runway_months",
+       "before": "56.1\u2013133.2 months of expenses",
+       "after": "45.1\u2013111.7 months of expenses",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "E-A-005",
+        "finance.salary",
+        "finance.savings"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m24",
+       "field": "lifestyle.stress",
+       "before": "Medium",
+       "after": "High for a few months, then easing",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "E-A-005",
+        "finance.salary",
+        "finance.savings",
+        "finance.runway_months"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m60",
+       "field": "finance.salary",
+       "before": "$12K a year",
+       "after": "$12K a year",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "E-A-005"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m60",
+       "field": "finance.savings",
+       "before": "$40K to $48K",
+       "after": "$36K to $44K",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "E-A-005",
+        "finance.salary"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m60",
+       "field": "finance.runway_months",
+       "before": "149.8\u2013351.9 months of expenses",
+       "after": "136.6\u2013325.8 months of expenses",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "E-A-005",
+        "finance.salary",
+        "finance.savings"
+       ]
+      }
+     ],
+     "front_pages": [
+      {
+       "branch": "A",
+       "headline": "Wages withheld for 3 months. By year two: experienced crew member.",
+       "deck": "Savings at year two: $12K to $15K. Steady and homesick; every month home is a goal reached.",
+       "changed_because": "Wages withheld for 3 months \u2192 pay changed \u2192 savings at year 2: $15K to $18K \u2192 $12K to $15K.",
+       "unchanged": false
+      },
+      {
+       "branch": "B",
+       "headline": "Year two: shift lead or certified tradesperson.",
+       "deck": "Savings at year two: $843 to $4K.",
+       "changed_because": "This shock happens somewhere this world never went.",
+       "unchanged": true
+      }
+     ],
+     "verdict": {
+      "more_robust": "B",
+      "why": "Path B is untouched by this shock.",
+      "dominant_assumption": "How long a job search takes if things go wrong",
+      "confidence": "medium"
+     },
+     "from_version": 1,
+     "to_version": 2,
+     "created_at": "2026-10-27T15:35:57.756827+00:00"
+    }
+   ],
+   "suggested_shocks": [
+    {
+     "label": "Wages withheld for 3 months",
+     "description": "The employer stops paying salary for three months.",
+     "month": 8
+    },
+    {
+     "label": "Hours cut at month 12",
+     "description": "Shifts are cut and the job ends.",
+     "month": 12
+    },
+    {
+     "label": "Medical emergency",
+     "description": "An unexpected hospital bill and two weeks off work.",
+     "month": 16
+    }
+   ],
+   "checks": [
+    {
+     "name": "Branch isolation",
+     "passed": true,
+     "repaired": 0,
+     "detail": "No world cites the other world's evidence or events."
+    },
+    {
+     "name": "Timeline order",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Every event follows its causes."
+    },
+    {
+     "name": "Money reconciles",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Savings match pay, tax and costs at every timepoint."
+    },
+    {
+     "name": "Facts have sources",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Every FACT has a citation; every ASSUMPTION came from you."
+    },
+    {
+     "name": "No unsupported values",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Values without evidence are shown as unknown, not filled in."
+    },
+    {
+     "name": "Story holds together",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Both worlds hold together."
+    }
+   ],
+   "comparison": {
+    "summary": "Path A (Job in Dubai) leans toward balance; Path B (Local job in Kochi) leans toward stability, location.",
+    "dominant_assumptions": [
+     "How long a job search takes if things go wrong",
+     "Housing cost difference between the cities",
+     "Whether equity ends up worth anything"
+    ],
+    "what_would_change_my_mind": [
+     "The startup's runway is shorter than 12 months",
+     "The stable role offers a fast promotion track"
+    ]
+   },
+   "third_door": null,
+   "derived_from": null,
+   "created_at": "2026-10-27T15:35:53.839608+00:00"
+  }
+ },
+ "messages": [
+  {
+   "id": "57e4623f9529",
+   "role": "user",
+   "text": "Was leaving home worth it?",
+   "claims": [],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-27T15:35:54.377324+00:00"
+  },
+  {
+   "id": "2f18cb1a2042",
+   "role": "future_a",
+   "text": "Honestly? At month 1, arrived and started on site [E-A-001]. Most of what I'm learning is supervising and planning work [ev_A_006]. My role these days: experienced crew member [ev_A_006]. That's the part of this life I think about most.",
+   "claims": [
+    {
+     "start": 22,
+     "end": 50,
+     "ref": "E-A-001"
+    },
+    {
+     "start": 61,
+     "end": 120,
+     "ref": "ev_A_006"
+    },
+    {
+     "start": 132,
+     "end": 176,
+     "ref": "ev_A_006"
+    }
+   ],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-27T15:35:55.468644+00:00"
+  },
+  {
+   "id": "6782796b2172",
+   "role": "future_b",
+   "text": "I see it differently. At month 5, picked up extra shifts [E-B-001]. Most of what I'm learning is leading a shift [ev_B_004]. My role these days: shift lead or certified tradesperson [ev_B_004]. That's the part of this life I think about most.",
+   "claims": [
+    {
+     "start": 34,
+     "end": 57,
+     "ref": "E-B-001"
+    },
+    {
+     "start": 68,
+     "end": 113,
+     "ref": "ev_B_004"
+    },
+    {
+     "start": 125,
+     "end": 182,
+     "ref": "ev_B_004"
+    }
+   ],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-27T15:35:56.617554+00:00"
+  },
+  {
+   "id": "8ecfc44da771",
+   "role": "future_a",
+   "text": "Fair, but from where I'm standing: What worries me most: unpaid wages or a cancelled contract far from home [ev_A_010]. Stress? medium [ev_A_009]. That's the part of this life I think about most.",
+   "claims": [
+    {
+     "start": 6,
+     "end": 108,
+     "ref": "ev_A_010"
+    },
+    {
+     "start": 120,
+     "end": 135,
+     "ref": "ev_A_009"
+    }
+   ],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-27T15:35:57.597345+00:00"
+  }
+ ],
+ "postcards": {
+  "A": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTM2IDEwMjQiIHdpZHRoPSIxNTM2IiBoZWlnaHQ9IjEwMjQiPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFhMWQyNCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzJGNkZDQyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTUzNiIgaGVpZ2h0PSIxMDI0IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgNzYwIEwxODAgNjQwIEwzMjAgNzAwIEw1MjAgNTYwIEw3MDAgNjkwIEw5MDAgNjAwIEwxMTAwIDcwMCBMMTMwMCA2MTAgTDE1MzYgNzIwIEwxNTM2IDEwMjQgTDAgMTAyNFoiIGZpbGw9IiMwZDBlMTIiIG9wYWNpdHk9Ii44NSIvPgo8cmVjdCB4PSI0MCIgeT0iNDAiIHdpZHRoPSIxNDU2IiBoZWlnaHQ9Ijk0NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWNlOGRmIiBzdHJva2Utd2lkdGg9IjQiIG9wYWNpdHk9Ii42Ii8+Cjx0ZXh0IHg9IjgwIiB5PSIxNjAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSI5NiIgZmlsbD0iI2VjZThkZiI+R3JlZXRpbmdzIGZyb20gRHViYWk8L3RleHQ+Cjx0ZXh0IHg9IjgwIiB5PSI5NDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zdHlsZT0iaXRhbGljIiBmb250LXNpemU9IjQ0IiBmaWxsPSIjZWNlOGRmIj5QYXRoIEEgwrcgRHViYWkgwrcgbW9udGggMjQ8L3RleHQ+Cjx0ZXh0IHg9IjE0NTYiIHk9Ijk0MCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2VjZThkZiIgb3BhY2l0eT0iLjciPk9GRkxJTkUgTU9DSyDCtyBub3QgZ2VuZXJhdGVkIGJ5IE11c2UgSW1hZ2U8L3RleHQ+Cjwvc3ZnPg==",
+  "B": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTM2IDEwMjQiIHdpZHRoPSIxNTM2IiBoZWlnaHQ9IjEwMjQiPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFhMWQyNCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0I4NjQxRSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTUzNiIgaGVpZ2h0PSIxMDI0IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgNzYwIEwxODAgNjQwIEwzMjAgNzAwIEw1MjAgNTYwIEw3MDAgNjkwIEw5MDAgNjAwIEwxMTAwIDcwMCBMMTMwMCA2MTAgTDE1MzYgNzIwIEwxNTM2IDEwMjQgTDAgMTAyNFoiIGZpbGw9IiMwZDBlMTIiIG9wYWNpdHk9Ii44NSIvPgo8cmVjdCB4PSI0MCIgeT0iNDAiIHdpZHRoPSIxNDU2IiBoZWlnaHQ9Ijk0NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWNlOGRmIiBzdHJva2Utd2lkdGg9IjQiIG9wYWNpdHk9Ii42Ii8+Cjx0ZXh0IHg9IjgwIiB5PSIxNjAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSI5NiIgZmlsbD0iI2VjZThkZiI+R3JlZXRpbmdzIGZyb20gS29jaGk8L3RleHQ+Cjx0ZXh0IHg9IjgwIiB5PSI5NDAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zdHlsZT0iaXRhbGljIiBmb250LXNpemU9IjQ0IiBmaWxsPSIjZWNlOGRmIj5QYXRoIEIgwrcgS29jaGkgwrcgbW9udGggMjQ8L3RleHQ+Cjx0ZXh0IHg9IjE0NTYiIHk9Ijk0MCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2VjZThkZiIgb3BhY2l0eT0iLjciPk9GRkxJTkUgTU9DSyDCtyBub3QgZ2VuZXJhdGVkIGJ5IE11c2UgSW1hZ2U8L3RleHQ+Cjwvc3ZnPg=="
+ }
+}

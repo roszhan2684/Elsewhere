@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import hashlib
 import json
 import logging
 import shutil
@@ -194,7 +195,11 @@ async def simulate(sim_id: str, request: Request):
     sim = await must_load(sim_id)
     if sim.status == "running":
         return {"simulation_id": sim_id, "status": "running"}
+    start_simulation(sim_id)
+    return {"simulation_id": sim_id, "status": "running"}
 
+
+def start_simulation(sim_id: str) -> None:
     async def run() -> None:
         token = current_sim.set(sim_id)
         emit = emitter(sim_id)
@@ -216,7 +221,6 @@ async def simulate(sim_id: str, request: Request):
                 current_sim.reset(token)
 
     spawn(run())
-    return {"simulation_id": sim_id, "status": "running"}
 
 
 async def _to_wav(raw: bytes, filename: str) -> bytes:
@@ -242,7 +246,8 @@ async def voice(request: Request, audio: UploadFile = File(...), sim_id: str | N
     if len(raw) > 32 * 1024 * 1024:
         raise HTTPException(413, "Audio is too long. Keep it under 10 minutes.")
     wav = await _to_wav(raw, audio.filename or "audio")
-    keywords = ["startup", "equity", "Seattle", "San Francisco", "New York", "grad school", "PhD", "MBA", "salary", "relocate"]
+    keywords = ["startup", "equity", "Seattle", "San Francisco", "New York", "grad school", "PhD", "MBA", "salary", "relocate",
+                "Dubai", "Kerala", "Kochi", "recruitment fee", "nursing", "CNA", "Uber", "Lyft", "warehouse"]
     text = await llm.transcribe(wav=wav, keywords=keywords, mock=lambda: mock_brain.CANONICAL)
     return {"transcript": text, "mode": llm.mode}
 
@@ -472,3 +477,152 @@ async def demo_fork(slug: str, request: Request):
     for m in d.get("messages", []):
         await store.add_message(sim.id, PersonaMessage.model_validate({**m, "id": uuid.uuid4().hex[:12]}))
     return {"id": sim.id}
+
+
+# ---------------------------------------------------------------- third door (idea: is this really either/or?)
+
+@app.post("/v1/simulations/{sim_id}/third-door")
+async def third_door(sim_id: str, request: Request):
+    rate_limit(request)
+    sim = await must_load(sim_id)
+    if sim.status != "ready":
+        raise HTTPException(409, "This simulation isn't ready yet.")
+    token = current_sim.set(sim_id)
+    try:
+        door = await pipeline.third_door(llm, sim)
+    finally:
+        current_sim.reset(token)
+    async with _locks[sim_id]:
+        fresh = await must_load(sim_id)
+        fresh.third_door = door
+        await store.save(fresh)
+    return door
+
+
+class DoorSimIn(BaseModel):
+    against: Literal["A", "B"]
+
+
+@app.post("/v1/simulations/{sim_id}/third-door/simulate", status_code=202)
+async def third_door_simulate(sim_id: str, body: DoorSimIn, request: Request):
+    rate_limit(request)
+    sim = await must_load(sim_id)
+    if not sim.third_door:
+        raise HTTPException(409, "Find a third door first.")
+    new_id = uuid.uuid4().hex[:12]
+    spec = pipeline.third_door_decision(sim, body.against)
+    child = Simulation(id=new_id, mode=llm.mode, status="draft", decision=spec, derived_from=sim_id)  # type: ignore[arg-type]
+    await store.save(child)
+    start_simulation(new_id)
+    return {"simulation_id": new_id, "status": "running"}
+
+
+# ---------------------------------------------------------------- fork with friends (share link + votes)
+
+def _voter(request: Request, token: str) -> str:
+    ip = request.headers.get("x-forwarded-for", request.client.host if request.client else "?").split(",")[0].strip()
+    return hashlib.sha256(f"{ip}|{token}".encode()).hexdigest()[:32]
+
+
+def public_view(sim: Simulation, share_id: str) -> dict[str, Any]:
+    """What a friend sees: both futures, no chats, no evidence ledger, no stated savings or spending."""
+    d = sim.decision
+    branches = {}
+    for b, bw in sim.branches.items():
+        branches[b] = {
+            "branch": b, "label": bw.label, "summary": bw.summary, "top_tradeoffs": bw.top_tradeoffs, "confidence": bw.confidence,
+            "city": bw.snap("m0").location.city.text,
+            "snapshots": [s.model_dump(mode="json", exclude={"event_ids"}) for s in bw.snapshots if s.timepoint in ("m24", "m60")],
+        }
+    return {
+        "share_id": share_id, "mode": sim.mode, "title": d.title, "question": d.question,
+        "priorities": d.priorities.model_dump(), "goals": d.goals[:3], "branches": branches,
+        "third_door": sim.third_door.label if sim.third_door else None,
+    }
+
+
+async def tally(share_id: str, token: str | None = None, request: Request | None = None) -> dict[str, Any]:
+    votes = await store.votes(share_id)
+    mine = None
+    if token and request is not None:
+        me = _voter(request, token)
+        mine = next((v["choice"] for v in votes if v["voter"] == me), None)
+    return {
+        "A": sum(v["choice"] == "A" for v in votes), "B": sum(v["choice"] == "B" for v in votes), "total": len(votes), "mine": mine,
+        "reasons": [{k: v[k] for k in ("choice", "name", "reason", "created_at")} for v in votes if v["reason"]][:30],
+    }
+
+
+@app.post("/v1/simulations/{sim_id}/share")
+async def create_share(sim_id: str):
+    sim = await must_load(sim_id)
+    if sim.status != "ready":
+        raise HTTPException(409, "This simulation isn't ready yet.")
+    share_id = await store.share_for(sim_id)
+    if not share_id:
+        share_id = uuid.uuid4().hex[:10]
+        await store.create_share(share_id, sim_id)
+    return {"share_id": share_id, **(await tally(share_id))}
+
+
+@app.get("/v1/simulations/{sim_id}/share")
+async def get_share(sim_id: str):
+    await must_load(sim_id)
+    share_id = await store.share_for(sim_id)
+    if not share_id:
+        return {"share_id": None}
+    return {"share_id": share_id, **(await tally(share_id))}
+
+
+async def _share_sim(share_id: str) -> Simulation:
+    sim_id = await store.share_sim(share_id)
+    sim = await store.load(sim_id) if sim_id else None
+    if sim is None:
+        raise HTTPException(404, "This link doesn't exist or was deleted.")
+    return sim
+
+
+@app.get("/v1/shares/{share_id}")
+async def get_public_share(share_id: str, request: Request, token: str | None = None):
+    sim = await _share_sim(share_id)
+    return {**public_view(sim, share_id), "votes": await tally(share_id, token, request)}
+
+
+class VoteIn(BaseModel):
+    choice: Literal["A", "B"]
+    token: str = Field(min_length=8, max_length=64)
+    name: str = Field(default="", max_length=40)
+    reason: str = Field(default="", max_length=280)
+
+
+@app.post("/v1/shares/{share_id}/votes")
+async def vote(share_id: str, body: VoteIn, request: Request):
+    await _share_sim(share_id)
+    await store.vote(share_id, _voter(request, body.token), body.choice, body.name.strip(), body.reason.strip())
+    return await tally(share_id, body.token, request)
+
+
+# ---------------------------------------------------------------- reality check-ins
+
+class CheckinIn(BaseModel):
+    month: int = Field(ge=0, le=120)
+    took: Literal["A", "B", "neither"]
+    savings_usd: float | None = Field(default=None, ge=-10_000_000, le=100_000_000)
+    annual_pay_usd: float | None = Field(default=None, ge=0, le=100_000_000)
+    stress: int | None = Field(default=None, ge=1, le=5)
+    hours_per_week: float | None = Field(default=None, ge=0, le=120)
+    note: str = Field(default="", max_length=1000)
+
+
+@app.get("/v1/simulations/{sim_id}/checkins")
+async def checkins(sim_id: str):
+    await must_load(sim_id)
+    return await store.checkins(sim_id)
+
+
+@app.post("/v1/simulations/{sim_id}/checkins")
+async def add_checkin(sim_id: str, body: CheckinIn):
+    await must_load(sim_id)
+    checkin_id = uuid.uuid4().hex[:12]
+    await store.add_checkin(checkin_id, sim_id, body.model_dump())
+    return {"id": checkin_id, **body.model_dump()}

@@ -76,3 +76,45 @@ async def test_parallel_calls_cannot_overshoot():
     refused = sum(isinstance(r, BudgetExceeded) for r in results)
     assert refused >= 3 and fake.calls == 5 - refused
     assert llm.budget.spent <= 0.05 and each > 0
+
+
+def test_ceiling_beats_env():
+    from elsewhere.budget import HARD_CEILING_USD
+    assert Budget(500).limit == HARD_CEILING_USD == 10.0
+
+
+async def test_reaching_ceiling_locks_live_for_good():
+    from elsewhere import budget
+    llm, fake = live_llm(500)  # env asks for $500; the ceiling still holds it to $10
+    llm.budget.set_spent(9.99)
+    with pytest.raises(BudgetExceeded):
+        await llm.structured(agent="t", model="muse-wonder-1.0", instructions="x", input="y", schema=Out, mock=lambda: Out(answer="m"))
+    assert fake.calls == 0 and budget.live_locked()
+    assert not Settings(model_mode="live", model_api_key="k", budget_usd=5).live
+    llm.budget.set_spent(0)  # even with money "left", the lock refuses
+    with pytest.raises(BudgetExceeded):
+        await llm.structured(agent="t", model="muse-spark-1.3", instructions="x", input="y", schema=Out, mock=lambda: Out(answer="m"))
+    assert fake.calls == 0
+
+
+async def test_sees_spend_from_other_processes():
+    from elsewhere import budget
+    llm, fake = live_llm(5)
+
+    async def ledger() -> float:
+        return 4.999  # another process already spent this
+
+    budget.register_ledger(ledger)
+    with pytest.raises(BudgetExceeded):
+        await llm.structured(agent="t", model="muse-spark-1.3", instructions="x", input="y", schema=Out, mock=lambda: Out(answer="m"))
+    assert fake.calls == 0
+
+
+async def test_deleting_a_simulation_keeps_its_spend(tmp_path):
+    from elsewhere.llm import CallRecord
+    from elsewhere.store import Store
+    store = Store(f"sqlite+aiosqlite:///{tmp_path}/ledger.db")
+    await store.init()
+    await store.log_call(CallRecord("sim1", "t", "muse-spark-1.3", "meta", "low", 10, cost_usd=1.25))
+    await store.delete("sim1")
+    assert await store.total_cost() == pytest.approx(1.25)

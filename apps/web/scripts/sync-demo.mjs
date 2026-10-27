@@ -17,7 +17,8 @@ for (const f of readdirSync(src).filter((f) => f.endsWith(".json")).sort()) {
   const raw = readFileSync(join(src, f), "utf8");
   const d = JSON.parse(raw);
   writeFileSync(join(out, f), raw);
-  index.push({ slug: d.slug, title: d.simulation.decision.title, blurb: d.blurb, mode: d.simulation.mode });
+  index.push({ slug: d.slug, title: d.simulation.decision.title, blurb: d.blurb, mode: d.simulation.mode, order: d.order ?? 50 });
 }
+index.sort((a, b) => a.order - b.order || a.slug.localeCompare(b.slug));
 writeFileSync(join(out, "index.json"), JSON.stringify(index, null, 1));
 console.log(`sync-demo: ${index.length} scenarios`);

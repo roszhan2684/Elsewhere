@@ -159,6 +159,20 @@ export interface CheckResult {
   detail: string;
 }
 
+export interface ThirdDoor {
+  is_real_alternative: boolean;
+  label: string;
+  path: PathSpec;
+  why_not_binary: string;
+  borrows_from_a: string;
+  borrows_from_b: string;
+  gives_up: string;
+  first_step: string;
+  risks: string[];
+  mode: "live" | "mock";
+  created_at: string;
+}
+
 export interface Simulation {
   id: string;
   slug: string | null;
@@ -173,7 +187,41 @@ export interface Simulation {
   suggested_shocks: { label: string; description: string; month: number }[];
   checks: CheckResult[];
   comparison: { summary: string; dominant_assumptions: string[]; what_would_change_my_mind: string[] } | null;
+  third_door?: ThirdDoor | null;
+  derived_from?: string | null;
   created_at: string;
+}
+
+export interface Tally {
+  A: number;
+  B: number;
+  total: number;
+  mine: Branch | null;
+  reasons: { choice: Branch; name: string; reason: string; created_at: string }[];
+}
+
+export interface PublicShare {
+  share_id: string;
+  mode: "live" | "mock";
+  title: string;
+  question: string;
+  priorities: DecisionSpec["priorities"];
+  goals: string[];
+  third_door: string | null;
+  branches: Record<Branch, { branch: Branch; label: string; summary: string; top_tradeoffs: string[]; confidence: Confidence; city: string | null; snapshots: Snapshot[] }>;
+  votes: Tally;
+}
+
+export interface Checkin {
+  id: string;
+  month: number;
+  took: Branch | "neither";
+  savings_usd: number | null;
+  annual_pay_usd: number | null;
+  stress: number | null;
+  hours_per_week: number | null;
+  note: string;
+  created_at?: string;
 }
 
 export interface ClaimSpan {

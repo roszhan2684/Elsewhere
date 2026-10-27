@@ -6,6 +6,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ApiError, api, subscribe } from "@/lib/api";
 import type { PersonaMessage, Simulation } from "@/lib/types";
+import { AgentGraph } from "./AgentGraph";
 import { AgentList, type AgentRow, reduceAgentEvent } from "./AgentList";
 import { ForkLine } from "./ForkLine";
 import { ForkMark } from "./ForkMark";
@@ -99,6 +100,7 @@ export function SimLoader() {
             <p className="font-mono text-[13px] text-muted">{finished} agents finished</p>
           </div>
           <div className="flex flex-col gap-3">
+            <div className="rounded-2xl bg-ink-2 p-4"><AgentGraph rows={rows} mode="simulate" caption="live" /></div>
             <AgentList rows={rows} />
             <p className="px-3 text-[13px] leading-relaxed text-muted">We show what each agent finished, never its private reasoning. Specialists run in parallel; each branch grows as its agents finish.</p>
           </div>

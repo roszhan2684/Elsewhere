@@ -16,6 +16,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_asyn
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 from .contracts import PersonaMessage, Simulation
+from .budget import register_ledger
 from .llm import CallRecord
 
 
@@ -99,6 +100,36 @@ class ModelCallRow(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
 
 
+class ShareRow(Base):
+    """A read-only link friends can open to vote on which life to choose."""
+
+    __tablename__ = "shares"
+    id: Mapped[str] = mapped_column(String(24), primary_key=True)
+    simulation_id: Mapped[str] = mapped_column(String(40), index=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
+class VoteRow(Base):
+    __tablename__ = "share_votes"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    share_id: Mapped[str] = mapped_column(String(24), index=True)
+    voter: Mapped[str] = mapped_column(String(64))  # hashed IP + browser token, never the raw IP
+    choice: Mapped[str] = mapped_column(String(2))
+    name: Mapped[str] = mapped_column(String(40), default="")
+    reason: Mapped[str] = mapped_column(String(280), default="")
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
+class CheckinRow(Base):
+    """Real life, reported later, to compare against both simulated worlds."""
+
+    __tablename__ = "checkins"
+    id: Mapped[str] = mapped_column(String(24), primary_key=True)
+    simulation_id: Mapped[str] = mapped_column(String(40), index=True)
+    data: Mapped[dict] = mapped_column(JSON)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
 class Store:
     def __init__(self, url: str):
         if url.startswith("sqlite"):
@@ -112,6 +143,7 @@ class Store:
         self._conds: dict[str, asyncio.Condition] = {}
 
     async def init(self) -> None:
+        register_ledger(self.total_cost)  # the hard budget re-reads all-time spend before every live call
         async with self.engine.begin() as conn:
             await conn.run_sync(Base.metadata.create_all)
             # Older local databases predate the cost ledger.
@@ -164,11 +196,16 @@ class Store:
             return [{"id": i, "title": t, "status": st, "mode": m, "updated_at": u.isoformat()} for i, t, st, m, u in rows]
 
     async def delete(self, sim_id: str) -> None:
-        from sqlalchemy import delete
+        from sqlalchemy import delete, update
 
         async with self.session() as s, s.begin():
-            for model in (WorldVersionRow, EventRow, MessageRow, AssetRow, ModelCallRow):
+            for model in (WorldVersionRow, EventRow, MessageRow, AssetRow, CheckinRow):
                 await s.execute(delete(model).where(model.simulation_id == sim_id))
+            # Spend rows stay: they are the budget ledger. Deleting them would free money already spent.
+            await s.execute(update(ModelCallRow).where(ModelCallRow.simulation_id == sim_id).values(simulation_id=None))
+            shares = select(ShareRow.id).where(ShareRow.simulation_id == sim_id)
+            await s.execute(delete(VoteRow).where(VoteRow.share_id.in_(shares)))
+            await s.execute(delete(ShareRow).where(ShareRow.simulation_id == sim_id))
             await s.execute(delete(SimRow).where(SimRow.id == sim_id))
 
     # ---------------------------------------------------------------- events (SSE)
@@ -257,3 +294,43 @@ class Store:
         async with self.session() as s:
             return (await s.execute(select(func.count()).select_from(ModelCallRow)
                                     .where(ModelCallRow.simulation_id.in_(sim_ids), ModelCallRow.created_at >= since))).scalar_one()
+
+    # ---------------------------------------------------------------- shares and votes (Fork With Friends)
+
+    async def share_for(self, sim_id: str) -> str | None:
+        async with self.session() as s:
+            return (await s.execute(select(ShareRow.id).where(ShareRow.simulation_id == sim_id).limit(1))).scalar_one_or_none()
+
+    async def create_share(self, share_id: str, sim_id: str) -> None:
+        async with self.session() as s, s.begin():
+            s.add(ShareRow(id=share_id, simulation_id=sim_id))
+
+    async def share_sim(self, share_id: str) -> str | None:
+        async with self.session() as s:
+            row = await s.get(ShareRow, share_id)
+            return row.simulation_id if row else None
+
+    async def vote(self, share_id: str, voter: str, choice: str, name: str, reason: str) -> None:
+        """One vote per voter per share; voting again changes it."""
+        async with self.session() as s, s.begin():
+            row = (await s.execute(select(VoteRow).where(VoteRow.share_id == share_id, VoteRow.voter == voter))).scalar_one_or_none()
+            if row is None:
+                s.add(VoteRow(share_id=share_id, voter=voter, choice=choice, name=name, reason=reason))
+            else:
+                row.choice, row.name, row.reason, row.created_at = choice, name, reason, utcnow()
+
+    async def votes(self, share_id: str) -> list[dict[str, Any]]:
+        async with self.session() as s:
+            rows = (await s.execute(select(VoteRow).where(VoteRow.share_id == share_id).order_by(VoteRow.created_at.desc()))).scalars()
+            return [{"choice": r.choice, "name": r.name, "reason": r.reason, "voter": r.voter, "created_at": r.created_at.isoformat()} for r in rows]
+
+    # ---------------------------------------------------------------- check-ins
+
+    async def add_checkin(self, checkin_id: str, sim_id: str, data: dict[str, Any]) -> None:
+        async with self.session() as s, s.begin():
+            s.add(CheckinRow(id=checkin_id, simulation_id=sim_id, data=data))
+
+    async def checkins(self, sim_id: str) -> list[dict[str, Any]]:
+        async with self.session() as s:
+            rows = (await s.execute(select(CheckinRow).where(CheckinRow.simulation_id == sim_id).order_by(CheckinRow.created_at))).scalars()
+            return [{"id": r.id, **r.data, "created_at": r.created_at.isoformat()} for r in rows]

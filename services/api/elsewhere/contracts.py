@@ -305,6 +305,22 @@ class Comparison(BaseModel):
     what_would_change_my_mind: list[str]
 
 
+class ThirdDoor(BaseModel):
+    """A path Wonder proposes when the decision may be a false either/or."""
+
+    is_real_alternative: bool
+    label: str
+    path: PathSpec
+    why_not_binary: str
+    borrows_from_a: str
+    borrows_from_b: str
+    gives_up: str
+    first_step: str
+    risks: list[str] = []
+    mode: Literal["live", "mock"] = "mock"
+    created_at: str = Field(default_factory=now_iso)
+
+
 class Simulation(BaseModel):
     id: str
     slug: str | None = None
@@ -319,6 +335,8 @@ class Simulation(BaseModel):
     suggested_shocks: list[SuggestedShock] = []
     checks: list[CheckResult] = []
     comparison: Comparison | None = None
+    third_door: ThirdDoor | None = None
+    derived_from: str | None = None  # the simulation this one's third door came from
     created_at: str = Field(default_factory=now_iso)
 
     def evidence_by_id(self) -> dict[str, EvidenceItem]:

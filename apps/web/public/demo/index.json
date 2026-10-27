@@ -1,20 +1,44 @@
 [
  {
+  "slug": "gulf-job-vs-stay-kerala",
+  "title": "Dubai job vs Stay in Kochi",
+  "blurb": "A recruiter offers a construction job in Dubai at 2.5× the pay, for a $1,500 fee. Go, or stay near family in Kerala?",
+  "mode": "mock",
+  "order": 1
+ },
+ {
+  "slug": "cna-vs-nursing-school",
+  "title": "CNA job vs Nursing school",
+  "blurb": "First in the family to go to college: keep a $36K nursing-assistant job, or borrow for a two-year nursing degree?",
+  "mode": "mock",
+  "order": 2
+ },
+ {
+  "slug": "rideshare-vs-warehouse",
+  "title": "Rideshare vs Warehouse job",
+  "blurb": "A single parent in Atlanta: lease a car to drive rideshare and be home after school, or keep the warehouse job with health insurance?",
+  "mode": "mock",
+  "order": 3
+ },
+ {
   "slug": "grad-school-vs-job",
   "title": "Boston ML Masters vs Austin SWE",
   "blurb": "A two-year master's in machine learning in Boston, or a full-time engineering job in Austin now?",
-  "mode": "live"
+  "mode": "live",
+  "order": 50
  },
  {
   "slug": "own-product-vs-stay",
   "title": "Indie Build vs Stay NYC",
   "blurb": "Quit to build your own product, or stay employed at a big company in New York?",
-  "mode": "live"
+  "mode": "live",
+  "order": 50
  },
  {
   "slug": "startup-sf-vs-seattle",
   "title": "Startup SF vs Stable Seattle",
   "blurb": "Join a 7-person AI startup in San Francisco, or take the stable role in Seattle?",
-  "mode": "live"
+  "mode": "live",
+  "order": 50
  }
 ]

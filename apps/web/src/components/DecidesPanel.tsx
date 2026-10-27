@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { motion } from "motion/react";
 import { useMemo, useState } from "react";
 import { ApiError, api } from "@/lib/api";
+import { findTipping } from "@/lib/breakeven";
 import { gapSegment, savingsMid, segments, usd, withGap } from "@/lib/finance";
 import type { Branch, FinanceInputs, Simulation } from "@/lib/types";
 
@@ -77,6 +78,13 @@ export function DecidesPanel({ sim, ensureLive, onUpdated }: { sim: Simulation; 
     })
     .sort((a, b) => b.swing - a.swing);
   const maxSwing = Math.max(...bars.map((b) => b.swing), 1);
+  const leader = gap >= 0 ? "A" : "B";
+  const trailer = leader === "A" ? "B" : "A";
+  const tips = all
+    .map((l) => ({ l, t: findTipping((v) => gapWith({ key: l.key, v }), vals[l.key], l.min, l.max) }))
+    .sort((x, y) => (x.t ? Math.abs(x.t.value - vals[x.l.key]) / Math.max(1e-9, Math.abs(vals[x.l.key]) || 1) : 1e9) - (y.t ? Math.abs(y.t.value - vals[y.l.key]) / Math.max(1e-9, Math.abs(vals[y.l.key]) || 1) : 1e9));
+  const flips = tips.filter((x) => x.t && x.t.value >= 0);
+  const holds = tips.filter((x) => !x.t || x.t.value < 0);
   const dirty = all.some((l) => vals[l.key] !== l.initial);
   const hasGap = all.some((l) => l.key.startsWith("gap"));
 
@@ -173,6 +181,37 @@ export function DecidesPanel({ sim, ensureLive, onUpdated }: { sim: Simulation; 
           </p>
         </div>
       </div>
+
+      <div className="flex flex-col gap-4 rounded-2xl border border-line p-5">
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <span className="label-mono">Tipping points · what would flip it</span>
+          <span className="font-mono text-[11px] text-muted">Path {leader} ahead now</span>
+        </div>
+        {flips.length === 0 && <p className="text-[15px] text-soft">No single assumption flips the result, even far outside the sliders. On money alone, this one is robust.</p>}
+        <ul className="flex flex-col gap-2.5">
+          {flips.map(({ l, t }) => (
+            <li key={l.key} className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-[15px]">
+              <span className={clsx("h-2 w-2 shrink-0 translate-y-[-1px] rounded-full", trailer === "A" ? "bg-path-a" : "bg-path-b")} aria-hidden="true" />
+              <span className="min-w-0 flex-1">
+                Path <b className={clsx("font-medium", trailer === "A" ? "text-path-a" : "text-path-b")}>{trailer}</b> pulls ahead if <b className="font-medium">{l.label.replace(/ \([AB]\)$/, "")}</b> on Path {l.branch} goes {t!.direction} <b className="font-medium">{l.fmt(roundTo(t!.value, l.step))}</b>
+                <span className="text-soft"> (now {l.fmt(vals[l.key])})</span>
+              </span>
+              {!t!.withinRange && <span className="font-mono text-[11px] text-muted">beyond the slider range</span>}
+            </li>
+          ))}
+        </ul>
+        {holds.length > 0 && (
+          <p className="text-[13px] leading-relaxed text-muted">
+            Doesn’t flip at any realistic value: {holds.map((x) => x.l.label).join(", ")}.
+          </p>
+        )}
+        <p className="text-[12px] text-muted">Found by searching each assumption for the value where the two paths end level at {horizon === 24 ? "2 years" : "5 years"}. Only money is compared here; see Values for the rest.</p>
+      </div>
     </div>
   );
+}
+
+function roundTo(v: number, step: number): number {
+  const r = Math.round(v / step) * step;
+  return Number(r.toFixed(step < 1 ? 2 : 0));
 }

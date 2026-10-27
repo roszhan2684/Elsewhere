@@ -13,8 +13,37 @@ from __future__ import annotations
 
 import asyncio
 import logging
+from pathlib import Path
+from typing import Awaitable, Callable
 
 log = logging.getLogger("elsewhere.budget")
+
+# Total recorded spend (all time, every process sharing the database) may never pass this,
+# whatever BUDGET_USD says. Recorded costs carry the safety margin, so real spend stays lower.
+HARD_CEILING_USD = 10.0
+
+# While this file exists, every live call is refused: the app runs in demo mode only.
+# It is created automatically when the ceiling is reached, or by `python -m scripts.demo_mode`.
+# Delete it only when you mean to spend again.
+LIVE_LOCK = Path(__file__).resolve().parent.parent / "LIVE_LOCKED"
+
+# Reads the all-time spend from the database. The Store registers itself, so a second process
+# (a seed script next to the server, say) sees what the first one spent.
+_ledger: Callable[[], Awaitable[float]] | None = None
+
+
+def register_ledger(fn: Callable[[], Awaitable[float]]) -> None:
+    global _ledger
+    _ledger = fn
+
+
+def live_locked() -> bool:
+    return LIVE_LOCK.exists()
+
+
+def lock_live(reason: str) -> None:
+    LIVE_LOCK.write_text(reason.strip() + "\n")
+    log.warning("budget: live calls locked (%s)", reason)
 
 # model: (input, cached_input, output) per 1M tokens
 TOKEN_PRICES: dict[str, tuple[float, float, float]] = {
@@ -55,7 +84,7 @@ def worst_case(model: str, input_chars: int, max_output_tokens: int, searches: i
 
 class Budget:
     def __init__(self, limit_usd: float, safety: float = 1.15):
-        self.limit = float(limit_usd)
+        self.limit = min(float(limit_usd), HARD_CEILING_USD)
         self.safety = float(safety)
         self.spent = 0.0
         self.reserved = 0.0
@@ -71,7 +100,17 @@ class Budget:
     async def reserve(self, amount: float, what: str) -> float:
         amount = amount * self.safety
         async with self._lock:
+            if live_locked():
+                raise BudgetExceeded("Live AI is locked (demo mode). Live model calls are off.")
+            if _ledger is not None:
+                try:
+                    self.spent = max(self.spent, await _ledger())
+                except Exception:
+                    log.exception("budget: could not read the spend ledger; refusing to be safe")
+                    raise BudgetExceeded("Could not confirm spend so far. Live model calls are paused.")
             if self.spent + self.reserved + amount > self.limit:
+                if self.limit >= HARD_CEILING_USD and self.reserved == 0:
+                    lock_live(f"${HARD_CEILING_USD:.0f} ceiling reached: ${self.spent:.2f} recorded; a {what} call needed up to ${amount:.2f}")
                 log.warning("budget: refused %s (needs up to $%.4f, remaining $%.4f)", what, amount, self.remaining)
                 raise BudgetExceeded(
                     f"Live AI budget reached (${self.spent:.2f} of ${self.limit:.2f} used). Live model calls are paused."

@@ -1,10 +1,14 @@
 "use client";
 
 import clsx from "clsx";
+import { motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { ApiError, api, subscribe } from "@/lib/api";
 import type { ShockRecord, Simulation } from "@/lib/types";
+import { rollLifeEvent } from "@/lib/futures";
+import { AgentGraph } from "./AgentGraph";
 import { AgentList, type AgentRow, reduceAgentEvent } from "./AgentList";
+import { Dice } from "./FuturesPanel";
 import { FrontPages } from "./FrontPages";
 
 export function ShockPanel({
@@ -33,8 +37,31 @@ export function ShockPanel({
   const [note, setNote] = useState<string | null>(null);
   const [viewing, setViewing] = useState<string | null>(null); // null = latest
   const unsub = useRef<(() => void) | null>(null);
+  const [rolling, setRolling] = useState<string | null>(null);
+  const [rolled, setRolled] = useState<{ label: string; description: string; month: number } | null>(null);
+  const spin = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  useEffect(() => () => unsub.current?.(), []);
+  useEffect(() => () => { unsub.current?.(); if (spin.current) clearInterval(spin.current); }, []);
+
+  /** Life Roulette: draw one realistic surprise, weighted by how often it happens in real life. */
+  function roll() {
+    if (running || rolling) return;
+    const base = Math.floor(Math.random() * 1e9);
+    let i = 0;
+    spin.current = setInterval(() => {
+      i++;
+      setRolling(rollLifeEvent(sim, base + i * 7919).label);
+      if (i >= 12) {
+        if (spin.current) clearInterval(spin.current);
+        const d = rollLifeEvent(sim, base);
+        setRolling(null);
+        setRolled({ label: d.label, description: d.description, month: d.month });
+        setLabel(d.label);
+        setDescription(d.description);
+        setMonth(d.month);
+      }
+    }, 70);
+  }
 
   function applyFallback(reason: string) {
     if (fallback && fallback.request.label === label) {
@@ -100,8 +127,18 @@ export function ShockPanel({
           <p className="text-[15px] leading-relaxed text-soft">
             Throw a surprise at both worlds. Muse Wonder plans where it enters each one, code traces everything downstream, and Spark agents recompute only what changed.
           </p>
+          <button type="button" onClick={roll} disabled={running || !!rolling}
+            className="flex min-h-12 items-center gap-3 rounded-xl border border-dashed border-line-2 px-4 py-3 text-left hover:border-paper disabled:opacity-60">
+            <motion.span animate={rolling ? { rotate: 360 } : { rotate: 0 }} transition={rolling ? { repeat: Infinity, duration: 0.5, ease: "linear" } : { duration: 0.2 }} className="grid place-items-center">
+              <Dice size={20} />
+            </motion.span>
+            <span className="flex-1">
+              <span className="block text-[15px] font-medium">{rolling ?? "Life Roulette"}</span>
+              <span className="block text-[13px] text-muted">{rolling ? "Rolling…" : "Draw a random surprise, weighted by how often it happens in real life"}</span>
+            </span>
+          </button>
           <div className="flex flex-col gap-2">
-            {presets.map((p) => (
+            {[...(rolled ? [rolled] : []), ...presets.filter((p) => p.label !== rolled?.label)].map((p) => (
               <button key={p.label} type="button" onClick={() => { setLabel(p.label); setDescription(p.description); setMonth(p.month); }}
                 className={clsx("flex items-center gap-3 rounded-xl border px-4 py-3 text-left transition", label === p.label ? "border-shock bg-shock/10" : "border-line hover:border-line-2")}>
                 <span className="h-2 w-2 shrink-0 rounded-full bg-shock" aria-hidden="true" />
@@ -138,6 +175,7 @@ export function ShockPanel({
         </div>
         <div className="flex min-h-[200px] flex-col gap-3 rounded-2xl bg-ink-2 p-4">
           <span className="label-mono px-2 pt-1">{running ? "Live recompute" : rows.length ? "Last recompute" : "Agents"}</span>
+          <AgentGraph rows={rows} mode="shock" />
           {rows.length ? <AgentList rows={rows} /> : <p className="px-2 text-[14px] text-muted">Agent progress shows here while a shock is applied.</p>}
         </div>
       </div>

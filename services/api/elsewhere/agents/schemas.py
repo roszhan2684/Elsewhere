@@ -10,7 +10,7 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
-from ..contracts import Branch, Comparison, Confidence, FrontPage, ShockVerdict, SuggestedShock, Timepoint, Unit
+from ..contracts import Branch, Comparison, Confidence, FrontPage, PathSpec, ShockVerdict, SuggestedShock, Timepoint, Unit
 
 SpecialistDomain = Literal["career", "finance", "lifestyle", "risk", "values"]
 
@@ -166,3 +166,15 @@ class FrontPagesOut(BaseModel):
 
 
 FinanceOutput.model_rebuild()
+
+
+class ThirdDoorOut(BaseModel):
+    is_real_alternative: bool = Field(description="False if this decision really is either/or; then explain why in why_not_binary")
+    label: str = Field(description="Under 40 chars, e.g. 'Seattle job + weekend startup'")
+    path: PathSpec
+    why_not_binary: str = Field(description="One or two sentences: why A-or-B may be a false choice (or why it really is binary)")
+    borrows_from_a: str = Field(description="What this path keeps from Path A, one line")
+    borrows_from_b: str = Field(description="What this path keeps from Path B, one line")
+    gives_up: str = Field(description="What it costs compared with going all-in on either path, one line")
+    first_step: str = Field(description="One concrete thing to do this week to test it")
+    risks: list[str] = Field(description="Up to 3 short risks")

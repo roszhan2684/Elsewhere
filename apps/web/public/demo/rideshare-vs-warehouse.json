@@ -1,0 +1,4915 @@
+{
+ "slug": "rideshare-vs-warehouse",
+ "order": 3,
+ "blurb": "A single parent in Atlanta: lease a car to drive rideshare and be home after school, or keep the warehouse job with health insurance?",
+ "simulation": {
+  "id": "demo-rideshare-vs-warehouse",
+  "slug": "rideshare-vs-warehouse",
+  "mode": "mock",
+  "status": "ready",
+  "version": 1,
+  "decision": {
+   "title": "Rideshare vs Warehouse job",
+   "question": "Should I lease a car to drive full-time for Uber and Lyft in Atlanta, earning about $40,000 a year after the car lease, gas and insurance, or keep my warehouse job in Atlanta at $37,000 a year with he",
+   "path_a": {
+    "label": "Rideshare in Atlanta",
+    "city": "Atlanta",
+    "role": "Rideshare driver",
+    "org_type": "established_company",
+    "annual_pay_usd": 40000.0,
+    "equity": null,
+    "notes": "Should I lease a car to drive full-time for Uber and Lyft in Atlanta, earning about $40,000 a year after the car lease, gas and insurance,"
+   },
+   "path_b": {
+    "label": "Warehouse job in Atlanta",
+    "city": "Atlanta",
+    "role": "Warehouse worker",
+    "org_type": "established_company",
+    "annual_pay_usd": 37000.0,
+    "equity": null,
+    "notes": "keep my warehouse job in Atlanta at $37,000 a year with health insurance? I want control over my hours and to be home when my daughter gets out of school, but I need steady money"
+   },
+   "priorities": {
+    "learning": 3,
+    "stability": 4,
+    "ownership": 3,
+    "location": 4,
+    "autonomy": 4
+   },
+   "goals": [
+    "Control over my hours and to be home when my daughter gets out of school"
+   ],
+   "fears": [
+    "Getting deactivated or the car breaking down"
+   ],
+   "constraints": [
+    "Should I lease a car to drive full-time for Uber and Lyft in Atlanta, earning about $40,000 a year after the car lease, gas and insurance, or keep my warehouse job in Atlanta at $37,000 a year with health insurance?"
+   ],
+   "current": {
+    "city": null,
+    "profession": "Rideshare driver",
+    "age_band": null,
+    "savings_usd": 2500.0,
+    "monthly_expenses_usd": 2200.0
+   },
+   "clarifying_questions": []
+  },
+  "branches": {
+   "A": {
+    "branch": "A",
+    "label": "Rideshare in Atlanta",
+    "summary": "In Path A you build steadily in Atlanta. No benefits; income drops when the car or the app does is the main risk.",
+    "top_tradeoffs": [
+     "More stability, less learning",
+     "More predictability, less ownership",
+     "Life built around Atlanta"
+    ],
+    "confidence": "high",
+    "persona": {
+     "name": "Future A",
+     "voice": "Quick, warm, always watching the clock.",
+     "temperament": "Free to be there after school, anxious about every slow week."
+    },
+    "finance_inputs": {
+     "start_savings": 2500.0,
+     "annual_pay": 40000.0,
+     "effective_tax_rate": 0.15,
+     "annual_housing_low": 17928.0,
+     "annual_housing_high": 21912.0,
+     "annual_other_costs": 15840.0,
+     "raise_pct_per_year": 0.0,
+     "equity_note": null,
+     "pay_segments": [],
+     "one_time_costs": []
+    },
+    "snapshots": [
+     {
+      "timepoint": "m0",
+      "headline": "Day one: full-time rideshare driver in Atlanta",
+      "career": {
+       "role": {
+        "text": "Full-time rideshare driver",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "self-employed",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Picks own hours",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "skills": {
+        "text": "The apps and the city",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$40K a year",
+        "range": {
+         "low": 40000.0,
+         "high": 40000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_001",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$18K to $22K a year",
+        "range": {
+         "low": 17928.0,
+         "high": 21912.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$2K",
+        "range": {
+         "low": 2500.0,
+         "high": 2500.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "0.8\u20130.9 months of expenses",
+        "range": {
+         "low": 0.8,
+         "high": 0.9,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Atlanta",
+        "range": null,
+        "evidence_id": "ev_U_002",
+        "status": "known"
+       },
+       "commute": {
+        "text": "The car is the office",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Atlanta",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "45\u201355 hours a week",
+        "range": {
+         "low": 45.0,
+         "high": 55.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Low: one deactivation or breakdown stops income",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: hourly jobs stay open",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "downside": {
+        "text": "No benefits; income drops when the car or the app does",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": []
+     },
+     {
+      "timepoint": "m6",
+      "headline": "Six months in: driver who knows the best hours",
+      "career": {
+       "role": {
+        "text": "Driver who knows the best hours",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "self-employed",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Plans around school pickup",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Peak hours and airports",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$40K a year",
+        "range": {
+         "low": 40000.0,
+         "high": 40000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_001",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$18K to $22K a year",
+        "range": {
+         "low": 17928.0,
+         "high": 21912.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "savings": {
+        "text": "\u2212$168 to $3K",
+        "range": {
+         "low": -167.9999999999991,
+         "high": 3408.000000000001,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "0\u20131.3 months of expenses",
+        "range": {
+         "low": 0.0,
+         "high": 1.3,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Atlanta",
+        "range": null,
+        "evidence_id": "ev_U_002",
+        "status": "known"
+       },
+       "commute": {
+        "text": "The car is the office",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Atlanta",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "45\u201355 hours a week",
+        "range": {
+         "low": 45.0,
+         "high": 55.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "stress": {
+        "text": "High",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Low: one deactivation or breakdown stops income",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: hourly jobs stay open",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "downside": {
+        "text": "No benefits; income drops when the car or the app does",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": [
+       "E-A-001"
+      ]
+     },
+     {
+      "timepoint": "m24",
+      "headline": "Year two: experienced driver, some regular clients",
+      "career": {
+       "role": {
+        "text": "Experienced driver, some regular clients",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "self-employed",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Runs it like a small business",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Bookkeeping and taxes",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Atlanta",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$40K a year",
+        "range": {
+         "low": 40000.0,
+         "high": 40000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_001",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$18K to $22K a year",
+        "range": {
+         "low": 17928.0,
+         "high": 21912.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "savings": {
+        "text": "\u2212$8K to $6K",
+        "range": {
+         "low": -8171.999999999993,
+         "high": 6132.000000000009,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "0\u20132.3 months of expenses",
+        "range": {
+         "low": 0.0,
+         "high": 2.3,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Atlanta",
+        "range": null,
+        "evidence_id": "ev_U_002",
+        "status": "known"
+       },
+       "commute": {
+        "text": "The car is the office",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Atlanta",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "45\u201355 hours a week",
+        "range": {
+         "low": 45.0,
+         "high": 55.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Low: one deactivation or breakdown stops income",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: hourly jobs stay open",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "downside": {
+        "text": "No benefits; income drops when the car or the app does",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "stability": {
+        "text": "1/5 (you weighted it 4/5)",
+        "range": {
+         "low": 1.0,
+         "high": 1.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "location": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "5/5 (you weighted it 4/5)",
+        "range": {
+         "low": 5.0,
+         "high": 5.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-A-001",
+       "E-A-002",
+       "E-A-003"
+      ]
+     },
+     {
+      "timepoint": "m60",
+      "headline": "Year five: driver or moved to a steadier job",
+      "career": {
+       "role": {
+        "text": "Driver or moved to a steadier job",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "self-employed",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Decides whether to keep driving",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Running a one-person business",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Atlanta",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$40K a year",
+        "range": {
+         "low": 40000.0,
+         "high": 40000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_001",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$18K to $22K a year",
+        "range": {
+         "low": 17928.0,
+         "high": 21912.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "savings": {
+        "text": "\u2212$24K to $12K",
+        "range": {
+         "low": -24180.000000000004,
+         "high": 11580.000000000031,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "0\u20134.3 months of expenses",
+        "range": {
+         "low": 0.0,
+         "high": 4.3,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_012",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Atlanta",
+        "range": null,
+        "evidence_id": "ev_U_002",
+        "status": "known"
+       },
+       "commute": {
+        "text": "The car is the office",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Atlanta",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "45\u201355 hours a week",
+        "range": {
+         "low": 45.0,
+         "high": 55.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_009",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Low: one deactivation or breakdown stops income",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: hourly jobs stay open",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "downside": {
+        "text": "No benefits; income drops when the car or the app does",
+        "range": null,
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "stability": {
+        "text": "1/5 (you weighted it 4/5)",
+        "range": {
+         "low": 1.0,
+         "high": 1.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "location": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "5/5 (you weighted it 4/5)",
+        "range": {
+         "low": 5.0,
+         "high": 5.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-A-001",
+       "E-A-002",
+       "E-A-003"
+      ]
+     }
+    ]
+   },
+   "B": {
+    "branch": "B",
+    "label": "Warehouse job in Atlanta",
+    "summary": "In Path B you build steadily in Atlanta. Pay grows slowly and little is saved is the main risk.",
+    "top_tradeoffs": [
+     "More stability, less learning",
+     "More predictability, less ownership",
+     "Life built around Atlanta"
+    ],
+    "confidence": "high",
+    "persona": {
+     "name": "Future B",
+     "voice": "Practical and dry, a little weary.",
+     "temperament": "Steady and close to home; quietly wonders about the bigger move."
+    },
+    "finance_inputs": {
+     "start_savings": 2500.0,
+     "annual_pay": 37000.0,
+     "effective_tax_rate": 0.12,
+     "annual_housing_low": 17928.0,
+     "annual_housing_high": 21912.0,
+     "annual_other_costs": 15840.0,
+     "raise_pct_per_year": 0.03,
+     "equity_note": null,
+     "pay_segments": [],
+     "one_time_costs": []
+    },
+    "snapshots": [
+     {
+      "timepoint": "m0",
+      "headline": "Day one: hourly worker in Atlanta",
+      "career": {
+       "role": {
+        "text": "Hourly worker",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Assigned shifts",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "skills": {
+        "text": "The job's routines",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$37K a year",
+        "range": {
+         "low": 37000.0,
+         "high": 37000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_004",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$18K to $22K a year",
+        "range": {
+         "low": 17928.0,
+         "high": 21912.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$2K",
+        "range": {
+         "low": 2500.0,
+         "high": 2500.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "0.8\u20130.9 months of expenses",
+        "range": {
+         "low": 0.8,
+         "high": 0.9,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Atlanta",
+        "range": null,
+        "evidence_id": "ev_U_005",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Short drive or bus",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Atlanta",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201348 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 48.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: steady, but hours can be cut",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: similar work is easy to find",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Pay grows slowly and little is saved",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": []
+     },
+     {
+      "timepoint": "m6",
+      "headline": "Six months in: reliable on the schedule",
+      "career": {
+       "role": {
+        "text": "Reliable on the schedule",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Training new hires",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Speed and reliability",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$37K a year",
+        "range": {
+         "low": 37000.0,
+         "high": 37000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_004",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$18K to $22K a year",
+        "range": {
+         "low": 17928.0,
+         "high": 21912.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "savings": {
+        "text": "\u2212$888 to $3K",
+        "range": {
+         "low": -887.9999999999991,
+         "high": 2688.000000000001,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "0\u20131 months of expenses",
+        "range": {
+         "low": 0.0,
+         "high": 1.0,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Atlanta",
+        "range": null,
+        "evidence_id": "ev_U_005",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Short drive or bus",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Atlanta",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201348 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 48.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: steady, but hours can be cut",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: similar work is easy to find",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Pay grows slowly and little is saved",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": [
+       "E-B-001"
+      ]
+     },
+     {
+      "timepoint": "m24",
+      "headline": "Year two: shift lead or certified tradesperson",
+      "career": {
+       "role": {
+        "text": "Shift lead or certified tradesperson",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Runs a shift or small jobs",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Leading a shift",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Atlanta",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$39K a year",
+        "range": {
+         "low": 39253.299999999996,
+         "high": 39253.299999999996,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$18K to $22K a year",
+        "range": {
+         "low": 17928.0,
+         "high": 21912.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "savings": {
+        "text": "\u2212$10K to $4K",
+        "range": {
+         "low": -10075.199999999995,
+         "high": 4228.800000000005,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "0\u20131.6 months of expenses",
+        "range": {
+         "low": 0.0,
+         "high": 1.6,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Atlanta",
+        "range": null,
+        "evidence_id": "ev_U_005",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Short drive or bus",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Atlanta",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201348 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 48.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: steady, but hours can be cut",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: similar work is easy to find",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Pay grows slowly and little is saved",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "stability": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "location": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "2/5 (you weighted it 4/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-B-001",
+       "E-B-002"
+      ]
+     },
+     {
+      "timepoint": "m60",
+      "headline": "Year five: supervisor or small contractor",
+      "career": {
+       "role": {
+        "text": "Supervisor or small contractor",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Manages a crew or own clients",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Running work for others",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Atlanta",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$43K a year",
+        "range": {
+         "low": 42893.1407491,
+         "high": 42893.1407491,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$18K to $22K a year",
+        "range": {
+         "low": 17928.0,
+         "high": 21912.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "savings": {
+        "text": "\u2212$21K to $14K",
+        "range": {
+         "low": -21314.538026400005,
+         "high": 14445.4619736,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "0\u20135.4 months of expenses",
+        "range": {
+         "low": 0.0,
+         "high": 5.4,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Atlanta",
+        "range": null,
+        "evidence_id": "ev_U_005",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Short drive or bus",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Atlanta",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201348 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 48.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Low",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium: steady, but hours can be cut",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: similar work is easy to find",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Pay grows slowly and little is saved",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "stability": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "location": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "2/5 (you weighted it 4/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-B-001",
+       "E-B-002",
+       "E-B-003"
+      ]
+     }
+    ]
+   }
+  },
+  "evidence": [
+   {
+    "id": "ev_U_001",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path A pays $40,000 a year (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.810857+00:00"
+   },
+   {
+    "id": "ev_U_002",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path A is based in Atlanta (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.810868+00:00"
+   },
+   {
+    "id": "ev_U_003",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path A: Rideshare in Atlanta. Should I lease a car to drive full-time for Uber and Lyft in Atlanta, earning about $40,000 a year after the car lease, gas and insurance,",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.810874+00:00"
+   },
+   {
+    "id": "ev_U_004",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path B pays $37,000 a year (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.810880+00:00"
+   },
+   {
+    "id": "ev_U_005",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path B is based in Atlanta (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.810885+00:00"
+   },
+   {
+    "id": "ev_U_006",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path B: Warehouse job in Atlanta. keep my warehouse job in Atlanta at $37,000 a year with health insurance? I want control over my hours and to be home when my daughter gets out of school, but I need steady money",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.810891+00:00"
+   },
+   {
+    "id": "ev_U_007",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "You have about $2,500 saved (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.810898+00:00"
+   },
+   {
+    "id": "ev_U_008",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "You spend about $2,200 a month (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.810904+00:00"
+   },
+   {
+    "id": "ev_U_009",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Your priorities (1-5): learning 3, stability 4, ownership 3, location 4, autonomy 4.",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.810912+00:00"
+   },
+   {
+    "id": "ev_U_010",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Goal: Control over my hours and to be home when my daughter gets out of school",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.810920+00:00"
+   },
+   {
+    "id": "ev_U_011",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Worry: Getting deactivated or the car breaking down",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.810928+00:00"
+   },
+   {
+    "id": "ev_A_001",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "Taxi drivers, shuttle drivers and chauffeurs, the group that includes ride-hailing, earned a median $37,960 a year in 2025. Ride-hailing drivers typically work as independent contractors, use their own cars, and pay for fuel and maintenance (BLS).",
+    "citation": {
+     "url": "https://www.bls.gov/ooh/transportation-and-material-moving/taxi-drivers-and-chauffeurs.htm",
+     "title": "BLS Occupational Outlook Handbook: Taxi Drivers, Shuttle Drivers, and Chauffeurs",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.811526+00:00"
+   },
+   {
+    "id": "ev_A_002",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "Self-employed people pay a 15.3% self-employment tax on net earnings (12.4% Social Security plus 2.9% Medicare), on top of income tax (IRS Publication 334).",
+    "citation": {
+     "url": "https://www.irs.gov/publications/p334",
+     "title": "IRS Publication 334, Tax Guide for Small Business",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.811534+00:00"
+   },
+   {
+    "id": "ev_A_003",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "The IRS standard mileage rate for business driving was 70 cents a mile in 2025, a rough guide to what each mile costs a driver in gas, wear and depreciation (IRS).",
+    "citation": {
+     "url": "https://www.irs.gov/newsroom/irs-increases-the-standard-mileage-rate-for-business-use-in-2025-key-rate-increases-3-cents-to-70-cents-per-mile",
+     "title": "IRS: standard mileage rate for business use in 2025",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.811541+00:00"
+   },
+   {
+    "id": "ev_B_001",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "Hand laborers and material movers earned a median $38,220 a year in 2025 (stockers and order fillers: $37,330). BLS notes these jobs have some of the highest injury and illness rates of all occupations.",
+    "citation": {
+     "url": "https://www.bls.gov/ooh/transportation-and-material-moving/hand-laborers-and-material-movers.htm",
+     "title": "BLS Occupational Outlook Handbook: Hand Laborers and Material Movers",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.811546+00:00"
+   },
+   {
+    "id": "ev_B_002",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "Employer health coverage for one person cost $8,951 a year on average in 2024; employers paid most of it and workers paid $1,368 on average (KFF Employer Health Benefits Survey).",
+    "citation": {
+     "url": "https://www.kff.org/health-costs/report/2024-employer-health-benefits-survey/",
+     "title": "KFF 2024 Employer Health Benefits Survey",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.811550+00:00"
+   },
+   {
+    "id": "ev_A_004",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "Typical annual rent for a one-bedroom apartment in Atlanta: HUD's FY2026 Fair Market Rent for a one-bedroom in the Atlanta-Sandy Springs-Roswell metro is $1,660 a month.",
+    "citation": {
+     "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY2026_FMR_Schedule.pdf",
+     "title": "HUD FY2026 Fair Market Rent schedule",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.813268+00:00"
+   },
+   {
+    "id": "ev_B_003",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "Typical annual rent for a one-bedroom apartment in Atlanta: HUD's FY2026 Fair Market Rent for a one-bedroom in the Atlanta-Sandy Springs-Roswell metro is $1,660 a month.",
+    "citation": {
+     "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY2026_FMR_Schedule.pdf",
+     "title": "HUD FY2026 Fair Market Rent schedule",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:58.813293+00:00"
+   },
+   {
+    "id": "ev_A_005",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:59.034328+00:00"
+   },
+   {
+    "id": "ev_A_006",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Typical progression for a Rideshare driver at a established company.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:59.034349+00:00"
+   },
+   {
+    "id": "ev_A_007",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Professional network grows around Atlanta.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:34:59.034358+00:00"
+   },
+   {
+    "id": "ev_A_008",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "finance",
+    "model_id": "muse-spark-1.3",
+    "text": "Equity at a established company is illiquid until an exit.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:59.034442+00:00"
+   },
+   {
+    "id": "ev_A_009",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "lifestyle",
+    "model_id": "muse-spark-1.3",
+    "text": "Hours and stress typical of a established company role.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:34:59.034460+00:00"
+   },
+   {
+    "id": "ev_A_010",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "risk",
+    "model_id": "muse-spark-1.3",
+    "text": "Risk profile of a established company path.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:59.034517+00:00"
+   },
+   {
+    "id": "ev_A_011",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "values",
+    "model_id": "muse-spark-1.3",
+    "text": "Scored against the priorities you gave.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:59.034538+00:00"
+   },
+   {
+    "id": "ev_A_012",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:59.034578+00:00"
+   },
+   {
+    "id": "ev_B_004",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:59.034824+00:00"
+   },
+   {
+    "id": "ev_B_005",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Typical progression for a Warehouse worker at a established company.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:59.034833+00:00"
+   },
+   {
+    "id": "ev_B_006",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Professional network grows around Atlanta.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:34:59.034841+00:00"
+   },
+   {
+    "id": "ev_B_007",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "finance",
+    "model_id": "muse-spark-1.3",
+    "text": "Equity at a established company is illiquid until an exit.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:59.034911+00:00"
+   },
+   {
+    "id": "ev_B_008",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "lifestyle",
+    "model_id": "muse-spark-1.3",
+    "text": "Hours and stress typical of a established company role.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:34:59.034925+00:00"
+   },
+   {
+    "id": "ev_B_009",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "risk",
+    "model_id": "muse-spark-1.3",
+    "text": "Risk profile of a established company path.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:59.034971+00:00"
+   },
+   {
+    "id": "ev_B_010",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "values",
+    "model_id": "muse-spark-1.3",
+    "text": "Scored against the priorities you gave.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:59.034992+00:00"
+   },
+   {
+    "id": "ev_B_011",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:59.035034+00:00"
+   }
+  ],
+  "events": [
+   {
+    "id": "E-A-001",
+    "branch": "A",
+    "month": 2,
+    "kind": "turning_point",
+    "title": "Learned the best hours to drive",
+    "detail": "Earnings steady out.",
+    "caused_by": [],
+    "evidence_id": "ev_A_006",
+    "version": 1
+   },
+   {
+    "id": "E-A-002",
+    "branch": "A",
+    "month": 9,
+    "kind": "turning_point",
+    "title": "Paid for a big car repair",
+    "detail": "A week off the road.",
+    "caused_by": [],
+    "evidence_id": "ev_A_006",
+    "version": 1
+   },
+   {
+    "id": "E-A-003",
+    "branch": "A",
+    "month": 20,
+    "kind": "turning_point",
+    "title": "Bought own health insurance",
+    "detail": "A new monthly cost.",
+    "caused_by": [],
+    "evidence_id": "ev_A_006",
+    "version": 1
+   },
+   {
+    "id": "E-B-001",
+    "branch": "B",
+    "month": 5,
+    "kind": "turning_point",
+    "title": "Picked up extra shifts",
+    "detail": "Overtime helps for a few months.",
+    "caused_by": [],
+    "evidence_id": "ev_B_005",
+    "version": 1
+   },
+   {
+    "id": "E-B-002",
+    "branch": "B",
+    "month": 18,
+    "kind": "turning_point",
+    "title": "Promoted to shift lead",
+    "detail": "A small raise and more responsibility.",
+    "caused_by": [],
+    "evidence_id": "ev_B_005",
+    "version": 1
+   },
+   {
+    "id": "E-B-003",
+    "branch": "B",
+    "month": 40,
+    "kind": "turning_point",
+    "title": "Took on supervising",
+    "detail": "Leads others.",
+    "caused_by": [],
+    "evidence_id": "ev_B_005",
+    "version": 1
+   }
+  ],
+  "shocks": [],
+  "suggested_shocks": [
+   {
+    "label": "Car breaks down",
+    "description": "A major repair and two weeks off the road.",
+    "month": 10
+   },
+   {
+    "label": "Hours cut at month 12",
+    "description": "Shifts are cut and the job ends.",
+    "month": 12
+   },
+   {
+    "label": "Medical emergency",
+    "description": "An unexpected hospital bill and two weeks off work.",
+    "month": 16
+   }
+  ],
+  "checks": [
+   {
+    "name": "Branch isolation",
+    "passed": true,
+    "repaired": 0,
+    "detail": "No world cites the other world's evidence or events."
+   },
+   {
+    "name": "Timeline order",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Every event follows its causes."
+   },
+   {
+    "name": "Money reconciles",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Savings match pay, tax and costs at every timepoint."
+   },
+   {
+    "name": "Facts have sources",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Every FACT has a citation; every ASSUMPTION came from you."
+   },
+   {
+    "name": "No unsupported values",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Values without evidence are shown as unknown, not filled in."
+   },
+   {
+    "name": "Story holds together",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Both worlds hold together."
+   }
+  ],
+  "comparison": {
+   "summary": "Path A (Rideshare in Atlanta) leans toward location, autonomy; Path B (Warehouse job in Atlanta) leans toward stability, location.",
+   "dominant_assumptions": [
+    "How long a job search takes if things go wrong",
+    "Housing cost difference between the cities",
+    "Whether equity ends up worth anything"
+   ],
+   "what_would_change_my_mind": [
+    "The startup's runway is shorter than 12 months",
+    "The stable role offers a fast promotion track"
+   ]
+  },
+  "third_door": null,
+  "derived_from": null,
+  "created_at": "2026-10-27T15:34:58.810827+00:00"
+ },
+ "precomputed_shock": {
+  "request": {
+   "label": "Car breaks down",
+   "description": "A major repair and two weeks off the road.",
+   "month": 10
+  },
+  "simulation": {
+   "id": "demo-rideshare-vs-warehouse",
+   "slug": "rideshare-vs-warehouse",
+   "mode": "mock",
+   "status": "ready",
+   "version": 2,
+   "decision": {
+    "title": "Rideshare vs Warehouse job",
+    "question": "Should I lease a car to drive full-time for Uber and Lyft in Atlanta, earning about $40,000 a year after the car lease, gas and insurance, or keep my warehouse job in Atlanta at $37,000 a year with he",
+    "path_a": {
+     "label": "Rideshare in Atlanta",
+     "city": "Atlanta",
+     "role": "Rideshare driver",
+     "org_type": "established_company",
+     "annual_pay_usd": 40000.0,
+     "equity": null,
+     "notes": "Should I lease a car to drive full-time for Uber and Lyft in Atlanta, earning about $40,000 a year after the car lease, gas and insurance,"
+    },
+    "path_b": {
+     "label": "Warehouse job in Atlanta",
+     "city": "Atlanta",
+     "role": "Warehouse worker",
+     "org_type": "established_company",
+     "annual_pay_usd": 37000.0,
+     "equity": null,
+     "notes": "keep my warehouse job in Atlanta at $37,000 a year with health insurance? I want control over my hours and to be home when my daughter gets out of school, but I need steady money"
+    },
+    "priorities": {
+     "learning": 3,
+     "stability": 4,
+     "ownership": 3,
+     "location": 4,
+     "autonomy": 4
+    },
+    "goals": [
+     "Control over my hours and to be home when my daughter gets out of school"
+    ],
+    "fears": [
+     "Getting deactivated or the car breaking down"
+    ],
+    "constraints": [
+     "Should I lease a car to drive full-time for Uber and Lyft in Atlanta, earning about $40,000 a year after the car lease, gas and insurance, or keep my warehouse job in Atlanta at $37,000 a year with health insurance?"
+    ],
+    "current": {
+     "city": null,
+     "profession": "Rideshare driver",
+     "age_band": null,
+     "savings_usd": 2500.0,
+     "monthly_expenses_usd": 2200.0
+    },
+    "clarifying_questions": []
+   },
+   "branches": {
+    "A": {
+     "branch": "A",
+     "label": "Rideshare in Atlanta",
+     "summary": "In Path A you build steadily in Atlanta. No benefits; income drops when the car or the app does is the main risk.",
+     "top_tradeoffs": [
+      "More stability, less learning",
+      "More predictability, less ownership",
+      "Life built around Atlanta"
+     ],
+     "confidence": "high",
+     "persona": {
+      "name": "Future A",
+      "voice": "Quick, warm, always watching the clock.",
+      "temperament": "Free to be there after school, anxious about every slow week."
+     },
+     "finance_inputs": {
+      "start_savings": 2500.0,
+      "annual_pay": 40000.0,
+      "effective_tax_rate": 0.15,
+      "annual_housing_low": 17928.0,
+      "annual_housing_high": 21912.0,
+      "annual_other_costs": 15840.0,
+      "raise_pct_per_year": 0.0,
+      "equity_note": null,
+      "pay_segments": [
+       {
+        "start_month": 0,
+        "end_month": 10,
+        "annual_pay": 40000.0,
+        "label": "base pay"
+       },
+       {
+        "start_month": 10,
+        "end_month": 11,
+        "annual_pay": 20000.0,
+        "label": "off the road"
+       },
+       {
+        "start_month": 11,
+        "end_month": null,
+        "annual_pay": 40000.0,
+        "label": "driving again"
+       }
+      ],
+      "one_time_costs": [
+       {
+        "month": 10,
+        "amount": 2800.0,
+        "label": "Car breaks down"
+       }
+      ]
+     },
+     "snapshots": [
+      {
+       "timepoint": "m0",
+       "headline": "Day one: full-time rideshare driver in Atlanta",
+       "career": {
+        "role": {
+         "text": "Full-time rideshare driver",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "self-employed",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Picks own hours",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "skills": {
+         "text": "The apps and the city",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$40K a year",
+         "range": {
+          "low": 40000.0,
+          "high": 40000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_001",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$18K to $22K a year",
+         "range": {
+          "low": 17928.0,
+          "high": 21912.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$2K",
+         "range": {
+          "low": 2500.0,
+          "high": 2500.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "0.8\u20130.9 months of expenses",
+         "range": {
+          "low": 0.8,
+          "high": 0.9,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Atlanta",
+         "range": null,
+         "evidence_id": "ev_U_002",
+         "status": "known"
+        },
+        "commute": {
+         "text": "The car is the office",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Atlanta",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "45\u201355 hours a week",
+         "range": {
+          "low": 45.0,
+          "high": 55.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Low: one deactivation or breakdown stops income",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: hourly jobs stay open",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "downside": {
+         "text": "No benefits; income drops when the car or the app does",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": []
+      },
+      {
+       "timepoint": "m6",
+       "headline": "Six months in: driver who knows the best hours",
+       "career": {
+        "role": {
+         "text": "Driver who knows the best hours",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "self-employed",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Plans around school pickup",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Peak hours and airports",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$40K a year",
+         "range": {
+          "low": 40000.0,
+          "high": 40000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_001",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$18K to $22K a year",
+         "range": {
+          "low": 17928.0,
+          "high": 21912.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "savings": {
+         "text": "\u2212$168 to $3K",
+         "range": {
+          "low": -167.9999999999991,
+          "high": 3408.000000000001,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "0\u20131.3 months of expenses",
+         "range": {
+          "low": 0.0,
+          "high": 1.3,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Atlanta",
+         "range": null,
+         "evidence_id": "ev_U_002",
+         "status": "known"
+        },
+        "commute": {
+         "text": "The car is the office",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Atlanta",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "45\u201355 hours a week",
+         "range": {
+          "low": 45.0,
+          "high": 55.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "stress": {
+         "text": "High",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Low: one deactivation or breakdown stops income",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: hourly jobs stay open",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "downside": {
+         "text": "No benefits; income drops when the car or the app does",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": [
+        "E-A-001"
+       ]
+      },
+      {
+       "timepoint": "m24",
+       "headline": "Year two: experienced driver, some regular clients",
+       "career": {
+        "role": {
+         "text": "Experienced driver, some regular clients",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "self-employed",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Runs it like a small business",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Bookkeeping and taxes",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Atlanta",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$40K a year",
+         "range": {
+          "low": 40000.0,
+          "high": 40000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_001",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$18K to $22K a year",
+         "range": {
+          "low": 17928.0,
+          "high": 21912.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "savings": {
+         "text": "\u2212$12K to $2K",
+         "range": {
+          "low": -12388.666666666657,
+          "high": 1915.3333333333394,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "0\u20130.7 months of expenses",
+         "range": {
+          "low": 0.0,
+          "high": 0.7,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Atlanta",
+         "range": null,
+         "evidence_id": "ev_U_002",
+         "status": "known"
+        },
+        "commute": {
+         "text": "The car is the office",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Atlanta",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "45\u201355 hours a week",
+         "range": {
+          "low": 45.0,
+          "high": 55.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "stress": {
+         "text": "High for a few months, then easing",
+         "range": null,
+         "evidence_id": "ev_A_016",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Low: one deactivation or breakdown stops income",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: hourly jobs stay open",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "downside": {
+         "text": "No benefits; income drops when the car or the app does",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "stability": {
+         "text": "1/5 (you weighted it 4/5)",
+         "range": {
+          "low": 1.0,
+          "high": 1.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "location": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "5/5 (you weighted it 4/5)",
+         "range": {
+          "low": 5.0,
+          "high": 5.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-A-001",
+        "E-A-002",
+        "E-A-004",
+        "E-A-003"
+       ]
+      },
+      {
+       "timepoint": "m60",
+       "headline": "Year five: driver or moved to a steadier job",
+       "career": {
+        "role": {
+         "text": "Driver or moved to a steadier job",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "self-employed",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Decides whether to keep driving",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Running a one-person business",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Atlanta",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$40K a year",
+         "range": {
+          "low": 40000.0,
+          "high": 40000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_001",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$18K to $22K a year",
+         "range": {
+          "low": 17928.0,
+          "high": 21912.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "savings": {
+         "text": "\u2212$28K to $7K",
+         "range": {
+          "low": -28396.66666666667,
+          "high": 7363.333333333361,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "0\u20132.7 months of expenses",
+         "range": {
+          "low": 0.0,
+          "high": 2.7,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_012",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Atlanta",
+         "range": null,
+         "evidence_id": "ev_U_002",
+         "status": "known"
+        },
+        "commute": {
+         "text": "The car is the office",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Atlanta",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "45\u201355 hours a week",
+         "range": {
+          "low": 45.0,
+          "high": 55.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_016",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_009",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Low: one deactivation or breakdown stops income",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: hourly jobs stay open",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "downside": {
+         "text": "No benefits; income drops when the car or the app does",
+         "range": null,
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "stability": {
+         "text": "1/5 (you weighted it 4/5)",
+         "range": {
+          "low": 1.0,
+          "high": 1.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "location": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "5/5 (you weighted it 4/5)",
+         "range": {
+          "low": 5.0,
+          "high": 5.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-A-001",
+        "E-A-002",
+        "E-A-004",
+        "E-A-003"
+       ]
+      }
+     ]
+    },
+    "B": {
+     "branch": "B",
+     "label": "Warehouse job in Atlanta",
+     "summary": "In Path B you build steadily in Atlanta. Pay grows slowly and little is saved is the main risk.",
+     "top_tradeoffs": [
+      "More stability, less learning",
+      "More predictability, less ownership",
+      "Life built around Atlanta"
+     ],
+     "confidence": "high",
+     "persona": {
+      "name": "Future B",
+      "voice": "Practical and dry, a little weary.",
+      "temperament": "Steady and close to home; quietly wonders about the bigger move."
+     },
+     "finance_inputs": {
+      "start_savings": 2500.0,
+      "annual_pay": 37000.0,
+      "effective_tax_rate": 0.12,
+      "annual_housing_low": 17928.0,
+      "annual_housing_high": 21912.0,
+      "annual_other_costs": 15840.0,
+      "raise_pct_per_year": 0.03,
+      "equity_note": null,
+      "pay_segments": [],
+      "one_time_costs": []
+     },
+     "snapshots": [
+      {
+       "timepoint": "m0",
+       "headline": "Day one: hourly worker in Atlanta",
+       "career": {
+        "role": {
+         "text": "Hourly worker",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Assigned shifts",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "skills": {
+         "text": "The job's routines",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$37K a year",
+         "range": {
+          "low": 37000.0,
+          "high": 37000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_004",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$18K to $22K a year",
+         "range": {
+          "low": 17928.0,
+          "high": 21912.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$2K",
+         "range": {
+          "low": 2500.0,
+          "high": 2500.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "0.8\u20130.9 months of expenses",
+         "range": {
+          "low": 0.8,
+          "high": 0.9,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Atlanta",
+         "range": null,
+         "evidence_id": "ev_U_005",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Short drive or bus",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Atlanta",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201348 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 48.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: steady, but hours can be cut",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: similar work is easy to find",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Pay grows slowly and little is saved",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": []
+      },
+      {
+       "timepoint": "m6",
+       "headline": "Six months in: reliable on the schedule",
+       "career": {
+        "role": {
+         "text": "Reliable on the schedule",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Training new hires",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Speed and reliability",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$37K a year",
+         "range": {
+          "low": 37000.0,
+          "high": 37000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_004",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$18K to $22K a year",
+         "range": {
+          "low": 17928.0,
+          "high": 21912.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "savings": {
+         "text": "\u2212$888 to $3K",
+         "range": {
+          "low": -887.9999999999991,
+          "high": 2688.000000000001,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "0\u20131 months of expenses",
+         "range": {
+          "low": 0.0,
+          "high": 1.0,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Atlanta",
+         "range": null,
+         "evidence_id": "ev_U_005",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Short drive or bus",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Atlanta",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201348 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 48.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: steady, but hours can be cut",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: similar work is easy to find",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Pay grows slowly and little is saved",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": [
+        "E-B-001"
+       ]
+      },
+      {
+       "timepoint": "m24",
+       "headline": "Year two: shift lead or certified tradesperson",
+       "career": {
+        "role": {
+         "text": "Shift lead or certified tradesperson",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Runs a shift or small jobs",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Leading a shift",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Atlanta",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$39K a year",
+         "range": {
+          "low": 39253.299999999996,
+          "high": 39253.299999999996,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$18K to $22K a year",
+         "range": {
+          "low": 17928.0,
+          "high": 21912.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "savings": {
+         "text": "\u2212$10K to $4K",
+         "range": {
+          "low": -10075.199999999995,
+          "high": 4228.800000000005,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "0\u20131.6 months of expenses",
+         "range": {
+          "low": 0.0,
+          "high": 1.6,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Atlanta",
+         "range": null,
+         "evidence_id": "ev_U_005",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Short drive or bus",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Atlanta",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201348 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 48.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: steady, but hours can be cut",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: similar work is easy to find",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Pay grows slowly and little is saved",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "stability": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "location": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "2/5 (you weighted it 4/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-B-001",
+        "E-B-002"
+       ]
+      },
+      {
+       "timepoint": "m60",
+       "headline": "Year five: supervisor or small contractor",
+       "career": {
+        "role": {
+         "text": "Supervisor or small contractor",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Manages a crew or own clients",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Running work for others",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Atlanta",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$43K a year",
+         "range": {
+          "low": 42893.1407491,
+          "high": 42893.1407491,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$18K to $22K a year",
+         "range": {
+          "low": 17928.0,
+          "high": 21912.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "savings": {
+         "text": "\u2212$21K to $14K",
+         "range": {
+          "low": -21314.538026400005,
+          "high": 14445.4619736,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "0\u20135.4 months of expenses",
+         "range": {
+          "low": 0.0,
+          "high": 5.4,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Atlanta",
+         "range": null,
+         "evidence_id": "ev_U_005",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Short drive or bus",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Atlanta",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201348 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 48.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Low",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium: steady, but hours can be cut",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: similar work is easy to find",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Pay grows slowly and little is saved",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "stability": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "location": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "2/5 (you weighted it 4/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-B-001",
+        "E-B-002",
+        "E-B-003"
+       ]
+      }
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "id": "ev_U_001",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path A pays $40,000 a year (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.810857+00:00"
+    },
+    {
+     "id": "ev_U_002",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path A is based in Atlanta (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.810868+00:00"
+    },
+    {
+     "id": "ev_U_003",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path A: Rideshare in Atlanta. Should I lease a car to drive full-time for Uber and Lyft in Atlanta, earning about $40,000 a year after the car lease, gas and insurance,",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.810874+00:00"
+    },
+    {
+     "id": "ev_U_004",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path B pays $37,000 a year (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.810880+00:00"
+    },
+    {
+     "id": "ev_U_005",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path B is based in Atlanta (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.810885+00:00"
+    },
+    {
+     "id": "ev_U_006",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path B: Warehouse job in Atlanta. keep my warehouse job in Atlanta at $37,000 a year with health insurance? I want control over my hours and to be home when my daughter gets out of school, but I need steady money",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.810891+00:00"
+    },
+    {
+     "id": "ev_U_007",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "You have about $2,500 saved (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.810898+00:00"
+    },
+    {
+     "id": "ev_U_008",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "You spend about $2,200 a month (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.810904+00:00"
+    },
+    {
+     "id": "ev_U_009",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Your priorities (1-5): learning 3, stability 4, ownership 3, location 4, autonomy 4.",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.810912+00:00"
+    },
+    {
+     "id": "ev_U_010",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Goal: Control over my hours and to be home when my daughter gets out of school",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.810920+00:00"
+    },
+    {
+     "id": "ev_U_011",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Worry: Getting deactivated or the car breaking down",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.810928+00:00"
+    },
+    {
+     "id": "ev_A_001",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "Taxi drivers, shuttle drivers and chauffeurs, the group that includes ride-hailing, earned a median $37,960 a year in 2025. Ride-hailing drivers typically work as independent contractors, use their own cars, and pay for fuel and maintenance (BLS).",
+     "citation": {
+      "url": "https://www.bls.gov/ooh/transportation-and-material-moving/taxi-drivers-and-chauffeurs.htm",
+      "title": "BLS Occupational Outlook Handbook: Taxi Drivers, Shuttle Drivers, and Chauffeurs",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.811526+00:00"
+    },
+    {
+     "id": "ev_A_002",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "Self-employed people pay a 15.3% self-employment tax on net earnings (12.4% Social Security plus 2.9% Medicare), on top of income tax (IRS Publication 334).",
+     "citation": {
+      "url": "https://www.irs.gov/publications/p334",
+      "title": "IRS Publication 334, Tax Guide for Small Business",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.811534+00:00"
+    },
+    {
+     "id": "ev_A_003",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "The IRS standard mileage rate for business driving was 70 cents a mile in 2025, a rough guide to what each mile costs a driver in gas, wear and depreciation (IRS).",
+     "citation": {
+      "url": "https://www.irs.gov/newsroom/irs-increases-the-standard-mileage-rate-for-business-use-in-2025-key-rate-increases-3-cents-to-70-cents-per-mile",
+      "title": "IRS: standard mileage rate for business use in 2025",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.811541+00:00"
+    },
+    {
+     "id": "ev_B_001",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "Hand laborers and material movers earned a median $38,220 a year in 2025 (stockers and order fillers: $37,330). BLS notes these jobs have some of the highest injury and illness rates of all occupations.",
+     "citation": {
+      "url": "https://www.bls.gov/ooh/transportation-and-material-moving/hand-laborers-and-material-movers.htm",
+      "title": "BLS Occupational Outlook Handbook: Hand Laborers and Material Movers",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.811546+00:00"
+    },
+    {
+     "id": "ev_B_002",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "Employer health coverage for one person cost $8,951 a year on average in 2024; employers paid most of it and workers paid $1,368 on average (KFF Employer Health Benefits Survey).",
+     "citation": {
+      "url": "https://www.kff.org/health-costs/report/2024-employer-health-benefits-survey/",
+      "title": "KFF 2024 Employer Health Benefits Survey",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.811550+00:00"
+    },
+    {
+     "id": "ev_A_004",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "Typical annual rent for a one-bedroom apartment in Atlanta: HUD's FY2026 Fair Market Rent for a one-bedroom in the Atlanta-Sandy Springs-Roswell metro is $1,660 a month.",
+     "citation": {
+      "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY2026_FMR_Schedule.pdf",
+      "title": "HUD FY2026 Fair Market Rent schedule",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.813268+00:00"
+    },
+    {
+     "id": "ev_B_003",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "Typical annual rent for a one-bedroom apartment in Atlanta: HUD's FY2026 Fair Market Rent for a one-bedroom in the Atlanta-Sandy Springs-Roswell metro is $1,660 a month.",
+     "citation": {
+      "url": "https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY2026_FMR_Schedule.pdf",
+      "title": "HUD FY2026 Fair Market Rent schedule",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.813293+00:00"
+    },
+    {
+     "id": "ev_A_005",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:59.034328+00:00"
+    },
+    {
+     "id": "ev_A_006",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Typical progression for a Rideshare driver at a established company.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:59.034349+00:00"
+    },
+    {
+     "id": "ev_A_007",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Professional network grows around Atlanta.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:34:59.034358+00:00"
+    },
+    {
+     "id": "ev_A_008",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "finance",
+     "model_id": "muse-spark-1.3",
+     "text": "Equity at a established company is illiquid until an exit.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:59.034442+00:00"
+    },
+    {
+     "id": "ev_A_009",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "lifestyle",
+     "model_id": "muse-spark-1.3",
+     "text": "Hours and stress typical of a established company role.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:34:59.034460+00:00"
+    },
+    {
+     "id": "ev_A_010",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "risk",
+     "model_id": "muse-spark-1.3",
+     "text": "Risk profile of a established company path.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:59.034517+00:00"
+    },
+    {
+     "id": "ev_A_011",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "values",
+     "model_id": "muse-spark-1.3",
+     "text": "Scored against the priorities you gave.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:59.034538+00:00"
+    },
+    {
+     "id": "ev_A_012",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:59.034578+00:00"
+    },
+    {
+     "id": "ev_B_004",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:59.034824+00:00"
+    },
+    {
+     "id": "ev_B_005",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Typical progression for a Warehouse worker at a established company.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:59.034833+00:00"
+    },
+    {
+     "id": "ev_B_006",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Professional network grows around Atlanta.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:34:59.034841+00:00"
+    },
+    {
+     "id": "ev_B_007",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "finance",
+     "model_id": "muse-spark-1.3",
+     "text": "Equity at a established company is illiquid until an exit.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:59.034911+00:00"
+    },
+    {
+     "id": "ev_B_008",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "lifestyle",
+     "model_id": "muse-spark-1.3",
+     "text": "Hours and stress typical of a established company role.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:34:59.034925+00:00"
+    },
+    {
+     "id": "ev_B_009",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "risk",
+     "model_id": "muse-spark-1.3",
+     "text": "Risk profile of a established company path.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:59.034971+00:00"
+    },
+    {
+     "id": "ev_B_010",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "values",
+     "model_id": "muse-spark-1.3",
+     "text": "Scored against the priorities you gave.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:59.034992+00:00"
+    },
+    {
+     "id": "ev_B_011",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:59.035034+00:00"
+    },
+    {
+     "id": "ev_U_012",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "shock",
+     "model_id": null,
+     "text": "For \u201cCar breaks down\u201d: The repair costs about $2,800",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:02.799196+00:00"
+    },
+    {
+     "id": "ev_U_013",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "shock",
+     "model_id": null,
+     "text": "For \u201cCar breaks down\u201d: Half a month of driving is lost",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:02.799312+00:00"
+    },
+    {
+     "id": "ev_A_013",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "shock",
+     "model_id": null,
+     "text": "You applied a shock: Car breaks down. A major repair and two weeks off the road.",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:35:02.799349+00:00"
+    },
+    {
+     "id": "ev_A_014",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 10.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:02.956059+00:00"
+    },
+    {
+     "id": "ev_A_015",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "values",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 10.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:02.957184+00:00"
+    },
+    {
+     "id": "ev_A_016",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "lifestyle",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 10.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:02.959976+00:00"
+    },
+    {
+     "id": "ev_A_017",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "risk",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 10.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:35:02.966632+00:00"
+    }
+   ],
+   "events": [
+    {
+     "id": "E-A-001",
+     "branch": "A",
+     "month": 2,
+     "kind": "turning_point",
+     "title": "Learned the best hours to drive",
+     "detail": "Earnings steady out.",
+     "caused_by": [],
+     "evidence_id": "ev_A_006",
+     "version": 1
+    },
+    {
+     "id": "E-A-002",
+     "branch": "A",
+     "month": 9,
+     "kind": "turning_point",
+     "title": "Paid for a big car repair",
+     "detail": "A week off the road.",
+     "caused_by": [],
+     "evidence_id": "ev_A_006",
+     "version": 1
+    },
+    {
+     "id": "E-A-003",
+     "branch": "A",
+     "month": 20,
+     "kind": "turning_point",
+     "title": "Bought own health insurance",
+     "detail": "A new monthly cost.",
+     "caused_by": [],
+     "evidence_id": "ev_A_006",
+     "version": 1
+    },
+    {
+     "id": "E-B-001",
+     "branch": "B",
+     "month": 5,
+     "kind": "turning_point",
+     "title": "Picked up extra shifts",
+     "detail": "Overtime helps for a few months.",
+     "caused_by": [],
+     "evidence_id": "ev_B_005",
+     "version": 1
+    },
+    {
+     "id": "E-B-002",
+     "branch": "B",
+     "month": 18,
+     "kind": "turning_point",
+     "title": "Promoted to shift lead",
+     "detail": "A small raise and more responsibility.",
+     "caused_by": [],
+     "evidence_id": "ev_B_005",
+     "version": 1
+    },
+    {
+     "id": "E-B-003",
+     "branch": "B",
+     "month": 40,
+     "kind": "turning_point",
+     "title": "Took on supervising",
+     "detail": "Leads others.",
+     "caused_by": [],
+     "evidence_id": "ev_B_005",
+     "version": 1
+    },
+    {
+     "id": "E-A-004",
+     "branch": "A",
+     "month": 10,
+     "kind": "shock",
+     "title": "Car broke down",
+     "detail": "A big repair and two weeks off the road.",
+     "caused_by": [
+      "S-01"
+     ],
+     "evidence_id": "ev_A_013",
+     "version": 2
+    }
+   ],
+   "shocks": [
+    {
+     "id": "S-01",
+     "label": "Car breaks down",
+     "description": "A major repair and two weeks off the road.",
+     "month": 10,
+     "applies_to": [
+      "A"
+     ],
+     "not_applied_because": {
+      "B": "This shock doesn't touch Path B: nothing in this world depends on it."
+     },
+     "changes": [
+      {
+       "branch": "A",
+       "timepoint": "m24",
+       "field": "finance.savings",
+       "before": "\u2212$8K to $6K",
+       "after": "\u2212$12K to $2K",
+       "because": [
+        "S-01",
+        "E-A-004"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m24",
+       "field": "finance.runway_months",
+       "before": "0\u20132.3 months of expenses",
+       "after": "0\u20130.7 months of expenses",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "finance.savings"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m24",
+       "field": "lifestyle.stress",
+       "before": "Medium",
+       "after": "High for a few months, then easing",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "finance.savings",
+        "finance.runway_months"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m60",
+       "field": "finance.savings",
+       "before": "\u2212$24K to $12K",
+       "after": "\u2212$28K to $7K",
+       "because": [
+        "S-01",
+        "E-A-004"
+       ]
+      },
+      {
+       "branch": "A",
+       "timepoint": "m60",
+       "field": "finance.runway_months",
+       "before": "0\u20134.3 months of expenses",
+       "after": "0\u20132.7 months of expenses",
+       "because": [
+        "S-01",
+        "E-A-004",
+        "finance.savings"
+       ]
+      }
+     ],
+     "front_pages": [
+      {
+       "branch": "A",
+       "headline": "Car breaks down. By year two: experienced driver, some regular clients.",
+       "deck": "Savings at year two: \u2212$12K to $2K. Free to be there after school, anxious about every slow week.",
+       "changed_because": "Car breaks down \u2192 savings at year 2: \u2212$8K to $6K \u2192 \u2212$12K to $2K.",
+       "unchanged": false
+      },
+      {
+       "branch": "B",
+       "headline": "Year two: shift lead or certified tradesperson.",
+       "deck": "Savings at year two: \u2212$10K to $4K.",
+       "changed_because": "This shock happens somewhere this world never went.",
+       "unchanged": true
+      }
+     ],
+     "verdict": {
+      "more_robust": "B",
+      "why": "Path B is untouched by this shock.",
+      "dominant_assumption": "How long a job search takes if things go wrong",
+      "confidence": "medium"
+     },
+     "from_version": 1,
+     "to_version": 2,
+     "created_at": "2026-10-27T15:35:02.799068+00:00"
+    }
+   ],
+   "suggested_shocks": [
+    {
+     "label": "Car breaks down",
+     "description": "A major repair and two weeks off the road.",
+     "month": 10
+    },
+    {
+     "label": "Hours cut at month 12",
+     "description": "Shifts are cut and the job ends.",
+     "month": 12
+    },
+    {
+     "label": "Medical emergency",
+     "description": "An unexpected hospital bill and two weeks off work.",
+     "month": 16
+    }
+   ],
+   "checks": [
+    {
+     "name": "Branch isolation",
+     "passed": true,
+     "repaired": 0,
+     "detail": "No world cites the other world's evidence or events."
+    },
+    {
+     "name": "Timeline order",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Every event follows its causes."
+    },
+    {
+     "name": "Money reconciles",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Savings match pay, tax and costs at every timepoint."
+    },
+    {
+     "name": "Facts have sources",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Every FACT has a citation; every ASSUMPTION came from you."
+    },
+    {
+     "name": "No unsupported values",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Values without evidence are shown as unknown, not filled in."
+    },
+    {
+     "name": "Story holds together",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Both worlds hold together."
+    }
+   ],
+   "comparison": {
+    "summary": "Path A (Rideshare in Atlanta) leans toward location, autonomy; Path B (Warehouse job in Atlanta) leans toward stability, location.",
+    "dominant_assumptions": [
+     "How long a job search takes if things go wrong",
+     "Housing cost difference between the cities",
+     "Whether equity ends up worth anything"
+    ],
+    "what_would_change_my_mind": [
+     "The startup's runway is shorter than 12 months",
+     "The stable role offers a fast promotion track"
+    ]
+   },
+   "third_door": null,
+   "derived_from": null,
+   "created_at": "2026-10-27T15:34:58.810827+00:00"
+  }
+ },
+ "messages": [
+  {
+   "id": "181f13dd63b8",
+   "role": "user",
+   "text": "Do you see your daughter more?",
+   "claims": [],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-27T15:34:59.344881+00:00"
+  },
+  {
+   "id": "d14797ea84fa",
+   "role": "future_a",
+   "text": "Honestly? At month 2, learned the best hours to drive [E-A-001]. Most of what I'm learning is bookkeeping and taxes [ev_A_006]. My role these days: experienced driver, some regular clients [ev_A_006]. That's the part of this life I think about most.",
+   "claims": [
+    {
+     "start": 22,
+     "end": 54,
+     "ref": "E-A-001"
+    },
+    {
+     "start": 65,
+     "end": 116,
+     "ref": "ev_A_006"
+    },
+    {
+     "start": 168,
+     "end": 189,
+     "ref": "ev_A_006"
+    }
+   ],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-27T15:35:00.477545+00:00"
+  },
+  {
+   "id": "ec9c57d06aad",
+   "role": "future_b",
+   "text": "I see it differently. At month 5, picked up extra shifts [E-B-001]. Most of what I'm learning is leading a shift [ev_B_005]. My role these days: shift lead or certified tradesperson [ev_B_005]. That's the part of this life I think about most.",
+   "claims": [
+    {
+     "start": 34,
+     "end": 57,
+     "ref": "E-B-001"
+    },
+    {
+     "start": 68,
+     "end": 113,
+     "ref": "ev_B_005"
+    },
+    {
+     "start": 125,
+     "end": 182,
+     "ref": "ev_B_005"
+    }
+   ],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-27T15:35:01.622794+00:00"
+  },
+  {
+   "id": "b50a6988cd32",
+   "role": "future_a",
+   "text": "Fair, but from where I'm standing: What worries me most: no benefits; income drops when the car or the app does [ev_A_010]. Stress? medium [ev_A_009]. That's the part of this life I think about most.",
+   "claims": [
+    {
+     "start": 6,
+     "end": 112,
+     "ref": "ev_A_010"
+    },
+    {
+     "start": 124,
+     "end": 139,
+     "ref": "ev_A_009"
+    }
+   ],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-27T15:35:02.640397+00:00"
+  }
+ ],
+ "postcards": {
+  "A": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTM2IDEwMjQiIHdpZHRoPSIxNTM2IiBoZWlnaHQ9IjEwMjQiPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFhMWQyNCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzJGNkZDQyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTUzNiIgaGVpZ2h0PSIxMDI0IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgNzYwIEwxODAgNjQwIEwzMjAgNzAwIEw1MjAgNTYwIEw3MDAgNjkwIEw5MDAgNjAwIEwxMTAwIDcwMCBMMTMwMCA2MTAgTDE1MzYgNzIwIEwxNTM2IDEwMjQgTDAgMTAyNFoiIGZpbGw9IiMwZDBlMTIiIG9wYWNpdHk9Ii44NSIvPgo8cmVjdCB4PSI0MCIgeT0iNDAiIHdpZHRoPSIxNDU2IiBoZWlnaHQ9Ijk0NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWNlOGRmIiBzdHJva2Utd2lkdGg9IjQiIG9wYWNpdHk9Ii42Ii8+Cjx0ZXh0IHg9IjgwIiB5PSIxNjAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSI5NiIgZmlsbD0iI2VjZThkZiI+R3JlZXRpbmdzIGZyb20gQXRsYW50YTwvdGV4dD4KPHRleHQgeD0iODAiIHk9Ijk0MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXN0eWxlPSJpdGFsaWMiIGZvbnQtc2l6ZT0iNDQiIGZpbGw9IiNlY2U4ZGYiPlBhdGggQSDCtyBBdGxhbnRhIMK3IG1vbnRoIDI0PC90ZXh0Pgo8dGV4dCB4PSIxNDU2IiB5PSI5NDAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiNlY2U4ZGYiIG9wYWNpdHk9Ii43Ij5PRkZMSU5FIE1PQ0sgwrcgbm90IGdlbmVyYXRlZCBieSBNdXNlIEltYWdlPC90ZXh0Pgo8L3N2Zz4=",
+  "B": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTM2IDEwMjQiIHdpZHRoPSIxNTM2IiBoZWlnaHQ9IjEwMjQiPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFhMWQyNCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0I4NjQxRSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTUzNiIgaGVpZ2h0PSIxMDI0IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgNzYwIEwxODAgNjQwIEwzMjAgNzAwIEw1MjAgNTYwIEw3MDAgNjkwIEw5MDAgNjAwIEwxMTAwIDcwMCBMMTMwMCA2MTAgTDE1MzYgNzIwIEwxNTM2IDEwMjQgTDAgMTAyNFoiIGZpbGw9IiMwZDBlMTIiIG9wYWNpdHk9Ii44NSIvPgo8cmVjdCB4PSI0MCIgeT0iNDAiIHdpZHRoPSIxNDU2IiBoZWlnaHQ9Ijk0NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWNlOGRmIiBzdHJva2Utd2lkdGg9IjQiIG9wYWNpdHk9Ii42Ii8+Cjx0ZXh0IHg9IjgwIiB5PSIxNjAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSI5NiIgZmlsbD0iI2VjZThkZiI+R3JlZXRpbmdzIGZyb20gQXRsYW50YTwvdGV4dD4KPHRleHQgeD0iODAiIHk9Ijk0MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXN0eWxlPSJpdGFsaWMiIGZvbnQtc2l6ZT0iNDQiIGZpbGw9IiNlY2U4ZGYiPlBhdGggQiDCtyBBdGxhbnRhIMK3IG1vbnRoIDI0PC90ZXh0Pgo8dGV4dCB4PSIxNDU2IiB5PSI5NDAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiNlY2U4ZGYiIG9wYWNpdHk9Ii43Ij5PRkZMSU5FIE1PQ0sgwrcgbm90IGdlbmVyYXRlZCBieSBNdXNlIEltYWdlPC90ZXh0Pgo8L3N2Zz4="
+ }
+}

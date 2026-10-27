@@ -38,7 +38,9 @@ class Settings(BaseSettings):
 
     @property
     def live(self) -> bool:
-        return self.model_mode == "live" and bool(self.model_api_key) and self.budget_usd > 0
+        from .budget import live_locked  # the demo-mode lock beats every env setting
+
+        return self.model_mode == "live" and bool(self.model_api_key) and self.budget_usd > 0 and not live_locked()
 
 
 @lru_cache

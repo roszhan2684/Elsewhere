@@ -1,0 +1,4905 @@
+{
+ "slug": "cna-vs-nursing-school",
+ "order": 2,
+ "blurb": "First in the family to go to college: keep a $36K nursing-assistant job, or borrow for a two-year nursing degree?",
+ "simulation": {
+  "id": "demo-cna-vs-nursing-school",
+  "slug": "cna-vs-nursing-school",
+  "mode": "mock",
+  "status": "ready",
+  "version": 1,
+  "decision": {
+   "title": "CNA job vs Nursing school",
+   "question": "Should I keep working as a certified nursing assistant in Houston at $36,000 a year, or go to community college for a two-year nursing degree to become a registered nurse? Tuition is about $11,000 a y",
+   "path_a": {
+    "label": "CNA job in Houston",
+    "city": "Houston",
+    "role": "Certified nursing assistant",
+    "org_type": "established_company",
+    "annual_pay_usd": 36000.0,
+    "equity": null,
+    "notes": "Should I keep working as a certified nursing assistant in Houston at $36,000 a year,"
+   },
+   "path_b": {
+    "label": "Nursing school in Houston",
+    "city": "Houston",
+    "role": "Nursing student",
+    "org_type": "school",
+    "annual_pay_usd": 14000.0,
+    "equity": null,
+    "notes": "go to community college for a two-year nursing degree to become a registered nurse? Tuition is about $11,000 a year, paid with student loans, and I'd work part-time at about $14,000 a year while study"
+   },
+   "priorities": {
+    "learning": 3,
+    "stability": 4,
+    "ownership": 3,
+    "location": 4,
+    "autonomy": 3
+   },
+   "goals": [
+    "Stay financially stable"
+   ],
+   "fears": [
+    "The debt"
+   ],
+   "constraints": [
+    "Tuition is about $11,000 a year, paid with student loans, and I'd work part-time at about $14,000 a year while studying.",
+    "I'm the first in my family to go to college."
+   ],
+   "current": {
+    "city": null,
+    "profession": "Certified nursing assistant",
+    "age_band": null,
+    "savings_usd": 3000.0,
+    "monthly_expenses_usd": 2100.0
+   },
+   "clarifying_questions": []
+  },
+  "branches": {
+   "A": {
+    "branch": "A",
+    "label": "CNA job in Houston",
+    "summary": "In Path A you build steadily in Houston. Hard physical work with a low pay ceiling is the main risk.",
+    "top_tradeoffs": [
+     "More stability, less learning",
+     "More predictability, less ownership",
+     "Life built around Houston"
+    ],
+    "confidence": "high",
+    "persona": {
+     "name": "Future A",
+     "voice": "Kind, tired, matter-of-fact.",
+     "temperament": "Proud of the work, frustrated by the pay."
+    },
+    "finance_inputs": {
+     "start_savings": 3000.0,
+     "annual_pay": 36000.0,
+     "effective_tax_rate": 0.12,
+     "annual_housing_low": 11880.0,
+     "annual_housing_high": 15312.000000000002,
+     "annual_other_costs": 15120.0,
+     "raise_pct_per_year": 0.03,
+     "equity_note": null,
+     "pay_segments": [],
+     "one_time_costs": []
+    },
+    "snapshots": [
+     {
+      "timepoint": "m0",
+      "headline": "Day one: certified nursing assistant in Houston",
+      "career": {
+       "role": {
+        "text": "Certified nursing assistant",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Patient care on a busy floor",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Patient care basics",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$36K a year",
+        "range": {
+         "low": 36000.0,
+         "high": 36000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_001",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$12K to $15K a year",
+        "range": {
+         "low": 11880.0,
+         "high": 15312.000000000002,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_002",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$3K",
+        "range": {
+         "low": 3000.0,
+         "high": 3000.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "1.1\u20131.4 months of expenses",
+        "range": {
+         "low": 1.1,
+         "high": 1.4,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Houston",
+        "range": null,
+        "evidence_id": "ev_U_002",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Bus or short drive to the hospital",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Houston",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201348 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 48.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "stress": {
+        "text": "High",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "High: care workers are always needed",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: nursing school stays open later",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Hard physical work with a low pay ceiling",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": []
+     },
+     {
+      "timepoint": "m6",
+      "headline": "Six months in: experienced cna",
+      "career": {
+       "role": {
+        "text": "Experienced CNA",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Trusted with harder patients",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Calm under pressure",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$36K a year",
+        "range": {
+         "low": 36000.0,
+         "high": 36000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_001",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$12K to $15K a year",
+        "range": {
+         "low": 11880.0,
+         "high": 15312.000000000002,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_002",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$3K to $6K",
+        "range": {
+         "low": 2868.0,
+         "high": 6096.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "1.1\u20132.9 months of expenses",
+        "range": {
+         "low": 1.1,
+         "high": 2.9,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Houston",
+        "range": null,
+        "evidence_id": "ev_U_002",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Bus or short drive to the hospital",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Houston",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201348 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 48.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "stress": {
+        "text": "High",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "High: care workers are always needed",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: nursing school stays open later",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Hard physical work with a low pay ceiling",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": [
+       "E-A-001"
+      ]
+     },
+     {
+      "timepoint": "m24",
+      "headline": "Year two: senior cna",
+      "career": {
+       "role": {
+        "text": "Senior CNA",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Trains new aides",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Training others",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Houston",
+        "range": null,
+        "evidence_id": "ev_A_005",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$38K a year",
+        "range": {
+         "low": 38192.4,
+         "high": 38192.4,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$12K to $15K a year",
+        "range": {
+         "low": 11880.0,
+         "high": 15312.000000000002,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_002",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$3K to $16K",
+        "range": {
+         "low": 3422.399999999998,
+         "high": 16334.400000000009,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "1.3\u20137.7 months of expenses",
+        "range": {
+         "low": 1.3,
+         "high": 7.7,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Houston",
+        "range": null,
+        "evidence_id": "ev_U_002",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Bus or short drive to the hospital",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Houston",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201348 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 48.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "stress": {
+        "text": "High",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "High: care workers are always needed",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: nursing school stays open later",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Hard physical work with a low pay ceiling",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "stability": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "location": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-A-001",
+       "E-A-002"
+      ]
+     },
+     {
+      "timepoint": "m60",
+      "headline": "Year five: senior cna or moved into nursing",
+      "career": {
+       "role": {
+        "text": "Senior CNA or moved into nursing",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Leads aides on a unit",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Deep floor experience",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Houston",
+        "range": null,
+        "evidence_id": "ev_A_005",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_004",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$42K a year",
+        "range": {
+         "low": 41733.8666748,
+         "high": 41733.8666748,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_A_006",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$12K to $15K a year",
+        "range": {
+         "low": 11880.0,
+         "high": 15312.000000000002,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_A_002",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$11K to $44K",
+        "range": {
+         "low": 11473.422460800002,
+         "high": 43753.42246079998,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "4.3\u201320.6 months of expenses",
+        "range": {
+         "low": 4.3,
+         "high": 20.6,
+         "unit": "months"
+        },
+        "evidence_id": "ev_A_010",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Houston",
+        "range": null,
+        "evidence_id": "ev_U_002",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Bus or short drive to the hospital",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Houston",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "40\u201348 hours a week",
+        "range": {
+         "low": 40.0,
+         "high": 48.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_A_007",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "High: care workers are always needed",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: nursing school stays open later",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Hard physical work with a low pay ceiling",
+        "range": null,
+        "evidence_id": "ev_A_008",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "stability": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "location": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "2/5 (you weighted it 3/5)",
+        "range": {
+         "low": 2.0,
+         "high": 2.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-A-001",
+       "E-A-002",
+       "E-A-003"
+      ]
+     }
+    ]
+   },
+   "B": {
+    "branch": "B",
+    "label": "Nursing school in Houston",
+    "summary": "In Path B you build steadily in Houston. Debt if you don't finish or don't pass the licensing exam is the main risk.",
+    "top_tradeoffs": [
+     "More learning, less stability",
+     "More predictability, less ownership",
+     "Life built around Houston"
+    ],
+    "confidence": "high",
+    "persona": {
+     "name": "Future B",
+     "voice": "Determined, a bit stunned at how far they've come.",
+     "temperament": "Exhausted during school, proud and steadier after."
+    },
+    "finance_inputs": {
+     "start_savings": 3000.0,
+     "annual_pay": 14000.0,
+     "effective_tax_rate": 0.14,
+     "annual_housing_low": 11880.0,
+     "annual_housing_high": 15312.000000000002,
+     "annual_other_costs": 15120.0,
+     "raise_pct_per_year": 0.04,
+     "equity_note": null,
+     "pay_segments": [
+      {
+       "start_month": 0,
+       "end_month": 24,
+       "annual_pay": 14000.0,
+       "label": "base pay"
+      },
+      {
+       "start_month": 24,
+       "end_month": null,
+       "annual_pay": 72000.0,
+       "label": "first role after the degree"
+      }
+     ],
+     "one_time_costs": [
+      {
+       "month": 0,
+       "amount": 11000.0,
+       "label": "tuition, year 1"
+      },
+      {
+       "month": 12,
+       "amount": 11000.0,
+       "label": "tuition, year 2"
+      }
+     ]
+    },
+    "snapshots": [
+     {
+      "timepoint": "m0",
+      "headline": "Day one: nursing student working part-time in Houston",
+      "career": {
+       "role": {
+        "text": "Nursing student working part-time",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "studying",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Classes, labs and shifts",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Anatomy, pharmacology",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$14K a year",
+        "range": {
+         "low": 14000.0,
+         "high": 14000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_004",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$12K to $15K a year",
+        "range": {
+         "low": 11880.0,
+         "high": 15312.000000000002,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$3K",
+        "range": {
+         "low": 3000.0,
+         "high": 3000.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "1.1\u20131.4 months of expenses",
+        "range": {
+         "low": 1.1,
+         "high": 1.4,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Houston",
+        "range": null,
+        "evidence_id": "ev_U_005",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Campus, hospital and work",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Houston",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "55\u201365 hours a week",
+        "range": {
+         "low": 55.0,
+         "high": 65.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "stress": {
+        "text": "High",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Low",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium during school, high once licensed",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: CNA work stays available",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Debt if you don't finish or don't pass the licensing exam",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": []
+     },
+     {
+      "timepoint": "m6",
+      "headline": "Six months in: nursing student in clinical rotations",
+      "career": {
+       "role": {
+        "text": "Nursing student in clinical rotations",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "studying",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Clinical rotations at a hospital",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Clinical judgement",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "network": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "optionality": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$14K a year",
+        "range": {
+         "low": 14000.0,
+         "high": 14000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_U_004",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$12K to $15K a year",
+        "range": {
+         "low": 11880.0,
+         "high": 15312.000000000002,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$15K to $18K in debt",
+        "range": {
+         "low": -17952.0,
+         "high": -14724.0,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "0 months of expenses",
+        "range": {
+         "low": 0.0,
+         "high": 0.0,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Houston",
+        "range": null,
+        "evidence_id": "ev_U_005",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Campus, hospital and work",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Houston",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "55\u201365 hours a week",
+        "range": {
+         "low": 55.0,
+         "high": 65.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "stress": {
+        "text": "High",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Low",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium during school, high once licensed",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: CNA work stays available",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Debt if you don't finish or don't pass the licensing exam",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "stability": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "ownership": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "location": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       },
+       "autonomy": {
+        "text": null,
+        "range": null,
+        "evidence_id": null,
+        "status": "unknown"
+       }
+      },
+      "event_ids": [
+       "E-B-001"
+      ]
+     },
+     {
+      "timepoint": "m24",
+      "headline": "Year two: newly licensed registered nurse",
+      "career": {
+       "role": {
+        "text": "Newly licensed registered nurse",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Own patients as an RN",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "skills": {
+        "text": "Licensed nursing practice",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Houston",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "High",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$72K a year",
+        "range": {
+         "low": 72000.0,
+         "high": 72000.0,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$12K to $15K a year",
+        "range": {
+         "low": 11880.0,
+         "high": 15312.000000000002,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$45K to $58K in debt",
+        "range": {
+         "low": -58326.399999999994,
+         "high": -45414.399999999994,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "0 months of expenses",
+        "range": {
+         "low": 0.0,
+         "high": 0.0,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Houston",
+        "range": null,
+        "evidence_id": "ev_U_005",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Campus, hospital and work",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Houston",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "55\u201365 hours a week",
+        "range": {
+         "low": 55.0,
+         "high": 65.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Low",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium during school, high once licensed",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: CNA work stays available",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Debt if you don't finish or don't pass the licensing exam",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "5/5 (you weighted it 3/5)",
+        "range": {
+         "low": 5.0,
+         "high": 5.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "stability": {
+        "text": "3/5 (you weighted it 4/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "location": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-B-001",
+       "E-B-002"
+      ]
+     },
+     {
+      "timepoint": "m60",
+      "headline": "Year five: experienced registered nurse",
+      "career": {
+       "role": {
+        "text": "Experienced registered nurse",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "employment_status": {
+        "text": "employed",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "scope": {
+        "text": "Charge nurse or specialty",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "skills": {
+        "text": "A specialty",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       },
+       "network": {
+        "text": "Dense network in Houston",
+        "range": null,
+        "evidence_id": "ev_B_006",
+        "status": "known"
+       },
+       "optionality": {
+        "text": "High",
+        "range": null,
+        "evidence_id": "ev_B_005",
+        "status": "known"
+       }
+      },
+      "finance": {
+       "salary": {
+        "text": "$81K a year",
+        "range": {
+         "low": 80990.20800000001,
+         "high": 80990.20800000001,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       },
+       "equity_value": {
+        "text": "None",
+        "range": null,
+        "evidence_id": "ev_B_007",
+        "status": "known"
+       },
+       "housing_cost": {
+        "text": "$12K to $15K a year",
+        "range": {
+         "low": 11880.0,
+         "high": 15312.000000000002,
+         "unit": "usd_per_year"
+        },
+        "evidence_id": "ev_B_003",
+        "status": "known"
+       },
+       "savings": {
+        "text": "$39K to $71K",
+        "range": {
+         "low": 39131.07200000005,
+         "high": 71411.07200000001,
+         "unit": "usd"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       },
+       "runway_months": {
+        "text": "14.7\u201333.6 months of expenses",
+        "range": {
+         "low": 14.7,
+         "high": 33.6,
+         "unit": "months"
+        },
+        "evidence_id": "ev_B_011",
+        "status": "known"
+       }
+      },
+      "location": {
+       "city": {
+        "text": "Houston",
+        "range": null,
+        "evidence_id": "ev_U_005",
+        "status": "known"
+       },
+       "commute": {
+        "text": "Campus, hospital and work",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "support_network": {
+        "text": "New in Houston",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "lifestyle": {
+       "work_hours": {
+        "text": "55\u201365 hours a week",
+        "range": {
+         "low": 55.0,
+         "high": 65.0,
+         "unit": "hours_per_week"
+        },
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "stress": {
+        "text": "Medium",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "flexibility": {
+        "text": "Low",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       },
+       "social_support": {
+        "text": "Building from scratch",
+        "range": null,
+        "evidence_id": "ev_B_008",
+        "status": "known"
+       }
+      },
+      "risk": {
+       "job_security": {
+        "text": "Medium during school, high once licensed",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "reversibility": {
+        "text": "High: CNA work stays available",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       },
+       "downside": {
+        "text": "Debt if you don't finish or don't pass the licensing exam",
+        "range": null,
+        "evidence_id": "ev_B_009",
+        "status": "known"
+       }
+      },
+      "values_fit": {
+       "learning": {
+        "text": "5/5 (you weighted it 3/5)",
+        "range": {
+         "low": 5.0,
+         "high": 5.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "stability": {
+        "text": "3/5 (you weighted it 4/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "ownership": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "location": {
+        "text": "4/5 (you weighted it 4/5)",
+        "range": {
+         "low": 4.0,
+         "high": 4.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       },
+       "autonomy": {
+        "text": "3/5 (you weighted it 3/5)",
+        "range": {
+         "low": 3.0,
+         "high": 3.0,
+         "unit": "score_1_5"
+        },
+        "evidence_id": "ev_U_009",
+        "status": "known"
+       }
+      },
+      "event_ids": [
+       "E-B-001",
+       "E-B-002",
+       "E-B-003"
+      ]
+     }
+    ]
+   }
+  },
+  "evidence": [
+   {
+    "id": "ev_U_001",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path A pays $36,000 a year (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.501265+00:00"
+   },
+   {
+    "id": "ev_U_002",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path A is based in Houston (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.501283+00:00"
+   },
+   {
+    "id": "ev_U_003",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path A: CNA job in Houston. Should I keep working as a certified nursing assistant in Houston at $36,000 a year,",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.501290+00:00"
+   },
+   {
+    "id": "ev_U_004",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path B pays $14,000 a year (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.501299+00:00"
+   },
+   {
+    "id": "ev_U_005",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path B is based in Houston (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.501305+00:00"
+   },
+   {
+    "id": "ev_U_006",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Path B: Nursing school in Houston. go to community college for a two-year nursing degree to become a registered nurse? Tuition is about $11,000 a year, paid with student loans, and I'd work part-time at about $14,000 a year while study",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.501312+00:00"
+   },
+   {
+    "id": "ev_U_007",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "You have about $3,000 saved (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.501324+00:00"
+   },
+   {
+    "id": "ev_U_008",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "You spend about $2,100 a month (you said).",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.501331+00:00"
+   },
+   {
+    "id": "ev_U_009",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Your priorities (1-5): learning 3, stability 4, ownership 3, location 4, autonomy 3.",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.501340+00:00"
+   },
+   {
+    "id": "ev_U_010",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Goal: Stay financially stable",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.501348+00:00"
+   },
+   {
+    "id": "ev_U_011",
+    "kind": "ASSUMPTION",
+    "source": "user",
+    "agent": "intake",
+    "model_id": null,
+    "text": "Worry: The debt",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.501355+00:00"
+   },
+   {
+    "id": "ev_A_001",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "Nursing assistants and orderlies earned a median $41,870 a year in 2025; jobs are projected to grow 3% from 2025 to 2035 (BLS).",
+    "citation": {
+     "url": "https://www.bls.gov/ooh/healthcare/nursing-assistants.htm",
+     "title": "BLS Occupational Outlook Handbook: Nursing Assistants and Orderlies",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.502012+00:00"
+   },
+   {
+    "id": "ev_B_001",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "Registered nurses earned a median $97,550 a year in 2025; jobs are projected to grow 6% from 2025 to 2035, faster than average (BLS).",
+    "citation": {
+     "url": "https://www.bls.gov/ooh/healthcare/registered-nurses.htm",
+     "title": "BLS Occupational Outlook Handbook: Registered Nurses",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.502024+00:00"
+   },
+   {
+    "id": "ev_B_002",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "In 2024, 90.6% of first-time U.S.-educated associate-degree candidates passed the NCLEX-RN (76,655 of 84,580); repeat U.S.-educated test takers passed at 50.9% (NCSBN).",
+    "citation": {
+     "url": "https://www.ncsbn.org/public-files/2024_NCLEXExamStats_Final.pdf",
+     "title": "NCSBN 2024 NCLEX Examination Statistics, Table 1 and Table 8",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.502032+00:00"
+   },
+   {
+    "id": "ev_A_002",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "Typical annual rent for a one-bedroom apartment in Houston: HUD sets Houston-area Fair Market Rents by ZIP code; FY2026 one-bedroom values include $1,100 (77067), $1,160 (77034) and $1,390 (77043) a month.",
+    "citation": {
+     "url": "https://pasadenatx.gov/DocumentCenter/View/10575/FY-2026-FAIR-MARKET-RENTS-PDF",
+     "title": "FY2026 Fair Market Rents, Houston metro Small Area FMRs (Pasadena TX Housing Authority)",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.503802+00:00"
+   },
+   {
+    "id": "ev_B_003",
+    "kind": "FACT",
+    "source": "web",
+    "agent": "reference-library",
+    "model_id": null,
+    "text": "Typical annual rent for a one-bedroom apartment in Houston: HUD sets Houston-area Fair Market Rents by ZIP code; FY2026 one-bedroom values include $1,100 (77067), $1,160 (77034) and $1,390 (77043) a month.",
+    "citation": {
+     "url": "https://pasadenatx.gov/DocumentCenter/View/10575/FY-2026-FAIR-MARKET-RENTS-PDF",
+     "title": "FY2026 Fair Market Rents, Houston metro Small Area FMRs (Pasadena TX Housing Authority)",
+     "retrieved_at": "2026-10-27"
+    },
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.503826+00:00"
+   },
+   {
+    "id": "ev_A_003",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:54.723265+00:00"
+   },
+   {
+    "id": "ev_A_004",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Typical progression for a Certified nursing assistant at a established company.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:54.723282+00:00"
+   },
+   {
+    "id": "ev_A_005",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Professional network grows around Houston.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:34:54.723289+00:00"
+   },
+   {
+    "id": "ev_A_006",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "finance",
+    "model_id": "muse-spark-1.3",
+    "text": "Equity at a established company is illiquid until an exit.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:54.723360+00:00"
+   },
+   {
+    "id": "ev_A_007",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "lifestyle",
+    "model_id": "muse-spark-1.3",
+    "text": "Hours and stress typical of a established company role.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:34:54.723375+00:00"
+   },
+   {
+    "id": "ev_A_008",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "risk",
+    "model_id": "muse-spark-1.3",
+    "text": "Risk profile of a established company path.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:54.723418+00:00"
+   },
+   {
+    "id": "ev_A_009",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "values",
+    "model_id": "muse-spark-1.3",
+    "text": "Scored against the priorities you gave.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:54.723436+00:00"
+   },
+   {
+    "id": "ev_A_010",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.723472+00:00"
+   },
+   {
+    "id": "ev_B_004",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:54.723751+00:00"
+   },
+   {
+    "id": "ev_B_005",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Typical progression for a Nursing student at a school.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:54.723761+00:00"
+   },
+   {
+    "id": "ev_B_006",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "career",
+    "model_id": "muse-spark-1.3",
+    "text": "Professional network grows around Houston.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:34:54.723770+00:00"
+   },
+   {
+    "id": "ev_B_007",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "finance",
+    "model_id": "muse-spark-1.3",
+    "text": "Equity at a school is illiquid until an exit.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:54.723843+00:00"
+   },
+   {
+    "id": "ev_B_008",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "lifestyle",
+    "model_id": "muse-spark-1.3",
+    "text": "Hours and stress typical of a school role.",
+    "citation": null,
+    "confidence": "low",
+    "created_at": "2026-10-27T15:34:54.723857+00:00"
+   },
+   {
+    "id": "ev_B_009",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "risk",
+    "model_id": "muse-spark-1.3",
+    "text": "Risk profile of a school path.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:54.723903+00:00"
+   },
+   {
+    "id": "ev_B_010",
+    "kind": "INFERENCE",
+    "source": "model",
+    "agent": "values",
+    "model_id": "muse-spark-1.3",
+    "text": "Scored against the priorities you gave.",
+    "citation": null,
+    "confidence": "medium",
+    "created_at": "2026-10-27T15:34:54.723923+00:00"
+   },
+   {
+    "id": "ev_B_011",
+    "kind": "INFERENCE",
+    "source": "engine",
+    "agent": "finance-engine",
+    "model_id": null,
+    "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+    "citation": null,
+    "confidence": "high",
+    "created_at": "2026-10-27T15:34:54.723959+00:00"
+   }
+  ],
+  "events": [
+   {
+    "id": "E-A-001",
+    "branch": "A",
+    "month": 6,
+    "kind": "turning_point",
+    "title": "Picked up a second job part-time",
+    "detail": "Extra shifts to make rent.",
+    "caused_by": [],
+    "evidence_id": "ev_A_004",
+    "version": 1
+   },
+   {
+    "id": "E-A-002",
+    "branch": "A",
+    "month": 20,
+    "kind": "turning_point",
+    "title": "Became the aide who trains new hires",
+    "detail": "Respected on the floor.",
+    "caused_by": [],
+    "evidence_id": "ev_A_004",
+    "version": 1
+   },
+   {
+    "id": "E-A-003",
+    "branch": "A",
+    "month": 48,
+    "kind": "turning_point",
+    "title": "Thought again about nursing school",
+    "detail": "The ceiling is felt.",
+    "caused_by": [],
+    "evidence_id": "ev_A_004",
+    "version": 1
+   },
+   {
+    "id": "E-B-001",
+    "branch": "B",
+    "month": 5,
+    "kind": "turning_point",
+    "title": "Passed the first semester",
+    "detail": "The hardest classes are behind you.",
+    "caused_by": [],
+    "evidence_id": "ev_B_005",
+    "version": 1
+   },
+   {
+    "id": "E-B-002",
+    "branch": "B",
+    "month": 22,
+    "kind": "turning_point",
+    "title": "Graduated with an associate degree in nursing",
+    "detail": "First in the family to finish college.",
+    "caused_by": [],
+    "evidence_id": "ev_B_005",
+    "version": 1
+   },
+   {
+    "id": "E-B-003",
+    "branch": "B",
+    "month": 25,
+    "kind": "turning_point",
+    "title": "Passed the licensing exam and started as an RN",
+    "detail": "A new pay scale.",
+    "caused_by": [],
+    "evidence_id": "ev_B_005",
+    "version": 1
+   }
+  ],
+  "shocks": [],
+  "suggested_shocks": [
+   {
+    "label": "Hours cut at month 12",
+    "description": "Shifts are cut and the job ends.",
+    "month": 12
+   },
+   {
+    "label": "Fails the licensing exam once",
+    "description": "The first NCLEX attempt fails; the retake is months later.",
+    "month": 24
+   },
+   {
+    "label": "Medical emergency",
+    "description": "An unexpected hospital bill and two weeks off work.",
+    "month": 16
+   }
+  ],
+  "checks": [
+   {
+    "name": "Branch isolation",
+    "passed": true,
+    "repaired": 0,
+    "detail": "No world cites the other world's evidence or events."
+   },
+   {
+    "name": "Timeline order",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Every event follows its causes."
+   },
+   {
+    "name": "Money reconciles",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Savings match pay, tax and costs at every timepoint."
+   },
+   {
+    "name": "Facts have sources",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Every FACT has a citation; every ASSUMPTION came from you."
+   },
+   {
+    "name": "No unsupported values",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Values without evidence are shown as unknown, not filled in."
+   },
+   {
+    "name": "Story holds together",
+    "passed": true,
+    "repaired": 0,
+    "detail": "Both worlds hold together."
+   }
+  ],
+  "comparison": {
+   "summary": "Path A (CNA job in Houston) leans toward stability, location; Path B (Nursing school in Houston) leans toward learning, location.",
+   "dominant_assumptions": [
+    "How long a job search takes if things go wrong",
+    "Housing cost difference between the cities",
+    "Whether equity ends up worth anything"
+   ],
+   "what_would_change_my_mind": [
+    "The startup's runway is shorter than 12 months",
+    "The stable role offers a fast promotion track"
+   ]
+  },
+  "third_door": null,
+  "derived_from": null,
+  "created_at": "2026-10-27T15:34:54.501234+00:00"
+ },
+ "precomputed_shock": {
+  "request": {
+   "label": "Fails the licensing exam once",
+   "description": "The first NCLEX attempt fails; the retake is four months later.",
+   "month": 24
+  },
+  "simulation": {
+   "id": "demo-cna-vs-nursing-school",
+   "slug": "cna-vs-nursing-school",
+   "mode": "mock",
+   "status": "ready",
+   "version": 2,
+   "decision": {
+    "title": "CNA job vs Nursing school",
+    "question": "Should I keep working as a certified nursing assistant in Houston at $36,000 a year, or go to community college for a two-year nursing degree to become a registered nurse? Tuition is about $11,000 a y",
+    "path_a": {
+     "label": "CNA job in Houston",
+     "city": "Houston",
+     "role": "Certified nursing assistant",
+     "org_type": "established_company",
+     "annual_pay_usd": 36000.0,
+     "equity": null,
+     "notes": "Should I keep working as a certified nursing assistant in Houston at $36,000 a year,"
+    },
+    "path_b": {
+     "label": "Nursing school in Houston",
+     "city": "Houston",
+     "role": "Nursing student",
+     "org_type": "school",
+     "annual_pay_usd": 14000.0,
+     "equity": null,
+     "notes": "go to community college for a two-year nursing degree to become a registered nurse? Tuition is about $11,000 a year, paid with student loans, and I'd work part-time at about $14,000 a year while study"
+    },
+    "priorities": {
+     "learning": 3,
+     "stability": 4,
+     "ownership": 3,
+     "location": 4,
+     "autonomy": 3
+    },
+    "goals": [
+     "Stay financially stable"
+    ],
+    "fears": [
+     "The debt"
+    ],
+    "constraints": [
+     "Tuition is about $11,000 a year, paid with student loans, and I'd work part-time at about $14,000 a year while studying.",
+     "I'm the first in my family to go to college."
+    ],
+    "current": {
+     "city": null,
+     "profession": "Certified nursing assistant",
+     "age_band": null,
+     "savings_usd": 3000.0,
+     "monthly_expenses_usd": 2100.0
+    },
+    "clarifying_questions": []
+   },
+   "branches": {
+    "A": {
+     "branch": "A",
+     "label": "CNA job in Houston",
+     "summary": "In Path A you build steadily in Houston. Hard physical work with a low pay ceiling is the main risk.",
+     "top_tradeoffs": [
+      "More stability, less learning",
+      "More predictability, less ownership",
+      "Life built around Houston"
+     ],
+     "confidence": "high",
+     "persona": {
+      "name": "Future A",
+      "voice": "Kind, tired, matter-of-fact.",
+      "temperament": "Proud of the work, frustrated by the pay."
+     },
+     "finance_inputs": {
+      "start_savings": 3000.0,
+      "annual_pay": 36000.0,
+      "effective_tax_rate": 0.12,
+      "annual_housing_low": 11880.0,
+      "annual_housing_high": 15312.000000000002,
+      "annual_other_costs": 15120.0,
+      "raise_pct_per_year": 0.03,
+      "equity_note": null,
+      "pay_segments": [],
+      "one_time_costs": []
+     },
+     "snapshots": [
+      {
+       "timepoint": "m0",
+       "headline": "Day one: certified nursing assistant in Houston",
+       "career": {
+        "role": {
+         "text": "Certified nursing assistant",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Patient care on a busy floor",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Patient care basics",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$36K a year",
+         "range": {
+          "low": 36000.0,
+          "high": 36000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_001",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$12K to $15K a year",
+         "range": {
+          "low": 11880.0,
+          "high": 15312.000000000002,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_002",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$3K",
+         "range": {
+          "low": 3000.0,
+          "high": 3000.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "1.1\u20131.4 months of expenses",
+         "range": {
+          "low": 1.1,
+          "high": 1.4,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Houston",
+         "range": null,
+         "evidence_id": "ev_U_002",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Bus or short drive to the hospital",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Houston",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201348 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 48.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "stress": {
+         "text": "High",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "High: care workers are always needed",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: nursing school stays open later",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Hard physical work with a low pay ceiling",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": []
+      },
+      {
+       "timepoint": "m6",
+       "headline": "Six months in: experienced cna",
+       "career": {
+        "role": {
+         "text": "Experienced CNA",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Trusted with harder patients",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Calm under pressure",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$36K a year",
+         "range": {
+          "low": 36000.0,
+          "high": 36000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_001",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$12K to $15K a year",
+         "range": {
+          "low": 11880.0,
+          "high": 15312.000000000002,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_002",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$3K to $6K",
+         "range": {
+          "low": 2868.0,
+          "high": 6096.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "1.1\u20132.9 months of expenses",
+         "range": {
+          "low": 1.1,
+          "high": 2.9,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Houston",
+         "range": null,
+         "evidence_id": "ev_U_002",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Bus or short drive to the hospital",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Houston",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201348 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 48.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "stress": {
+         "text": "High",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "High: care workers are always needed",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: nursing school stays open later",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Hard physical work with a low pay ceiling",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": [
+        "E-A-001"
+       ]
+      },
+      {
+       "timepoint": "m24",
+       "headline": "Year two: senior cna",
+       "career": {
+        "role": {
+         "text": "Senior CNA",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Trains new aides",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Training others",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Houston",
+         "range": null,
+         "evidence_id": "ev_A_005",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$38K a year",
+         "range": {
+          "low": 38192.4,
+          "high": 38192.4,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$12K to $15K a year",
+         "range": {
+          "low": 11880.0,
+          "high": 15312.000000000002,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_002",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$3K to $16K",
+         "range": {
+          "low": 3422.399999999998,
+          "high": 16334.400000000009,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "1.3\u20137.7 months of expenses",
+         "range": {
+          "low": 1.3,
+          "high": 7.7,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Houston",
+         "range": null,
+         "evidence_id": "ev_U_002",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Bus or short drive to the hospital",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Houston",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201348 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 48.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "stress": {
+         "text": "High",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "High: care workers are always needed",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: nursing school stays open later",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Hard physical work with a low pay ceiling",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "stability": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "location": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-A-001",
+        "E-A-002"
+       ]
+      },
+      {
+       "timepoint": "m60",
+       "headline": "Year five: senior cna or moved into nursing",
+       "career": {
+        "role": {
+         "text": "Senior CNA or moved into nursing",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Leads aides on a unit",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Deep floor experience",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Houston",
+         "range": null,
+         "evidence_id": "ev_A_005",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_004",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$42K a year",
+         "range": {
+          "low": 41733.8666748,
+          "high": 41733.8666748,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_A_006",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$12K to $15K a year",
+         "range": {
+          "low": 11880.0,
+          "high": 15312.000000000002,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_A_002",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$11K to $44K",
+         "range": {
+          "low": 11473.422460800002,
+          "high": 43753.42246079998,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "4.3\u201320.6 months of expenses",
+         "range": {
+          "low": 4.3,
+          "high": 20.6,
+          "unit": "months"
+         },
+         "evidence_id": "ev_A_010",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Houston",
+         "range": null,
+         "evidence_id": "ev_U_002",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Bus or short drive to the hospital",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Houston",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "40\u201348 hours a week",
+         "range": {
+          "low": 40.0,
+          "high": 48.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_A_007",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "High: care workers are always needed",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: nursing school stays open later",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Hard physical work with a low pay ceiling",
+         "range": null,
+         "evidence_id": "ev_A_008",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "stability": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "location": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "2/5 (you weighted it 3/5)",
+         "range": {
+          "low": 2.0,
+          "high": 2.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-A-001",
+        "E-A-002",
+        "E-A-003"
+       ]
+      }
+     ]
+    },
+    "B": {
+     "branch": "B",
+     "label": "Nursing school in Houston",
+     "summary": "In Path B you build steadily in Houston. Debt if you don't finish or don't pass the licensing exam is the main risk.",
+     "top_tradeoffs": [
+      "More learning, less stability",
+      "More predictability, less ownership",
+      "Life built around Houston"
+     ],
+     "confidence": "high",
+     "persona": {
+      "name": "Future B",
+      "voice": "Determined, a bit stunned at how far they've come.",
+      "temperament": "Exhausted during school, proud and steadier after."
+     },
+     "finance_inputs": {
+      "start_savings": 3000.0,
+      "annual_pay": 14000.0,
+      "effective_tax_rate": 0.14,
+      "annual_housing_low": 11880.0,
+      "annual_housing_high": 15312.000000000002,
+      "annual_other_costs": 15120.0,
+      "raise_pct_per_year": 0.04,
+      "equity_note": null,
+      "pay_segments": [
+       {
+        "start_month": 0,
+        "end_month": 24,
+        "annual_pay": 14000.0,
+        "label": "base pay"
+       },
+       {
+        "start_month": 24,
+        "end_month": 28,
+        "annual_pay": 14000.0,
+        "label": "still part-time"
+       },
+       {
+        "start_month": 28,
+        "end_month": null,
+        "annual_pay": 72000.0,
+        "label": "registered nurse"
+       }
+      ],
+      "one_time_costs": [
+       {
+        "month": 0,
+        "amount": 11000.0,
+        "label": "tuition, year 1"
+       },
+       {
+        "month": 12,
+        "amount": 11000.0,
+        "label": "tuition, year 2"
+       }
+      ]
+     },
+     "snapshots": [
+      {
+       "timepoint": "m0",
+       "headline": "Day one: nursing student working part-time in Houston",
+       "career": {
+        "role": {
+         "text": "Nursing student working part-time",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "studying",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Classes, labs and shifts",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Anatomy, pharmacology",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$14K a year",
+         "range": {
+          "low": 14000.0,
+          "high": 14000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_004",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$12K to $15K a year",
+         "range": {
+          "low": 11880.0,
+          "high": 15312.000000000002,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$3K",
+         "range": {
+          "low": 3000.0,
+          "high": 3000.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "1.1\u20131.4 months of expenses",
+         "range": {
+          "low": 1.1,
+          "high": 1.4,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Houston",
+         "range": null,
+         "evidence_id": "ev_U_005",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Campus, hospital and work",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Houston",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "55\u201365 hours a week",
+         "range": {
+          "low": 55.0,
+          "high": 65.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "stress": {
+         "text": "High",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Low",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium during school, high once licensed",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: CNA work stays available",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Debt if you don't finish or don't pass the licensing exam",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": []
+      },
+      {
+       "timepoint": "m6",
+       "headline": "Six months in: nursing student in clinical rotations",
+       "career": {
+        "role": {
+         "text": "Nursing student in clinical rotations",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "studying",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Clinical rotations at a hospital",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Clinical judgement",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "network": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "optionality": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$14K a year",
+         "range": {
+          "low": 14000.0,
+          "high": 14000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_U_004",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$12K to $15K a year",
+         "range": {
+          "low": 11880.0,
+          "high": 15312.000000000002,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$15K to $18K in debt",
+         "range": {
+          "low": -17952.0,
+          "high": -14724.0,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "0 months of expenses",
+         "range": {
+          "low": 0.0,
+          "high": 0.0,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Houston",
+         "range": null,
+         "evidence_id": "ev_U_005",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Campus, hospital and work",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Houston",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "55\u201365 hours a week",
+         "range": {
+          "low": 55.0,
+          "high": 65.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "stress": {
+         "text": "High",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Low",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium during school, high once licensed",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: CNA work stays available",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Debt if you don't finish or don't pass the licensing exam",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "stability": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "ownership": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "location": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        },
+        "autonomy": {
+         "text": null,
+         "range": null,
+         "evidence_id": null,
+         "status": "unknown"
+        }
+       },
+       "event_ids": [
+        "E-B-001"
+       ]
+      },
+      {
+       "timepoint": "m24",
+       "headline": "Year two: newly licensed registered nurse",
+       "career": {
+        "role": {
+         "text": "Newly licensed registered nurse",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Own patients as an RN",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "skills": {
+         "text": "Licensed nursing practice",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Houston",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "High",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$14K a year",
+         "range": {
+          "low": 14000.0,
+          "high": 14000.0,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$12K to $15K a year",
+         "range": {
+          "low": 11880.0,
+          "high": 15312.000000000002,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$45K to $58K in debt",
+         "range": {
+          "low": -58326.399999999994,
+          "high": -45414.399999999994,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "0 months of expenses",
+         "range": {
+          "low": 0.0,
+          "high": 0.0,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Houston",
+         "range": null,
+         "evidence_id": "ev_U_005",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Campus, hospital and work",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Houston",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "55\u201365 hours a week",
+         "range": {
+          "low": 55.0,
+          "high": 65.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "stress": {
+         "text": "High for a few months, then easing",
+         "range": null,
+         "evidence_id": "ev_B_013",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Low",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium during school, high once licensed",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: CNA work stays available",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Debt if you don't finish or don't pass the licensing exam",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "5/5 (you weighted it 3/5)",
+         "range": {
+          "low": 5.0,
+          "high": 5.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "stability": {
+         "text": "3/5 (you weighted it 4/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "location": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-B-001",
+        "E-B-002",
+        "E-B-004"
+       ]
+      },
+      {
+       "timepoint": "m60",
+       "headline": "Year five: experienced registered nurse",
+       "career": {
+        "role": {
+         "text": "Experienced registered nurse",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "employment_status": {
+         "text": "employed",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "scope": {
+         "text": "Charge nurse or specialty",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "skills": {
+         "text": "A specialty",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        },
+        "network": {
+         "text": "Dense network in Houston",
+         "range": null,
+         "evidence_id": "ev_B_006",
+         "status": "known"
+        },
+        "optionality": {
+         "text": "High",
+         "range": null,
+         "evidence_id": "ev_B_005",
+         "status": "known"
+        }
+       },
+       "finance": {
+        "salary": {
+         "text": "$78K a year",
+         "range": {
+          "low": 77875.20000000001,
+          "high": 77875.20000000001,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        },
+        "equity_value": {
+         "text": "None",
+         "range": null,
+         "evidence_id": "ev_B_007",
+         "status": "known"
+        },
+        "housing_cost": {
+         "text": "$12K to $15K a year",
+         "range": {
+          "low": 11880.0,
+          "high": 15312.000000000002,
+          "unit": "usd_per_year"
+         },
+         "evidence_id": "ev_B_003",
+         "status": "known"
+        },
+        "savings": {
+         "text": "$21K to $53K",
+         "range": {
+          "low": 20820.181333333363,
+          "high": 53100.18133333337,
+          "unit": "usd"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        },
+        "runway_months": {
+         "text": "7.8\u201325 months of expenses",
+         "range": {
+          "low": 7.8,
+          "high": 25.0,
+          "unit": "months"
+         },
+         "evidence_id": "ev_B_011",
+         "status": "known"
+        }
+       },
+       "location": {
+        "city": {
+         "text": "Houston",
+         "range": null,
+         "evidence_id": "ev_U_005",
+         "status": "known"
+        },
+        "commute": {
+         "text": "Campus, hospital and work",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "support_network": {
+         "text": "New in Houston",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "lifestyle": {
+        "work_hours": {
+         "text": "55\u201365 hours a week",
+         "range": {
+          "low": 55.0,
+          "high": 65.0,
+          "unit": "hours_per_week"
+         },
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "stress": {
+         "text": "Medium",
+         "range": null,
+         "evidence_id": "ev_B_013",
+         "status": "known"
+        },
+        "flexibility": {
+         "text": "Low",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        },
+        "social_support": {
+         "text": "Building from scratch",
+         "range": null,
+         "evidence_id": "ev_B_008",
+         "status": "known"
+        }
+       },
+       "risk": {
+        "job_security": {
+         "text": "Medium during school, high once licensed",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "reversibility": {
+         "text": "High: CNA work stays available",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        },
+        "downside": {
+         "text": "Debt if you don't finish or don't pass the licensing exam",
+         "range": null,
+         "evidence_id": "ev_B_009",
+         "status": "known"
+        }
+       },
+       "values_fit": {
+        "learning": {
+         "text": "5/5 (you weighted it 3/5)",
+         "range": {
+          "low": 5.0,
+          "high": 5.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "stability": {
+         "text": "3/5 (you weighted it 4/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "ownership": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "location": {
+         "text": "4/5 (you weighted it 4/5)",
+         "range": {
+          "low": 4.0,
+          "high": 4.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        },
+        "autonomy": {
+         "text": "3/5 (you weighted it 3/5)",
+         "range": {
+          "low": 3.0,
+          "high": 3.0,
+          "unit": "score_1_5"
+         },
+         "evidence_id": "ev_U_009",
+         "status": "known"
+        }
+       },
+       "event_ids": [
+        "E-B-001",
+        "E-B-002",
+        "E-B-004",
+        "E-B-003",
+        "E-B-005"
+       ]
+      }
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "id": "ev_U_001",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path A pays $36,000 a year (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.501265+00:00"
+    },
+    {
+     "id": "ev_U_002",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path A is based in Houston (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.501283+00:00"
+    },
+    {
+     "id": "ev_U_003",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path A: CNA job in Houston. Should I keep working as a certified nursing assistant in Houston at $36,000 a year,",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.501290+00:00"
+    },
+    {
+     "id": "ev_U_004",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path B pays $14,000 a year (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.501299+00:00"
+    },
+    {
+     "id": "ev_U_005",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path B is based in Houston (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.501305+00:00"
+    },
+    {
+     "id": "ev_U_006",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Path B: Nursing school in Houston. go to community college for a two-year nursing degree to become a registered nurse? Tuition is about $11,000 a year, paid with student loans, and I'd work part-time at about $14,000 a year while study",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.501312+00:00"
+    },
+    {
+     "id": "ev_U_007",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "You have about $3,000 saved (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.501324+00:00"
+    },
+    {
+     "id": "ev_U_008",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "You spend about $2,100 a month (you said).",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.501331+00:00"
+    },
+    {
+     "id": "ev_U_009",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Your priorities (1-5): learning 3, stability 4, ownership 3, location 4, autonomy 3.",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.501340+00:00"
+    },
+    {
+     "id": "ev_U_010",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Goal: Stay financially stable",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.501348+00:00"
+    },
+    {
+     "id": "ev_U_011",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "intake",
+     "model_id": null,
+     "text": "Worry: The debt",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.501355+00:00"
+    },
+    {
+     "id": "ev_A_001",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "Nursing assistants and orderlies earned a median $41,870 a year in 2025; jobs are projected to grow 3% from 2025 to 2035 (BLS).",
+     "citation": {
+      "url": "https://www.bls.gov/ooh/healthcare/nursing-assistants.htm",
+      "title": "BLS Occupational Outlook Handbook: Nursing Assistants and Orderlies",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.502012+00:00"
+    },
+    {
+     "id": "ev_B_001",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "Registered nurses earned a median $97,550 a year in 2025; jobs are projected to grow 6% from 2025 to 2035, faster than average (BLS).",
+     "citation": {
+      "url": "https://www.bls.gov/ooh/healthcare/registered-nurses.htm",
+      "title": "BLS Occupational Outlook Handbook: Registered Nurses",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.502024+00:00"
+    },
+    {
+     "id": "ev_B_002",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "In 2024, 90.6% of first-time U.S.-educated associate-degree candidates passed the NCLEX-RN (76,655 of 84,580); repeat U.S.-educated test takers passed at 50.9% (NCSBN).",
+     "citation": {
+      "url": "https://www.ncsbn.org/public-files/2024_NCLEXExamStats_Final.pdf",
+      "title": "NCSBN 2024 NCLEX Examination Statistics, Table 1 and Table 8",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.502032+00:00"
+    },
+    {
+     "id": "ev_A_002",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "Typical annual rent for a one-bedroom apartment in Houston: HUD sets Houston-area Fair Market Rents by ZIP code; FY2026 one-bedroom values include $1,100 (77067), $1,160 (77034) and $1,390 (77043) a month.",
+     "citation": {
+      "url": "https://pasadenatx.gov/DocumentCenter/View/10575/FY-2026-FAIR-MARKET-RENTS-PDF",
+      "title": "FY2026 Fair Market Rents, Houston metro Small Area FMRs (Pasadena TX Housing Authority)",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.503802+00:00"
+    },
+    {
+     "id": "ev_B_003",
+     "kind": "FACT",
+     "source": "web",
+     "agent": "reference-library",
+     "model_id": null,
+     "text": "Typical annual rent for a one-bedroom apartment in Houston: HUD sets Houston-area Fair Market Rents by ZIP code; FY2026 one-bedroom values include $1,100 (77067), $1,160 (77034) and $1,390 (77043) a month.",
+     "citation": {
+      "url": "https://pasadenatx.gov/DocumentCenter/View/10575/FY-2026-FAIR-MARKET-RENTS-PDF",
+      "title": "FY2026 Fair Market Rents, Houston metro Small Area FMRs (Pasadena TX Housing Authority)",
+      "retrieved_at": "2026-10-27"
+     },
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.503826+00:00"
+    },
+    {
+     "id": "ev_A_003",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:54.723265+00:00"
+    },
+    {
+     "id": "ev_A_004",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Typical progression for a Certified nursing assistant at a established company.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:54.723282+00:00"
+    },
+    {
+     "id": "ev_A_005",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Professional network grows around Houston.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:34:54.723289+00:00"
+    },
+    {
+     "id": "ev_A_006",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "finance",
+     "model_id": "muse-spark-1.3",
+     "text": "Equity at a established company is illiquid until an exit.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:54.723360+00:00"
+    },
+    {
+     "id": "ev_A_007",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "lifestyle",
+     "model_id": "muse-spark-1.3",
+     "text": "Hours and stress typical of a established company role.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:34:54.723375+00:00"
+    },
+    {
+     "id": "ev_A_008",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "risk",
+     "model_id": "muse-spark-1.3",
+     "text": "Risk profile of a established company path.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:54.723418+00:00"
+    },
+    {
+     "id": "ev_A_009",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "values",
+     "model_id": "muse-spark-1.3",
+     "text": "Scored against the priorities you gave.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:54.723436+00:00"
+    },
+    {
+     "id": "ev_A_010",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.723472+00:00"
+    },
+    {
+     "id": "ev_B_004",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Non-housing living costs assumed to be 60% of your stated monthly spending.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:54.723751+00:00"
+    },
+    {
+     "id": "ev_B_005",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Typical progression for a Nursing student at a school.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:54.723761+00:00"
+    },
+    {
+     "id": "ev_B_006",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Professional network grows around Houston.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:34:54.723770+00:00"
+    },
+    {
+     "id": "ev_B_007",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "finance",
+     "model_id": "muse-spark-1.3",
+     "text": "Equity at a school is illiquid until an exit.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:54.723843+00:00"
+    },
+    {
+     "id": "ev_B_008",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "lifestyle",
+     "model_id": "muse-spark-1.3",
+     "text": "Hours and stress typical of a school role.",
+     "citation": null,
+     "confidence": "low",
+     "created_at": "2026-10-27T15:34:54.723857+00:00"
+    },
+    {
+     "id": "ev_B_009",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "risk",
+     "model_id": "muse-spark-1.3",
+     "text": "Risk profile of a school path.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:54.723903+00:00"
+    },
+    {
+     "id": "ev_B_010",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "values",
+     "model_id": "muse-spark-1.3",
+     "text": "Scored against the priorities you gave.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:54.723923+00:00"
+    },
+    {
+     "id": "ev_B_011",
+     "kind": "INFERENCE",
+     "source": "engine",
+     "agent": "finance-engine",
+     "model_id": null,
+     "text": "Calculated by Elsewhere's finance model from pay, tax rate, housing and living costs. A scenario value, not a prediction.",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:54.723959+00:00"
+    },
+    {
+     "id": "ev_U_012",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "shock",
+     "model_id": null,
+     "text": "For \u201cFails the licensing exam once\u201d: The retake is four months later",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:58.334851+00:00"
+    },
+    {
+     "id": "ev_U_013",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "shock",
+     "model_id": null,
+     "text": "For \u201cFails the licensing exam once\u201d: Part-time work continues meanwhile",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:58.334865+00:00"
+    },
+    {
+     "id": "ev_B_012",
+     "kind": "ASSUMPTION",
+     "source": "user",
+     "agent": "shock",
+     "model_id": null,
+     "text": "You applied a shock: Fails the licensing exam once. The first NCLEX attempt fails; the retake is four months later.",
+     "citation": null,
+     "confidence": "high",
+     "created_at": "2026-10-27T15:34:58.334878+00:00"
+    },
+    {
+     "id": "ev_B_013",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "lifestyle",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 24.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:58.488967+00:00"
+    },
+    {
+     "id": "ev_B_014",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "values",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 24.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:58.490066+00:00"
+    },
+    {
+     "id": "ev_B_015",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "risk",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 24.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:58.492789+00:00"
+    },
+    {
+     "id": "ev_B_016",
+     "kind": "INFERENCE",
+     "source": "model",
+     "agent": "career",
+     "model_id": "muse-spark-1.3",
+     "text": "Recomputed after the shock at month 24.",
+     "citation": null,
+     "confidence": "medium",
+     "created_at": "2026-10-27T15:34:58.499414+00:00"
+    }
+   ],
+   "events": [
+    {
+     "id": "E-A-001",
+     "branch": "A",
+     "month": 6,
+     "kind": "turning_point",
+     "title": "Picked up a second job part-time",
+     "detail": "Extra shifts to make rent.",
+     "caused_by": [],
+     "evidence_id": "ev_A_004",
+     "version": 1
+    },
+    {
+     "id": "E-A-002",
+     "branch": "A",
+     "month": 20,
+     "kind": "turning_point",
+     "title": "Became the aide who trains new hires",
+     "detail": "Respected on the floor.",
+     "caused_by": [],
+     "evidence_id": "ev_A_004",
+     "version": 1
+    },
+    {
+     "id": "E-A-003",
+     "branch": "A",
+     "month": 48,
+     "kind": "turning_point",
+     "title": "Thought again about nursing school",
+     "detail": "The ceiling is felt.",
+     "caused_by": [],
+     "evidence_id": "ev_A_004",
+     "version": 1
+    },
+    {
+     "id": "E-B-001",
+     "branch": "B",
+     "month": 5,
+     "kind": "turning_point",
+     "title": "Passed the first semester",
+     "detail": "The hardest classes are behind you.",
+     "caused_by": [],
+     "evidence_id": "ev_B_005",
+     "version": 1
+    },
+    {
+     "id": "E-B-002",
+     "branch": "B",
+     "month": 22,
+     "kind": "turning_point",
+     "title": "Graduated with an associate degree in nursing",
+     "detail": "First in the family to finish college.",
+     "caused_by": [],
+     "evidence_id": "ev_B_005",
+     "version": 1
+    },
+    {
+     "id": "E-B-003",
+     "branch": "B",
+     "month": 25,
+     "kind": "turning_point",
+     "title": "Passed the licensing exam and started as an RN",
+     "detail": "A new pay scale.",
+     "caused_by": [],
+     "evidence_id": "ev_B_005",
+     "version": 1
+    },
+    {
+     "id": "E-B-004",
+     "branch": "B",
+     "month": 24,
+     "kind": "shock",
+     "title": "Failed the licensing exam once",
+     "detail": "The retake is four months away.",
+     "caused_by": [
+      "S-01"
+     ],
+     "evidence_id": "ev_B_012",
+     "version": 2
+    },
+    {
+     "id": "E-B-005",
+     "branch": "B",
+     "month": 28,
+     "kind": "shock",
+     "title": "Passed the retake",
+     "detail": "Licensed as a registered nurse.",
+     "caused_by": [
+      "S-01"
+     ],
+     "evidence_id": "ev_B_012",
+     "version": 2
+    }
+   ],
+   "shocks": [
+    {
+     "id": "S-01",
+     "label": "Fails the licensing exam once",
+     "description": "The first NCLEX attempt fails; the retake is four months later.",
+     "month": 24,
+     "applies_to": [
+      "B"
+     ],
+     "not_applied_because": {
+      "A": "This shock doesn't touch Path A: nothing in this world depends on it."
+     },
+     "changes": [
+      {
+       "branch": "B",
+       "timepoint": "m24",
+       "field": "finance.salary",
+       "before": "$72K a year",
+       "after": "$14K a year",
+       "because": [
+        "S-01",
+        "E-B-004",
+        "E-B-005"
+       ]
+      },
+      {
+       "branch": "B",
+       "timepoint": "m24",
+       "field": "lifestyle.stress",
+       "before": "Medium",
+       "after": "High for a few months, then easing",
+       "because": [
+        "S-01",
+        "E-B-004",
+        "E-B-005",
+        "finance.salary",
+        "finance.savings",
+        "finance.runway_months"
+       ]
+      },
+      {
+       "branch": "B",
+       "timepoint": "m60",
+       "field": "finance.salary",
+       "before": "$81K a year",
+       "after": "$78K a year",
+       "because": [
+        "S-01",
+        "E-B-004",
+        "E-B-005"
+       ]
+      },
+      {
+       "branch": "B",
+       "timepoint": "m60",
+       "field": "finance.savings",
+       "before": "$39K to $71K",
+       "after": "$21K to $53K",
+       "because": [
+        "S-01",
+        "E-B-004",
+        "E-B-005",
+        "finance.salary"
+       ]
+      },
+      {
+       "branch": "B",
+       "timepoint": "m60",
+       "field": "finance.runway_months",
+       "before": "14.7\u201333.6 months of expenses",
+       "after": "7.8\u201325 months of expenses",
+       "because": [
+        "S-01",
+        "E-B-004",
+        "E-B-005",
+        "finance.salary",
+        "finance.savings"
+       ]
+      }
+     ],
+     "front_pages": [
+      {
+       "branch": "A",
+       "headline": "Year two: senior cna.",
+       "deck": "Savings at year two: $3K to $16K.",
+       "changed_because": "This shock happens somewhere this world never went.",
+       "unchanged": true
+      },
+      {
+       "branch": "B",
+       "headline": "Fails the licensing exam once. By year two: newly licensed registered nurse.",
+       "deck": "Savings at year two: $45K to $58K in debt. Exhausted during school, proud and steadier after.",
+       "changed_because": "Fails the licensing exam once \u2192 pay at year 2: $72K a year \u2192 $14K a year.",
+       "unchanged": false
+      }
+     ],
+     "verdict": {
+      "more_robust": "A",
+      "why": "Path A is untouched by this shock.",
+      "dominant_assumption": "How long a job search takes if things go wrong",
+      "confidence": "medium"
+     },
+     "from_version": 1,
+     "to_version": 2,
+     "created_at": "2026-10-27T15:34:58.334800+00:00"
+    }
+   ],
+   "suggested_shocks": [
+    {
+     "label": "Hours cut at month 12",
+     "description": "Shifts are cut and the job ends.",
+     "month": 12
+    },
+    {
+     "label": "Fails the licensing exam once",
+     "description": "The first NCLEX attempt fails; the retake is months later.",
+     "month": 24
+    },
+    {
+     "label": "Medical emergency",
+     "description": "An unexpected hospital bill and two weeks off work.",
+     "month": 16
+    }
+   ],
+   "checks": [
+    {
+     "name": "Branch isolation",
+     "passed": true,
+     "repaired": 0,
+     "detail": "No world cites the other world's evidence or events."
+    },
+    {
+     "name": "Timeline order",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Every event follows its causes."
+    },
+    {
+     "name": "Money reconciles",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Savings match pay, tax and costs at every timepoint."
+    },
+    {
+     "name": "Facts have sources",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Every FACT has a citation; every ASSUMPTION came from you."
+    },
+    {
+     "name": "No unsupported values",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Values without evidence are shown as unknown, not filled in."
+    },
+    {
+     "name": "Story holds together",
+     "passed": true,
+     "repaired": 0,
+     "detail": "Both worlds hold together."
+    }
+   ],
+   "comparison": {
+    "summary": "Path A (CNA job in Houston) leans toward stability, location; Path B (Nursing school in Houston) leans toward learning, location.",
+    "dominant_assumptions": [
+     "How long a job search takes if things go wrong",
+     "Housing cost difference between the cities",
+     "Whether equity ends up worth anything"
+    ],
+    "what_would_change_my_mind": [
+     "The startup's runway is shorter than 12 months",
+     "The stable role offers a fast promotion track"
+    ]
+   },
+   "third_door": null,
+   "derived_from": null,
+   "created_at": "2026-10-27T15:34:54.501234+00:00"
+  }
+ },
+ "messages": [
+  {
+   "id": "e867d2aba742",
+   "role": "user",
+   "text": "Was the debt worth it?",
+   "claims": [],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-27T15:34:55.032357+00:00"
+  },
+  {
+   "id": "7a8212bbfa54",
+   "role": "future_a",
+   "text": "Honestly? At month 6, picked up a second job part-time [E-A-001]. Most of what I'm learning is training others [ev_A_004]. My role these days: senior CNA [ev_A_004]. That's the part of this life I think about most.",
+   "claims": [
+    {
+     "start": 22,
+     "end": 55,
+     "ref": "E-A-001"
+    },
+    {
+     "start": 66,
+     "end": 111,
+     "ref": "ev_A_004"
+    },
+    {
+     "start": 123,
+     "end": 154,
+     "ref": "ev_A_004"
+    }
+   ],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-27T15:34:56.085563+00:00"
+  },
+  {
+   "id": "566489f7ad65",
+   "role": "future_b",
+   "text": "I see it differently. At month 5, passed the first semester [E-B-001]. Most of what I'm learning is licensed nursing practice [ev_B_005]. My role these days: newly licensed registered nurse [ev_B_005]. That's the part of this life I think about most.",
+   "claims": [
+    {
+     "start": 34,
+     "end": 60,
+     "ref": "E-B-001"
+    },
+    {
+     "start": 71,
+     "end": 126,
+     "ref": "ev_B_005"
+    },
+    {
+     "start": 138,
+     "end": 190,
+     "ref": "ev_B_005"
+    }
+   ],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-27T15:34:57.217950+00:00"
+  },
+  {
+   "id": "16d29e499004",
+   "role": "future_a",
+   "text": "Fair, but from where I'm standing: What worries me most: hard physical work with a low pay ceiling [ev_A_008]. Stress? high [ev_A_007]. That's the part of this life I think about most.",
+   "claims": [
+    {
+     "start": 6,
+     "end": 99,
+     "ref": "ev_A_008"
+    },
+    {
+     "start": 111,
+     "end": 124,
+     "ref": "ev_A_007"
+    }
+   ],
+   "guard_rewrites": 0,
+   "timepoint": "m24",
+   "created_at": "2026-10-27T15:34:58.176600+00:00"
+  }
+ ],
+ "postcards": {
+  "A": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTM2IDEwMjQiIHdpZHRoPSIxNTM2IiBoZWlnaHQ9IjEwMjQiPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFhMWQyNCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzJGNkZDQyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTUzNiIgaGVpZ2h0PSIxMDI0IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgNzYwIEwxODAgNjQwIEwzMjAgNzAwIEw1MjAgNTYwIEw3MDAgNjkwIEw5MDAgNjAwIEwxMTAwIDcwMCBMMTMwMCA2MTAgTDE1MzYgNzIwIEwxNTM2IDEwMjQgTDAgMTAyNFoiIGZpbGw9IiMwZDBlMTIiIG9wYWNpdHk9Ii44NSIvPgo8cmVjdCB4PSI0MCIgeT0iNDAiIHdpZHRoPSIxNDU2IiBoZWlnaHQ9Ijk0NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWNlOGRmIiBzdHJva2Utd2lkdGg9IjQiIG9wYWNpdHk9Ii42Ii8+Cjx0ZXh0IHg9IjgwIiB5PSIxNjAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSI5NiIgZmlsbD0iI2VjZThkZiI+R3JlZXRpbmdzIGZyb20gSG91c3RvbjwvdGV4dD4KPHRleHQgeD0iODAiIHk9Ijk0MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXN0eWxlPSJpdGFsaWMiIGZvbnQtc2l6ZT0iNDQiIGZpbGw9IiNlY2U4ZGYiPlBhdGggQSDCtyBIb3VzdG9uIMK3IG1vbnRoIDI0PC90ZXh0Pgo8dGV4dCB4PSIxNDU2IiB5PSI5NDAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiNlY2U4ZGYiIG9wYWNpdHk9Ii43Ij5PRkZMSU5FIE1PQ0sgwrcgbm90IGdlbmVyYXRlZCBieSBNdXNlIEltYWdlPC90ZXh0Pgo8L3N2Zz4=",
+  "B": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTM2IDEwMjQiIHdpZHRoPSIxNTM2IiBoZWlnaHQ9IjEwMjQiPgo8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFhMWQyNCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0I4NjQxRSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTUzNiIgaGVpZ2h0PSIxMDI0IiBmaWxsPSJ1cmwoI3NreSkiLz4KPHBhdGggZD0iTTAgNzYwIEwxODAgNjQwIEwzMjAgNzAwIEw1MjAgNTYwIEw3MDAgNjkwIEw5MDAgNjAwIEwxMTAwIDcwMCBMMTMwMCA2MTAgTDE1MzYgNzIwIEwxNTM2IDEwMjQgTDAgMTAyNFoiIGZpbGw9IiMwZDBlMTIiIG9wYWNpdHk9Ii44NSIvPgo8cmVjdCB4PSI0MCIgeT0iNDAiIHdpZHRoPSIxNDU2IiBoZWlnaHQ9Ijk0NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWNlOGRmIiBzdHJva2Utd2lkdGg9IjQiIG9wYWNpdHk9Ii42Ii8+Cjx0ZXh0IHg9IjgwIiB5PSIxNjAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSI5NiIgZmlsbD0iI2VjZThkZiI+R3JlZXRpbmdzIGZyb20gSG91c3RvbjwvdGV4dD4KPHRleHQgeD0iODAiIHk9Ijk0MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXN0eWxlPSJpdGFsaWMiIGZvbnQtc2l6ZT0iNDQiIGZpbGw9IiNlY2U4ZGYiPlBhdGggQiDCtyBIb3VzdG9uIMK3IG1vbnRoIDI0PC90ZXh0Pgo8dGV4dCB4PSIxNDU2IiB5PSI5NDAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiNlY2U4ZGYiIG9wYWNpdHk9Ii43Ij5PRkZMSU5FIE1PQ0sgwrcgbm90IGdlbmVyYXRlZCBieSBNdXNlIEltYWdlPC90ZXh0Pgo8L3N2Zz4="
+ }
+}

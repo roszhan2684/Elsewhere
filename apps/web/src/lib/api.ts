@@ -1,4 +1,4 @@
-import type { DecisionSpec, PersonaMessage, Simulation, Timepoint } from "./types";
+import type { Checkin, DecisionSpec, PersonaMessage, PublicShare, Simulation, Tally, ThirdDoor, Timepoint } from "./types";
 
 export const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000").replace(/\/$/, "");
 
@@ -49,6 +49,14 @@ export const api = {
   postcard: (id: string, branch: "A" | "B") => req<{ id: string; url: string; mime: string; mode: string }>(`/v1/simulations/${id}/postcard`, { method: "POST", body: JSON.stringify({ branch }) }),
   assets: (id: string) => req<{ id: string; branch: "A" | "B"; kind: string; url: string }[]>(`/v1/simulations/${id}/assets`),
   calls: (id: string) => req<{ calls: ModelCall[]; by_model: Record<string, { calls: number; input_tokens: number; output_tokens: number; cached_tokens: number; latency_ms: number }> }>(`/v1/simulations/${id}/calls`),
+  thirdDoor: (id: string) => req<ThirdDoor>(`/v1/simulations/${id}/third-door`, { method: "POST" }),
+  thirdDoorSimulate: (id: string, against: "A" | "B") => req<{ simulation_id: string }>(`/v1/simulations/${id}/third-door/simulate`, { method: "POST", body: JSON.stringify({ against }) }),
+  share: (id: string) => req<{ share_id: string } & Tally>(`/v1/simulations/${id}/share`, { method: "POST" }),
+  shareStatus: (id: string) => req<({ share_id: string } & Tally) | { share_id: null }>(`/v1/simulations/${id}/share`),
+  publicShare: (shareId: string, token: string) => req<PublicShare>(`/v1/shares/${shareId}?token=${encodeURIComponent(token)}`),
+  vote: (shareId: string, body: { choice: "A" | "B"; token: string; name?: string; reason?: string }) => req<Tally>(`/v1/shares/${shareId}/votes`, { method: "POST", body: JSON.stringify(body) }),
+  checkins: (id: string) => req<Checkin[]>(`/v1/simulations/${id}/checkins`),
+  addCheckin: (id: string, c: Omit<Checkin, "id" | "created_at">) => req<Checkin>(`/v1/simulations/${id}/checkins`, { method: "POST", body: JSON.stringify(c) }),
   demoList: () => req<{ slug: string; title: string; blurb: string; mode: string }[]>("/v1/demo"),
   demoFork: (slug: string) => req<{ id: string }>(`/v1/demo/${slug}/fork`, { method: "POST" }),
   async voice(blob: Blob): Promise<{ transcript: string; mode: string }> {

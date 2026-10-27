@@ -11,7 +11,10 @@ const newsreader = Newsreader({
   weight: ["400", "600", "700"],
 });
 
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE),
   title: { default: "Elsewhere — See the life you didn't choose", template: "%s · Elsewhere" },
   description:
     "Describe one decision. Elsewhere builds two simulated futures, lets you talk to both versions of yourself, and shows which claims are facts, assumptions, or guesses.",

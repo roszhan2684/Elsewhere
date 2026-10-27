@@ -15,6 +15,7 @@ import re
 from typing import Any, Awaitable, Callable
 
 from .. import mock_brain as mock
+from .. import reference_facts as refs
 from ..config import get_settings
 from ..contracts import (
     TIMEPOINT_MONTHS,
@@ -40,6 +41,7 @@ from ..engine.compiler import (
     apply_specialist,
     blank_snapshots,
     carry_forward,
+    evidence_confidence,
     ground_citation,
     index_events,
 )
@@ -69,6 +71,9 @@ FIELD_NAMES = {
 TP_WORDS = {"m0": "now", "m6": "6 months", "m24": "year 2", "m60": "year 5"}
 ENGINE_FIELDS = {"finance.salary", "finance.housing_cost", "finance.savings", "finance.runway_months"}
 LIVING_COST_SHARE = 0.6  # share of stated monthly spending assumed to be non-housing
+REFERENCE_AGENT = "reference-library"  # evidence from the checked fact library (see reference_facts.py)
+HOUSING_PROVIDED = re.compile(
+    r"(housing|accommodation|room|lodging)( is)? (provided|included|free)|free (housing|accommodation)|company housing|employer housing", re.I)
 
 
 def _s():
@@ -123,6 +128,15 @@ def seed_user_evidence(reg: Registry, spec: DecisionSpec) -> dict[str, str]:
         reg.evidence("U", "ASSUMPTION", "user", "intake", f"Goal: {g}", "high")
     for f in spec.fears[:3]:
         reg.evidence("U", "ASSUMPTION", "user", "intake", f"Worry: {f}", "high")
+    return ids
+
+
+def seed_reference_facts(reg: Registry, spec: DecisionSpec) -> list[str]:
+    """Add checked facts from the built-in library that match this decision. Free: no model call."""
+    ids = []
+    for prefix, facts in refs.facts_for(spec).items():
+        for f in facts:
+            ids.append(reg.evidence(prefix, "FACT", "web", REFERENCE_AGENT, f.text, "high", citation=f.citation()))
     return ids
 
 
@@ -210,8 +224,14 @@ async def run_specialist(llm: LLM, sim: Simulation, domain: str, branch: str, fo
 
 
 async def ground_fact(llm: LLM, reg: Registry, question: str, branch: str) -> dict[str, Any]:
-    r = await llm.ground(agent=f"grounding_{branch}", question=question, mock=lambda: mock.ground(question))
     prefix = branch if branch in ("A", "B") else "S"
+    rent = refs.rent_answer(question)
+    if rent:
+        # A checked figure is already in the library, so skip the paid web search.
+        eid = reg.evidence(prefix, "FACT", "web", REFERENCE_AGENT, f"{question}: {rent.text}", "high", citation=rent.citation())
+        return {"evidence_id": eid, "answer": rent.text, "searched": True, "citations": [{"url": rent.url, "title": rent.title}],
+                "question": question, "branch": branch}
+    r = await llm.ground(agent=f"grounding_{branch}", question=question, mock=lambda: mock.ground(question))
     if r.searched and r.citations:
         eid = reg.evidence(prefix, "FACT", "web", "evidence-resolver", f"{question}: {r.text}", "high",
                            model_id=_s().specialist_model, citation=ground_citation(r.citations[0]))
@@ -256,6 +276,7 @@ async def simulate(llm: LLM, sim: Simulation, emit: Emit) -> Simulation:
     sim.version = 1
     reg = Registry(sim)
     user_ids = seed_user_evidence(reg, spec)
+    seed_reference_facts(reg, spec)
     for b in ("A", "B"):
         p = path_of(spec, b)
         bw = BranchWorld(branch=b, label=p.label, persona=Persona(name=f"Future {b}", voice="", temperament=""),
@@ -325,8 +346,12 @@ async def simulate(llm: LLM, sim: Simulation, emit: Emit) -> Simulation:
                     fi.pay_segments[0].label = "base pay"
             fi.one_time_costs = [OneTimeCost(month=c.month, amount=c.amount, label=c.label) for c in fo.planned_costs]
         housing_ev = None
+        provided = bool(HOUSING_PROVIDED.search(path_of(spec, b).notes or ""))
+        if provided:
+            # You said housing comes with this path, so your word beats a market-rent lookup.
+            housing_ev = user_ids.get(f"path_{b}")
         for g in grounded:
-            if g["branch"] == b and re.search(r"rent|housing|apartment", g["question"], re.I):
+            if not provided and g["branch"] == b and re.search(r"rent|housing|apartment", g["question"], re.I):
                 rng = _num_from_grounding(g["answer"])
                 if rng and g["searched"]:
                     lo, hi = rng
@@ -373,6 +398,8 @@ async def simulate(llm: LLM, sim: Simulation, emit: Emit) -> Simulation:
     sim.checks = checks
     await emit("agent_done", {"agent": "consistency", "branch": "both", "model": s.specialist_model,
                               "summary": f"{sum(c.repaired for c in checks)} repairs, {sum(1 for c in checks if c.passed)}/{len(checks)} checks passed"})
+    for b, bw in sim.branches.items():
+        bw.confidence = evidence_confidence(sim, b, bw.confidence)
     sim.status = "ready"
     return sim
 
@@ -564,3 +591,37 @@ def edit_assumptions(sim: Simulation, branch: str, edits: dict[str, float]) -> S
     index_events(sim)
     sim.checks = invariants.run_all(sim) + [c for c in sim.checks if c.name == "Story holds together"]
     return sim
+
+
+# ------------------------------------------------------------------ third door (one Wonder call)
+
+async def third_door(llm: LLM, sim: Simulation):
+    """Wonder checks whether A-or-B is a false choice and proposes one realistic third path."""
+    from ..contracts import ThirdDoor
+    from .schemas import ThirdDoorOut
+
+    spec = sim.decision
+    comparison = sim.comparison.model_dump_json() if sim.comparison else "(none)"
+    out = await llm.structured(
+        agent="third_door", model=_s().orchestrator_model, instructions=system("third_door"),
+        input=f"DECISION:\n{spec.model_dump_json(indent=1, exclude={'clarifying_questions'})}\n\n{world_text(sim, 'A')}\n\n{world_text(sim, 'B')}\n\nCOMPARISON: {comparison}",
+        schema=ThirdDoorOut, effort="medium", cache_key="elsewhere-third-door-v1", mock=lambda: mock.third_door(spec),
+        max_output_tokens=3000,
+    )
+    return ThirdDoor(**out.model_dump(), mode=llm.mode)
+
+
+def third_door_decision(sim: Simulation, against: str) -> DecisionSpec:
+    """A new decision: the chosen original path vs the third door. Runs through the normal pipeline."""
+    door = sim.third_door
+    assert door is not None
+    spec = sim.decision.model_copy(deep=True)
+    keep = path_of(spec, against)
+    spec.path_a = keep
+    spec.path_b = door.path.model_copy(deep=True)
+    short = lambda s: s.split(" in ")[0]  # noqa: E731
+    title = f"{short(keep.label)} vs {short(door.label)}"
+    spec.title = title[:40]
+    spec.question = f"{keep.label}, or the third door: {door.label}?"[:200]
+    spec.clarifying_questions = []
+    return spec

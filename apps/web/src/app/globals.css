@@ -18,6 +18,9 @@
   --color-path-a-ink: #2f6fcc;
   --color-path-b-ink: #b8641e;
   --color-shock: #ff5d73;
+  --color-ok: #5fd38d;
+  --color-warn: #f2c14e;
+  --color-path-c: #c3a6ff;
   --color-newsprint: #f3eee3;
   --color-newsprint-2: #e9e2d3;
 
@@ -81,6 +84,15 @@ body {
   }
 }
 
+@keyframes agent-flow {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+.agent-flow {
+  animation: agent-flow 0.6s linear infinite;
+}
+
 @media print {
   html,
   body {
@@ -89,5 +101,21 @@ body {
   }
   .no-print {
     display: none !important;
+  }
+  /* Print only the brief or handout, not the whole workspace. */
+  body:has(.print-area) * {
+    visibility: hidden;
+  }
+  body:has(.print-area) .print-area,
+  body:has(.print-area) .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: black;
+    background: white;
   }
 }
