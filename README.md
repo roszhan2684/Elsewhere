@@ -16,7 +16,7 @@
 
 <a href="docs/media/elsewhere-launch.mp4"><img src="docs/media/elsewhere-launch-poster.jpg" alt="Watch the Elsewhere launch film (25 seconds)" width="820"></a>
 
-▶ **[Watch the 25-second launch film](docs/media/elsewhere-launch.mp4)** · 🎬 **3-minute demo video:** _coming soon_ · 🌐 **[Live demo](https://elsewhere-futures.vercel.app)** (demo mode: 6 saved decisions, no key needed)
+▶ **[Watch the 25-second launch film](docs/media/elsewhere-launch.mp4)** · 🎬 **[Watch the 3-minute demo video](https://youtu.be/0rGjS-Ijc7o)** · 🌐 **[Live demo](https://elsewhere-futures.vercel.app)** (demo mode: 6 saved decisions, no key needed)
 
 </div>
 
