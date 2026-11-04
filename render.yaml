@@ -1,14 +1,17 @@
 # Render blueprint for the API. The web app deploys to Vercel (root: apps/web).
+# Public demo runs in demo mode: no Meta key is set and services/api/LIVE_LOCKED is baked into the
+# image, so the hosted API can never make a paid model call. New decisions get offline mock output.
 services:
   - type: web
     name: elsewhere-api
     runtime: docker
+    plan: free
     dockerfilePath: ./Dockerfile
     healthCheckPath: /health
     envVars:
-      - key: MODEL_API_KEY
-        sync: false
-      - key: DATABASE_URL
-        sync: false
+      - key: MODEL_MODE
+        value: mock
+      - key: BUDGET_USD
+        value: "0"
       - key: CORS_ORIGINS
-        value: https://elsewhere.vercel.app
+        value: https://elsewhere-futures.vercel.app,https://elsewhere-sigma-virid.vercel.app

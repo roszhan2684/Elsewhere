@@ -16,7 +16,7 @@
 
 <a href="docs/media/elsewhere-launch.mp4"><img src="docs/media/elsewhere-launch-poster.jpg" alt="Watch the Elsewhere launch film (25 seconds)" width="820"></a>
 
-▶ **[Watch the 25-second launch film](docs/media/elsewhere-launch.mp4)** · 🎬 **3-minute demo video:** _coming soon_ · 🌐 **Live demo:** _coming soon_
+▶ **[Watch the 25-second launch film](docs/media/elsewhere-launch.mp4)** · 🎬 **3-minute demo video:** _coming soon_ · 🌐 **[Live demo](https://elsewhere-futures.vercel.app)** (demo mode: 6 saved decisions, no key needed)
 
 </div>
 
@@ -113,7 +113,6 @@ Letting the model own the *reasoning* and code own the *bookkeeping* (ids, money
 ## 🔭 What’s next
 
 - iOS companion app
-- Live deployment for judges
 - Reality check-ins at scale: compare how life actually went with both simulated worlds
 
 ---
